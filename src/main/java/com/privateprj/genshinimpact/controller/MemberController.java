@@ -9,6 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/member")
+@CrossOrigin
 public class MemberController
 {
     @Autowired

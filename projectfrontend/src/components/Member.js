@@ -23,6 +23,14 @@ export default function Member() {
 
         console.log(member)
 
+        fetch(
+            "http://localhost:8090/member/signup", {
+            method:"POST",
+            headers:{"Content-type": "application/json"},
+            body:JSON.stringify(member)
+        }).then(() => {
+            console.log('New Member Added!')
+        })
     }
 
     return (
