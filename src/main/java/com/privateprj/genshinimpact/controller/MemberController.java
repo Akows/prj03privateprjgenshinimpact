@@ -5,6 +5,8 @@ import com.privateprj.genshinimpact.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/member")
 public class MemberController
@@ -18,5 +20,11 @@ public class MemberController
         memberService.saveMember(member);
 
         return "Sign-up Complete!";
+    }
+
+    @GetMapping("/getallmembers")
+    public List<Member> getAllMembers()
+    {
+        return memberService.getAllMembers();
     }
 }
