@@ -16,6 +16,8 @@ export default function Member() {
     const [id, setId] = React.useState('');
     const [pwd, setPwd] = React.useState('');
 
+    const [members, setMembers] = React.useState('');
+
     const handleClick = (e) => {
         e.preventDefault();
 
@@ -32,6 +34,14 @@ export default function Member() {
             console.log('New Member Added!')
         })
     }
+
+    React.useEffect(() => {
+        fetch("http://localhost:8090/member/getallmembers")
+        .then(res => res.json())
+        .then((result) => {
+            setMembers(result);
+        }
+    )}, [])
 
     return (
             <Container>
@@ -52,12 +62,20 @@ export default function Member() {
                                 <TextField id="standard-basic" label="Password" variant="standard" fullWidth value={pwd} onChange={(e) => setPwd(e.target.value)}/>
                         </Box>
 
-                        {id}
-                        {pwd}
-
                         <Button variant="contained" onClick={handleClick}>
                             Submit
                         </Button>
+
+                        <h1>Members List</h1>
+                        <Paper elevation={3} style={paperStyle}>
+                                {members&&members.map(member => (
+                                        <Paper elevation={6} style={{margin:'10px', padding: '15px', textAlign:'left'}} key={member.membernumber}>
+                                            <b>Member Number :</b> {member.membernumber} <br/>
+                                            <b>Member ID : </b>{member.id} <br/>
+                                            <b>Member PASSWORD : </b>{member.pwd} <br/>
+                                        </Paper>
+                                ))}
+                        </Paper>
 
                     </Paper>
             </Container>
