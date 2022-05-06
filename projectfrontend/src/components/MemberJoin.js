@@ -5,7 +5,7 @@ import Container from '@mui/material/Container';
 import Paper from '@mui/material/Paper';
 import Button from '@mui/material/Button';
 
-export default function Member() {
+export default function MemberJoin() {
     
     const paperStyle = {
         padding: '50px 20px', 

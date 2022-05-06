@@ -1,12 +1,12 @@
 import './App.css';
 import Appbar from './components/Appbar';
-import Member from './components/Member';
+import MemberJoin from './components/MemberJoin';
 
 function App() {
   return (
     <div className="App">
       <Appbar/>
-      <Member/>
+      <MemberJoin/>
     </div>
   );
 }
