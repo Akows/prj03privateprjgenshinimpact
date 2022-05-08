@@ -1,0 +1,28 @@
+#charactersinfo {
+    color: black;
+    padding: 10px;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+    #charactersinfo::before {
+        content: "";
+        background-image: url("../img/1108907.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0.7;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+    }
+
+    #charactersinfo > *
+    {
+        color: black;
+        text-align: center;
+        position: relative;
+    }
