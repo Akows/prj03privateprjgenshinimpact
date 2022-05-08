@@ -8,6 +8,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { styled, alpha } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
+import { Button } from '@mui/material';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -63,44 +64,24 @@ export default function Appbar() {
             component="div"
             sx={{ mr: 0.5, display: { xs: 'none', md: 'flex' } }}
           >
-            LOGO
+              <Button variant="contained" href="#">Logo</Button>
           </Typography>
 
           <Typography variant="h2" component="div" sx={{ flexGrow: 0.05 }}>
             l
           </Typography>
 
-          <IconButton
-            size="small"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 1 }}
-          >
+          <Button variant="contained" href="#">
             Menu 01
-          </IconButton>
+          </Button>
 
-          <IconButton
-            size="small"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 1 }}
-          >
+          <Button variant="contained" href="#">
             Menu 02
-          </IconButton>
+          </Button>
 
-          <IconButton
-            size="small"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 1 }}
-          >
+          <Button variant="contained" href="#">
             Menu 03
-          </IconButton>
-
-
+          </Button>
 
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Genshin Impact Web Page
