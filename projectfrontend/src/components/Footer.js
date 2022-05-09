@@ -1,7 +1,6 @@
 import * as React from 'react';
 import "../styles/Footer.css";
 import { Link } from 'react-router-dom';
-import { NavLink } from "react-router-dom";
 
 import gamelogo from "../styles/img/GIKR_1587984241_9146.png";
 import playgrade from "../styles/img/1c815dcb772be24409961e7d94e729c9_3752895997708255975.png";
@@ -18,21 +17,21 @@ const Footer = () => {
 
                 <div id='pagelinkarea'>
                     <span className='iconbutton'>
-                        <NavLink to={"/"}>
-                        <img src={discordicon} alt="img error!"/>
-                        </NavLink>
+                        <a href='https://discord.com/invite/genshinimpact' target='_blank' rel="noopener noreferrer"> 
+                            <img src={discordicon} alt="img error!"/> 
+                        </a>
                     </span>
 
                     <span className='iconbutton'>
-                        <NavLink to={"/"}>
-                            <img src={facebookicon} alt="img error!"/>
-                        </NavLink>
+                        <a href='https://www.facebook.com/Genshinimpact' target='_blank' rel="noopener noreferrer">
+                            <img src={facebookicon} alt="img error!"/> 
+                        </a>
                     </span>
 
                     <span className='iconbutton'>
-                        <NavLink to={"/"}>
-                            <img src={youtubeicon} alt="img error!"/>
-                        </NavLink>
+                        <a href='https://www.youtube.com/c/GenshinImpact' target='_blank' rel="noopener noreferrer"> 
+                            <img src={youtubeicon} alt="img error!"/> 
+                        </a>                        
                     </span>
                 </div>
 

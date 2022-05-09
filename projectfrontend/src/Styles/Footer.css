@@ -10,9 +10,14 @@
     background: linear-gradient(90deg, rgba(108,108,108,0.5270483193277311) 0%, rgba(217,217,217,1) 100%);
     text-align: left;
 }
+    #pagelinkarea > a {
+        text-decoration: none;
+    }
+
     .iconbutton{
         margin: 15px;
         height: 100%;
+        text-decoration: none;
     }
 
 #contentarea {
