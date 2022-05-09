@@ -23,7 +23,7 @@ const Appbar = () => {
                         </div>
 
                         <div className="navbutton">
-                            <Link to="/">자유게시판</Link>
+                            <Link to="/boardpage">자유게시판</Link>
                         </div>
 
                     </div>
