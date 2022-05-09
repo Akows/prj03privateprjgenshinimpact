@@ -1,4 +1,4 @@
-#mainpage {
+.mainpage1 {
     color: black;
     padding: 10px;
     width: 100%;
@@ -6,7 +6,7 @@
     position: relative;
 }
 
-    #mainpage::before {
+    .mainpage1::before {
         content: "";
         background-image: url("../styles/img/1129503.jpg");
         background-size: cover;
@@ -20,7 +20,7 @@
         bottom: 0px;
     }
 
-    #mainpage > *
+    .mainpage1 > *
     {
         color: black;
         text-align: center;
@@ -34,3 +34,89 @@
         4. 배경이미지 이외 요소들은 position: relative; 설정으로 상위로 띄우기.
     */
     
+    .mainpage2 {
+        color: black;
+        padding: 10px;
+        width: 100%;
+        height: 100vh;
+        position: relative;
+    }
+    
+        .mainpage2::before {
+            content: "";
+            background-image: url("../styles/img/wallpapersden.com_genshin-impact-2020_1920x1080.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.7;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+        }
+    
+        .mainpage2 > *
+        {
+            color: black;
+            text-align: center;
+            position: relative;
+        }
+
+        .mainpage3 {
+            color: black;
+            padding: 10px;
+            width: 100%;
+            height: 100vh;
+            position: relative;
+        }
+        
+            .mainpage3::before {
+                content: "";
+                background-image: url("../styles/img/EyZEIOSXIAQNxu6.jfif");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                opacity: 0.7;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+            }
+        
+            .mainpage3 > *
+            {
+                color: black;
+                text-align: center;
+                position: relative;
+            }
+
+            .mainpage4 {
+                color: black;
+                padding: 10px;
+                width: 100%;
+                height: 100vh;
+                position: relative;
+            }
+            
+                .mainpage4::before {
+                    content: "";
+                    background-image: url("../styles/img/Genshin.Impact.full.3501128.png");
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    opacity: 0.7;
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                }
+            
+                .mainpage4 > *
+                {
+                    color: black;
+                    text-align: center;
+                    position: relative;
+                }
