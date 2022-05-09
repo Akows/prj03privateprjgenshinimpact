@@ -23,16 +23,32 @@ const MemberjoinPage = () => {
 
     return (
         <div id="memberjoinpage">
-            <h1>회원 가입 화면입니다.</h1>
-            <p>회원 가입 화면입니다.</p>
-            <p>회원 가입 화면입니다.</p>
 
-            <form>
-                <input value={id} onChange={(e) => setId(e.target.value)}/>
-                <input value={pwd} onChange={(e) => setPwd(e.target.value)}/>
-                <button onClick={handleClick}>가입</button>
-            </form>
-            
+            <div id='joinformouter'>
+                <h1>회원가입</h1>
+
+                <div id='loginformarea'>
+                    <form id='loginform'>
+
+                        <div id='inputarea'>
+                            <input value={id} placeholder='사용할 ID를 입력해주세요' onChange={(e) => setId(e.target.value)}/>
+                        </div>
+
+                        <div id='inputarea'>
+                            <input value={pwd} placeholder='사용할 PWD를 입력해주세요'  onChange={(e) => setPwd(e.target.value)}/>
+                        </div>
+
+                        <br/>
+
+                        <button id='submitbutton' onClick={handleClick}>가입</button>
+                    </form>
+                </div>
+
+                <div id='imgshowarea'>
+
+                </div>
+
+            </div>
         </div>
     );
 }
