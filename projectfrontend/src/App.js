@@ -1,6 +1,7 @@
 import {  Route, Routes } from 'react-router-dom';
 import './App.css';
 import Appbar from './components/Appbar';
+import Footer from './components/Footer';
 import Charactersinfo from './pages/Charactersinfopage';
 import Loginpage from './pages/Loginpage';
 import Mainpage from './pages/Mainpage';
@@ -20,6 +21,10 @@ const App = () => {
           <Route path='/memberjoinPage' element={<MemberjoinPage />}/>
         </Routes>
       </div>
+      <div>
+        <Footer/>
+      </div>
+
     </div>
   );
 };
