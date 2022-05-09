@@ -1,4 +1,4 @@
-#charactersinfo {
+#loginpage {
     color: black;
     padding: 10px;
     width: 100%;
@@ -6,9 +6,9 @@
     position: relative;
 }
 
-    #charactersinfo::before {
+    #loginpage::before {
         content: "";
-        background-image: url("../styles/img/1108907.jpg");
+        background-image: url("../styles/img/1109789.png");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -20,7 +20,7 @@
         bottom: 0px;
     }
 
-    #charactersinfo > *
+    #loginpage > *
     {
         color: black;
         text-align: center;

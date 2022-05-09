@@ -1,0 +1,39 @@
+#appbar {
+    height: 70px;
+    text-align: center;
+}
+    #appbar > * {
+        height: 100%;
+        float: left;
+    }
+    #logoarea {
+        width: 8%;
+        background-color: bisque;
+    }
+
+    #logobutton {
+        background: url( "img/genshin-impact-logo.png" ) no-repeat;
+        border: none;
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+    }
+
+    #menuarea {
+        width: 80%;
+        background-color: beige;
+    }
+
+    #loginarea {
+        width: 12%;
+        background-color: cornflowerblue;
+    }
+
+        #appbarbutton {
+            width: 100px;
+            height: 80%;
+            background-color: coral;
+            padding: 10px;
+            margin: 5px auto;
+        }
+

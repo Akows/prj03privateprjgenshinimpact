@@ -1,4 +1,4 @@
-import "../Styles/Charactersinfo.css";
+import "../styles/Charactersinfo.css";
 
 const Charactersinfo = () => {
     return (
