@@ -3,6 +3,17 @@ import { Link } from 'react-router-dom';
 import "../styles/Boardpage.css";
 
 const Boardpage = () => {
+
+    const [board, setBoard] = React.useState('');
+
+    React.useEffect(() => {
+        fetch("http://localhost:8090/board/getallboard")
+        .then(res => res.json())
+        .then((result) => {
+            setBoard(result);
+        }
+    )}, [])
+
     return (
         <div id="boardpage">
 
@@ -22,20 +33,25 @@ const Boardpage = () => {
 
                         <tbody>
                             <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                {board&&board.map(member => (
+                                        <tr key={board.membernumber}>
+                                            <td>{board.membernumber}</td>
+                                            <td>{board.title}</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                ))}
                             </tr>
                         </tbody>
 
                         <tfoot>
                             <tr>
-                                <td colspan={'3'}></td>
+                                <td colSpan={'3'}></td>
                                 <td><button id='boardwritebutton'><Link to="/boardwritepage">글 쓰기</Link></button> </td>
                             </tr>
                         </tfoot>
+
                     </table>
                 </div>
             </div>
