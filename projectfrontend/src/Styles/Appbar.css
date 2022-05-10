@@ -63,3 +63,17 @@
             background-color: #a3a1a1;
             color: #e3dede;
         }
+
+    .navtitlebutton {
+        min-width: 150px;
+        min-height: 40px;
+        background: linear-gradient(
+            90deg,
+            rgba(129, 230, 217, 1) 0%,
+            rgba(79, 209, 197, 1) 100%
+        );
+        border-radius: 1000px;
+        cursor: pointer;
+        font-weight: 700;
+        vertical-align: middle;
+    }

@@ -1,6 +1,7 @@
 import * as React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import "../styles/Appbar.css";
+import gamelogo from "../styles/img/icons8-genshin-impact-logo-100.png";
 
 const Appbar = () => {
     return (
@@ -9,9 +10,9 @@ const Appbar = () => {
             <header>
                 <div className="navarea">
                     <div className="navtitlearea">
-                        <Link to="/" style={{ textDecoration: 'none', color: 'white'}}>
-                            Genshin Impect
-                        </Link>
+                        <NavLink to={"/"} style={{ textDecoration: 'none', color: 'white', backgroundColor: 'gray', opacity: '0.6'}}>
+                            <img src={gamelogo} alt="img error!" width='45' height='45'/>
+                        </NavLink>
                     </div>
 
                     <div className="navmenuarea">
