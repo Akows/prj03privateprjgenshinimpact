@@ -51,7 +51,7 @@ const Appbar = () => {
 
                     <div className="navprofilearea">
                         <div className="navbutton">
-                            <Link to="/mypage" style={{ textDecoration: 'none', color: 'white'}}>
+                            <Link to="/loginpage" style={{ textDecoration: 'none', color: 'white'}}>
                                 마이페이지
                             </Link>
                         </div>
