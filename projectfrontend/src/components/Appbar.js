@@ -7,33 +7,62 @@ const Appbar = () => {
 
         <div>
             <header>
-                <nav className="navarea">
-
-                    <span className="navtitlearea">
-                        <Link to="/">Genshin Impect</Link>
-                    </span>
-
-                    <div className="navmenuarea">
-                        <div className="navbutton">
-                            <Link to="/charactersinfopage">캐릭터 소개</Link>
-                        </div>
-
-                        <div className="navbutton">
-                            <Link to="/">캐릭터 육성 정보</Link>
-                        </div>
-
-                        <div className="navbutton">
-                            <Link to="/boardpage">자유게시판</Link>
-                        </div>
-
+                <div className="navarea">
+                    <div className="navtitlearea">
+                        <Link to="/" style={{ textDecoration: 'none', color: 'white'}}>
+                            Genshin Impect
+                        </Link>
                     </div>
 
                     <div className="navmenuarea">
-                        <Link to="/Loginpage">로그인</Link>
-                        <Link to="/MemberjoinPage">회원가입</Link>
+                        <div className="navmenuareaouter">
+                            <div className="navbutton navbutton2">
+                                <Link to="/boardpage" style={{ textDecoration: 'none', color: 'white'}}>
+                                    자유게시판
+                                </Link>
+                            </div>
+
+                            <div className="navbutton navbutton2">
+                                <Link to="/charactersinfopage" style={{ textDecoration: 'none', color: 'white' }}>
+                                    캐릭터 소개
+                                </Link>
+                            </div>
+
+                            <div className="navbutton navbutton2">
+                                <Link to="/" style={{ textDecoration: 'none', color: 'white' }}>
+                                    월드 정보
+                                </Link>
+                            </div>
+
+                            <div className="navbutton navbutton2">
+                                <Link to="/" style={{ textDecoration: 'none', color: 'white' }}>
+                                    월드 지도
+                                </Link>
+                            </div>
+
+                            <div className="navbutton navbutton2">
+                                <Link to="/" style={{ textDecoration: 'none', color: 'white' }}>
+                                    이벤트
+                                </Link>
+                            </div>
+                        </div>
                     </div>
 
-                </nav>
+                    <div className="navprofilearea">
+                        <div className="navbutton">
+                            <Link to="/mypage" style={{ textDecoration: 'none', color: 'white'}}>
+                                마이페이지
+                            </Link>
+                        </div>
+
+                        <div className="navbutton">
+                            <Link to="/MemberjoinPage" style={{ textDecoration: 'none', color: 'white'}}>
+                                회원가입
+                            </Link>
+                        </div>
+                    </div>
+
+                </div>
             </header>
         </div>
 
