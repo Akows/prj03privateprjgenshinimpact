@@ -3,21 +3,24 @@ import "../styles/MemberjoinPage.css";
 
 const MemberjoinPage = () => {
 
-    const [id, setId] = React.useState('');
-    const [pwd, setPwd] = React.useState('');
+    const [m_id, setM_id] = React.useState('');
+    const [m_password, setM_password] = React.useState('');
+    const [m_name, setM_name] = React.useState('');
+    const [m_email, setM_email] = React.useState('');
 
     const handleClick = (e) => {
         e.preventDefault();
 
-        const member = {id, pwd};
+        const inputData = {m_id, m_password, m_name, m_email};
 
         fetch(
             "http://localhost:8090/member/signup", {
             method:"POST",
             headers:{"Content-type": "application/json"},
-            body:JSON.stringify(member)
+            body:JSON.stringify(inputData)
         }).then(() => {
             console.log('New Member Added!')
+            console.log(inputData)
         })
     }
 
@@ -31,11 +34,19 @@ const MemberjoinPage = () => {
                     <form id='loginform'>
 
                         <div id='inputarea'>
-                            <input value={id} placeholder='사용할 ID를 입력해주세요' onChange={(e) => setId(e.target.value)}/>
+                            <input value={m_id} placeholder='사용할 ID를 입력해주세요' onChange={(e) => setM_id(e.target.value)}/>
                         </div>
 
                         <div id='inputarea'>
-                            <input value={pwd} placeholder='사용할 PWD를 입력해주세요'  onChange={(e) => setPwd(e.target.value)}/>
+                            <input value={m_password} placeholder='사용할 PWD를 입력해주세요'  onChange={(e) => setM_password(e.target.value)}/>
+                        </div>
+
+                        <div id='inputarea'>
+                            <input value={m_name} placeholder='사용할 NAME를 입력해주세요'  onChange={(e) => setM_name(e.target.value)}/>
+                        </div>
+
+                        <div id='inputarea'>
+                            <input value={m_email} placeholder='사용할 EMAIL를 입력해주세요'  onChange={(e) => setM_email(e.target.value)}/>
                         </div>
 
                         <br/>

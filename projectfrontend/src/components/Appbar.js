@@ -30,7 +30,7 @@ const Appbar = () => {
                             </div>
 
                             <div className="navbutton navbutton2">
-                                <Link to="/" style={{ textDecoration: 'none', color: 'white' }}>
+                                <Link to="/worldinfopage" style={{ textDecoration: 'none', color: 'white' }}>
                                     월드 정보
                                 </Link>
                             </div>
