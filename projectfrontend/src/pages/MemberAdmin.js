@@ -1,29 +1,17 @@
-import { useState } from "react";
+import React from "react";
 import "../styles/MemberAdmin.css";
 
 const MemberAdmin = () => {
 
-    const url = "http://localhost:8090/member/getalluserlist";
+    const [memberdata, setMemberdata] = React.useState('');
 
-    const [member, setMember] = useState({m_number_pk:null, m_id:null, m_name:null, m_email:null, m_grade:null, m_point:null});
-
-    function getMemberList(){
-        return fetch(url)
-        .then(response => {
-            return response.json();
-        })
-        .then(member => {
-            return member;
-        })
-        .catch(error => console.log(error));
-    }
-
-    function handleClick(){
-        getMemberList().then(response => {
-            console.log(response);
-            setMember(response);
-        })
-    }
+    React.useEffect(() => {
+        fetch("http://localhost:8090/member/getalluserlist")
+        .then(res => res.json())
+        .then((result) => {
+            setMemberdata(result);
+        }
+    )}, [])
 
     return (
         <div id="memberadmin">
@@ -32,16 +20,9 @@ const MemberAdmin = () => {
                     <br/><br/><br/>
                     <br/><br/><br/>
 
-                        <button onClick={handleClick}>Member</button>
+                    {memberdata && <textarea rows={10} value={JSON.stringify(memberdata, null, 2)} readOnly={true}></textarea>}
 
-                        <p>
-                            Number: {member.m_number_pk}<br/>
-                            ID: {member.m_id}<br/>
-                            Name: {member.m_name}<br/>
-                            Email: {member.m_email}<br/>
-                            Grade: {member.m_grade}<br/>
-                            Point: {member.m_point}<br/>
-                        </p>
+                    
                 </div>
         </div>
     );
