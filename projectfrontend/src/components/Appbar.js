@@ -51,8 +51,8 @@ const Appbar = () => {
 
                     <div className="navprofilearea">
                         <div className="navbutton">
-                            <Link to="/loginpage" style={{ textDecoration: 'none', color: 'white'}}>
-                                마이페이지
+                            <Link to="/memberadmin" style={{ textDecoration: 'none', color: 'white'}}>
+                                회원목록
                             </Link>
                         </div>
 

@@ -5,6 +5,7 @@
     <select id="getAllUserList" resultType="com.privproject.genshinimpectweb.Entity.MemberDto">
         SELECT *
         FROM member_tb
+        WHERE M_NUMBER_PK = '2'
     </select>
 
     <insert id="memberSignUp" parameterType="com.privproject.genshinimpectweb.Entity.MemberDto">
