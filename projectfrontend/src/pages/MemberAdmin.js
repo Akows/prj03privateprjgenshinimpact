@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import "../styles/MemberAdmin.css";
+import MemberList from "../components/MemberList";
 
 const MemberAdmin = () => {
 
@@ -14,7 +15,7 @@ const MemberAdmin = () => {
                 });
             }, []);
 
-{/* 
+{/*  Axios가 아닌 fetch를 사용했을 때 코드
     React.useEffect(() => {
         fetch("http://localhost:8090/member/getalluserlist")
         .then(res => res.json())
@@ -24,60 +25,37 @@ const MemberAdmin = () => {
     )}, [])
 */}
 
-    const memberlisttitle = () => {
-        return (
-            <tr>
-                <td>NUMBER</td>
-                <td>ID</td>
-                <td>PASSWORD</td>
-                <td>NAME</td>
-                <td>E-MAIL</td>
-                <td>GRADE</td>
-                <td>POINT</td>
-            </tr>
-        )
-    }
-
-    const memberdataarray = memberdata.map((item, index) => {
-        return (
-            <table key={index}>
-                <tr>
-                    <td>{item.m_number_pk}</td>
-                    <td>{item.m_id}</td>
-                    <td>{item.m_password}</td>
-                    <td>{item.m_name}</td>
-                    <td>{item.m_email}</td>
-                    <td>{item.m_grade}</td>
-                    <td>{item.m_point}</td>
-                </tr>
-            </table>
-        );
-    });
-
     return (
         <div id="memberadmin">
                 <div>
-                    <br/><br/><br/>
-                    <br/><br/><br/>
                     <br/><br/><br/>
 
                     {/* JSON 형식으로 DB에서 불러온 데이터들을 변환없이 그대로 화면에 호출하는 코드.
                         {memberdata && <textarea rows={10} value={JSON.stringify(memberdata, null, 2)} readOnly={true}></textarea>}                   
                     */}
 
-                        <div>
-                            {memberlisttitle}
-                        </div>
+                    <h1>MemberList</h1>
 
+                    <br/>
 
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>NUMBER</th>
+                                <th>ID</th>
+                                <th>PASSWORD</th>
+                                <th>NAME</th>
+                                <th>E-MAIL</th>
+                                <th>GRADE</th>
+                                <th>POINT</th>
+                                <th>ACTIVESTATE</th>
+                            </tr>
+                        </thead>
 
-                    {memberdata && 
+                        <MemberList data={memberdata}/>
 
-                        <div>
-                            {memberdataarray}
-                        </div>
-                    }
-                    
+                    </table>
+
                 </div>
         </div>
     );
