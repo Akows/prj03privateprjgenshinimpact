@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.privproject.genshinimpectweb.Mapper.BoardMapper">
+    <select id="getallboardlist" resultType="com.privproject.genshinimpectweb.Entity.BoardDto">
+        SELECT *
+        FROM board_tb
+    </select>
+
+    <insert id="boardWrite" parameterType="com.privproject.genshinimpectweb.Entity.BoardDto">
+        INSERT INTO board_tb(M_NUMBER_FK, B_TITLE, B_CONTENT, B_WRITE_TIME, B_DELETE_STATE, B_ATTACH_FILE_INFO)
+        VALUES (11, '제목', '내용', now(), 'N', '없음')
+    </insert>
+</mapper>

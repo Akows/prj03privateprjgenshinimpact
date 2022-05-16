@@ -3,6 +3,13 @@ ROLLBACK;
 
 SELECT * 
 FROM member_tb;
+SELECT * 
+FROM board_tb;
 
 INSERT INTO member_tb(M_ID, M_PASSWORD, M_NAME, M_EMAIL, M_GRADE, M_POINT, M_DELETE_STATE)
 VALUES ('', '', '', '', 'D', 0);
+
+INSERT INTO member_tb(M_NUMBER_FK, B_TITLE, B_CONTENT, B_WRITE_TIME, B_DELETE_STATE, B_ATTACH_FILE_INFO)
+VALUES (1, '제목', '내용', now(), 'N', '없음');
+
+alter table board_tb add FOREIGN KEY(M_NUMBER_PK) REFERENCES member_tb(M_NUMBER_PK);

@@ -1,58 +1,46 @@
+import axios from 'axios';
 import * as React from 'react';
-import { Link } from 'react-router-dom';
+import BoardList from '../components/BoardList';
 import "../styles/Boardpage.css";
 
 const Boardpage = () => {
 
-    const [board, setBoard] = React.useState('');
+    const [boarddata, setBoarddata] = React.useState([]);
 
     React.useEffect(() => {
-        fetch("http://localhost:8090/board/getallboard")
-        .then(res => res.json())
-        .then((result) => {
-            setBoard(result);
-        }
-    )}, [])
+        axios.get("http://localhost:8090/board/getallboardlist")
+                .then(response => {
+                    console.log(response.data);
+                    setBoarddata(response.data);
+                });
+    }, []);
 
     return (
-        <div id="boardpage">
+        <div id="boardpagebackground">
+                <div id='boardpageouter'>
+                        <div id='boardpageinner'>
 
-            <div id='boardouter'>
-                <h1>자유게시판</h1>
+                            <br/><br/><br/>
 
-                <div id='boardarea'>
-                    <table id='boardtableouter'>
-                        <thead>
-                            <tr>
-                                <th>글번호</th>
-                                <th>제목</th>
-                                <th>작성자</th>
-                                <th>작성시간</th>
-                            </tr>
-                        </thead>
+                            <h1>자유게시판</h1>
 
-                        <tbody>
-                            <tr>
-                                {board&&board.map(member => (
-                                        <tr key={board.membernumber}>
-                                            <td>{board.membernumber}</td>
-                                            <td>{board.title}</td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                ))}
-                            </tr>
-                        </tbody>
+                            <br/>
 
-                        <tfoot>
-                            <tr>
-                                <td colSpan={'3'}></td>
-                                <td><button id='boardwritebutton'><Link to="/boardwritepage">글 쓰기</Link></button> </td>
-                            </tr>
-                        </tfoot>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>글 번호</th>
+                                        <th>제목</th>
+                                        <th>내용</th>
+                                        <th>작성시간</th>
+                                    </tr>
+                                </thead>
 
-                    </table>
+                                <BoardList data={boarddata}/>
+
+                            </table>
+
+                            <button>button</button>
                 </div>
             </div>
         </div>

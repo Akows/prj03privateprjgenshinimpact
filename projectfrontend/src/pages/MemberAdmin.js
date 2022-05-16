@@ -10,7 +10,6 @@ const MemberAdmin = () => {
     React.useEffect(() => {
         axios.get("http://localhost:8090/member/getalluserlist")
                 .then(response => {
-                    console.log(response)
                     setMemberdata(response.data);
                 });
             }, []);
@@ -26,36 +25,39 @@ const MemberAdmin = () => {
 */}
 
     return (
-        <div id="memberadmin">
-                <div>
-                    <br/><br/><br/>
+        <div id="memberadminpage">
+                <div id="memberadminpagecontentsareaouter">
+                        <div id="memberadminpagecontentsarea">
 
-                    {/* JSON 형식으로 DB에서 불러온 데이터들을 변환없이 그대로 화면에 호출하는 코드.
-                        {memberdata && <textarea rows={10} value={JSON.stringify(memberdata, null, 2)} readOnly={true}></textarea>}                   
-                    */}
+                            <br/><br/><br/>
 
-                    <h1>MemberList</h1>
+                            {/* JSON 형식으로 DB에서 불러온 데이터들을 변환없이 그대로 화면에 호출하는 코드.
+                                {memberdata && <textarea rows={10} value={JSON.stringify(memberdata, null, 2)} readOnly={true}></textarea>}                   
+                            */}
 
-                    <br/>
+                            <h1>MemberList</h1>
 
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>NUMBER</th>
-                                <th>ID</th>
-                                <th>PASSWORD</th>
-                                <th>NAME</th>
-                                <th>E-MAIL</th>
-                                <th>GRADE</th>
-                                <th>POINT</th>
-                                <th>ACTIVESTATE</th>
-                            </tr>
-                        </thead>
+                            <br/>
 
-                        <MemberList data={memberdata}/>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>NUMBER</th>
+                                        <th>ID</th>
+                                        <th>PASSWORD</th>
+                                        <th>NAME</th>
+                                        <th>E-MAIL</th>
+                                        <th>GRADE</th>
+                                        <th>POINT</th>
+                                        <th>ACTIVESTATE</th>
+                                    </tr>
+                                </thead>
 
-                    </table>
+                                <MemberList data={memberdata}/>
 
+                            </table>
+
+                        </div>
                 </div>
         </div>
     );

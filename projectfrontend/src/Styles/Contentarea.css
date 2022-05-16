@@ -1,14 +1,12 @@
-#boardpagebackground {
-    color: black;
+#backpage {
     padding: 10px;
     width: 100%;
     height: 100vh;
     position: relative;
 }
-
-    #boardpagebackground::before {
+    #backpage::before {
         content: "";
-        background-image: url("../styles/img/1158628.png");
+        background-image: url("../styles/img/1108907.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -19,21 +17,19 @@
         right: 0px;
         bottom: 0px;
     }
-
-    #boardpagebackground > *
+    #backpage > *
     {
-        color: black;
         text-align: center;
         position: relative;
     }
 
-    #boardpageouter {
+    #contentouterarea {
         width: 1600px;
         height: 900px;
         margin-top: 80px;
         display: inline-block;
     }
-    #boardpageouter::before {
+    #contentouterarea::before {
         content: "";
         background-color: white;
         opacity: 0.6;
@@ -44,16 +40,8 @@
         bottom: 0px;
         border-radius: 20px;
     }
-    #boardpageouter > * {
+    #contentouterarea > * {
         text-align: center;
         position: relative;
     }
 
-    #boardpageinner {
-        width: 90%;
-        height: 90%;
-        margin: 0 auto;
-    }
-        #boardpageinner > table {
-            width: 100%;
-        }

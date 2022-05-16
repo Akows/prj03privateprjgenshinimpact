@@ -1,4 +1,4 @@
-#memberadmin {
+#memberadminpage {
     color: black;
     padding: 10px;
     width: 100%;
@@ -6,7 +6,7 @@
     position: relative;
 }
 
-    #memberadmin::before {
+    #memberadminpage::before {
         content: "";
         background-image: url("../styles/img/1109789.png");
         background-size: cover;
@@ -20,9 +20,41 @@
         bottom: 0px;
     }
 
-    #memberadmin > *
+    #memberadminpage > *
     {
         color: black;
         text-align: center;
         position: relative;
     }
+
+    #memberadminpagecontentsareaouter {
+        width: 1600px;
+        height: 900px;
+        margin-top: 80px;
+        display: inline-block;
+    }
+    #memberadminpagecontentsareaouter::before {
+        content: "";
+        background-color: white;
+        opacity: 0.6;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        border-radius: 20px;
+    }
+    #memberadminpagecontentsareaouter > * {
+        text-align: center;
+        position: relative;
+    }
+
+    #memberadminpagecontentsarea {
+        width: 90%;
+        height: 90%;
+        margin: 0 auto;
+    }
+        #memberadminpagecontentsarea > table {
+            width: 100%;
+        }
+

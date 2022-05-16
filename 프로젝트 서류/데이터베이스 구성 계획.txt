@@ -9,6 +9,8 @@ GENSHINIMPACT
 	1-6. 회원등급 M_GRADE
 	1-7. 회원포인트 M_POINT
 
+*	1-8. 삭제회원여부 M_DELETE_STATE -> 2022 05 16 추가
+
 2. 게시글 테이블 BOARD_TB
 	2-1. 게시글번호 (PK) B_NUMBER_PK
 	2-2. 게시글제목 B_TITLE
