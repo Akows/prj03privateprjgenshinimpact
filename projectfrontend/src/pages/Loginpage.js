@@ -6,7 +6,7 @@ const Loginpage = () => {
     const [m_id, setM_id] = React.useState('');
     const [m_password, setM_password] = React.useState('');
 
-    const handleClick = (e) => {
+    const clickEvent = (e) => {
         e.preventDefault();
 
         const inputData = {m_id, m_password};
@@ -17,21 +17,21 @@ const Loginpage = () => {
     /*
     const [inputId, setInputId] = useState('')
     const [inputPw, setInputPw] = useState('')
- 
+
 	// input data 의 변화가 있을 때마다 value 값을 변경해서 useState 해준다
     const handleInputId = (e) => {
         setInputId(e.target.value)
     }
- 
+
     const handleInputPw = (e) => {
         setInputPw(e.target.value)
     }
- 
+
 	// login 버튼 클릭 이벤트
     const onClickLogin = () => {
         console.log('click login')
     }
- 
+
 	// 페이지 렌더링 후 가장 처음 호출되는 함수
     useEffect(() => {
         axios.get('/user_inform/login')
@@ -77,7 +77,7 @@ const Loginpage = () => {
                                         <br/>
 
                                         <div id='m-joinpage-submitbtu'>
-                                            <button id='submitbutton' onClick={handleClick}>로그인</button>
+                                            <button id='submitbutton' onClick={clickEvent}>로그인</button>
                                         </div>
                                     </form>
                                 </div>
