@@ -12,4 +12,6 @@ public class MemberDto
     private String m_email;
     private String m_grade;
     private String m_point;
+    private String m_delete_state;
+
 }

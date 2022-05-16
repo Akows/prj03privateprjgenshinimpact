@@ -1,7 +1,8 @@
 COMMIT;
 ROLLBACK;
 
-SELECT * FROM genshinimpact.member_tb;
+SELECT * 
+FROM member_tb;
 
-INSERT INTO member_tb(M_ID, M_PASSWORD, M_NAME, M_EMAIL, M_GRADE, M_POINT)
+INSERT INTO member_tb(M_ID, M_PASSWORD, M_NAME, M_EMAIL, M_GRADE, M_POINT, M_DELETE_STATE)
 VALUES ('', '', '', '', 'D', 0);
