@@ -20,7 +20,6 @@ const MemberjoinPage = () => {
             body:JSON.stringify(inputData)
         }).then(() => {
             console.log('New Member Added!')
-            console.log(inputData)
             window.location.reload();
             alert("회원가입이 완료되었습니다.");
         })

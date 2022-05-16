@@ -1,6 +1,18 @@
+import React from "react";
 import "../styles/Loginpage.css";
 
 const Loginpage = () => {
+
+    const [m_id, setM_id] = React.useState('');
+    const [m_password, setM_password] = React.useState('');
+
+    const handleClick = (e) => {
+        e.preventDefault();
+
+        const inputData = {m_id, m_password};
+
+        console.log(inputData);
+    }
 
     /*
     const [inputId, setInputId] = useState('')
@@ -31,20 +43,53 @@ const Loginpage = () => {
     */
 
     return (
-        <div id="loginpage">
-            <h2>Login</h2>
-            <div>
-                <label htmlFor='input_id'>ID : </label>
-                <input type='text' name='input_id'/>
-            </div>
-            <div>
-                <label htmlFor='input_pw'>PW : </label>
-                <input type='password' name='input_pw'/>
-            </div>
-            <div>
-                <button type='button'>Login</button>
-            </div>
+
+        <div id="m-loginpage-background">
+                <div id='m-loginpage-content-outer'>
+
+                        <h1>로그인</h1>
+
+                                <div id='m-loginpage-joinform'>
+                                    <form>
+                                        <div id='m-loginpage-inputform'>
+
+                                            <h2>회원정보</h2>
+
+                                            <div id='m-loginpage-textinput'>
+                                                <h5 id='m-loginpage-inputguide'>아이디</h5>
+                                                <input value={m_id} placeholder='ID를 입력해주세요' onChange={(e) => setM_id(e.target.value)}/>
+                                            </div>
+
+                                            <br/>
+                                            <br/>
+                                            <hr/>
+
+                                            <div id='m-loginpage-textinput'>
+                                                <h5 id='m-loginpage-inputguide'>비밀번호</h5>
+                                                <input value={m_password} placeholder='PWD를 입력해주세요'  onChange={(e) => setM_password(e.target.value)}/>
+                                            </div>
+
+                                            <br/>
+                                            <br/>
+                                            <hr/>
+                                        </div>
+
+                                        <br/>
+
+                                        <div id='m-joinpage-submitbtu'>
+                                            <button id='submitbutton' onClick={handleClick}>로그인</button>
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <div id='m-joinpage-imgshow'>
+
+                                </div>
+
+
+                </div>
         </div>
+
     );
 }
 export default Loginpage;
