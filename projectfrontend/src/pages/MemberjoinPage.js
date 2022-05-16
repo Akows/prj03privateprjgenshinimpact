@@ -27,41 +27,68 @@ const MemberjoinPage = () => {
     }
 
     return (
-        <div id="memberjoinpage">
+        <div id="m-joinpage-background">
+                <div id='m-joinpage-content-outer'>
 
-            <div id='joinformouter'>
-                <h1>회원가입</h1>
+                        <h1>회원가입</h1>
 
-                <div id='loginformarea'>
-                    <form id='loginform'>
+                                <div id='m-joinpage-joinform'>
+                                    <form>
+                                        <div id='m-joinpage-inputform'>
 
-                        <div id='inputarea'>
-                            <input value={m_id} placeholder='사용할 ID를 입력해주세요' onChange={(e) => setM_id(e.target.value)}/>
-                        </div>
+                                            <h2>회원정보</h2>
 
-                        <div id='inputarea'>
-                            <input value={m_password} placeholder='사용할 PWD를 입력해주세요'  onChange={(e) => setM_password(e.target.value)}/>
-                        </div>
+                                            <div id='m-joinpage-textinput'>
+                                                <h5 id='m-joinpage-inputguide'>아이디</h5>
+                                                <input value={m_id} placeholder='사용할 ID를 입력해주세요' onChange={(e) => setM_id(e.target.value)}/>
+                                            </div>
 
-                        <div id='inputarea'>
-                            <input value={m_name} placeholder='사용할 NAME를 입력해주세요'  onChange={(e) => setM_name(e.target.value)}/>
-                        </div>
+                                            <br/>
+                                            <br/>
+                                            <hr/>
 
-                        <div id='inputarea'>
-                            <input value={m_email} placeholder='사용할 EMAIL를 입력해주세요'  onChange={(e) => setM_email(e.target.value)}/>
-                        </div>
+                                            <div id='m-joinpage-textinput'>
+                                                <h5 id='m-joinpage-inputguide'>비밀번호</h5>
+                                                <input value={m_password} placeholder='사용할 PWD를 입력해주세요'  onChange={(e) => setM_password(e.target.value)}/>
+                                            </div>
 
-                        <br/>
+                                            <br/>
+                                            <br/>
+                                            <hr/>
 
-                        <button id='submitbutton' onClick={handleClick}>가입</button>
-                    </form>
+                                            <div id='m-joinpage-textinput'>
+                                                <h5 id='m-joinpage-inputguide'>이름(닉네임)</h5>
+                                                <input value={m_name} placeholder='사용할 NAME를 입력해주세요'  onChange={(e) => setM_name(e.target.value)}/>
+                                            </div>
+
+                                            <br/>
+                                            <br/>
+                                            <hr/>
+
+                                            <div id='m-joinpage-textinput'>
+                                                <h5 id='m-joinpage-inputguide'>이메일 주소</h5>
+                                                <input value={m_email} placeholder='사용할 EMAIL를 입력해주세요'  onChange={(e) => setM_email(e.target.value)}/>
+                                            </div>
+
+                                            <br/>
+                                            <br/>
+                                            <hr/>
+                                        </div>
+
+                                        <br/>
+
+                                        <div id='m-joinpage-submitbtu'>
+                                            <button id='submitbutton' onClick={handleClick}>가입</button>
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <div id='m-imgshow'>
+
+                                </div>
+
+
                 </div>
-
-                <div id='imgshowarea'>
-
-                </div>
-
-            </div>
         </div>
     );
 }

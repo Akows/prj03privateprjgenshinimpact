@@ -14,15 +14,16 @@ const MemberAdmin = () => {
                 });
             }, []);
 
-{/*  Axios가 아닌 fetch를 사용했을 때 코드
-    React.useEffect(() => {
-        fetch("http://localhost:8090/member/getalluserlist")
-        .then(res => res.json())
-        .then((result) => {
-            setMemberdata(result);
-        }
-    )}, [])
-*/}
+    /*  
+        Axios가 아닌 fetch를 사용했을 때 코드
+        React.useEffect(() => {
+            fetch("http://localhost:8090/member/getalluserlist")
+            .then(res => res.json())
+            .then((result) => {
+                setMemberdata(result);
+            }
+        )}, [])
+    */
 
     return (
         <div id="memberadminpage">
