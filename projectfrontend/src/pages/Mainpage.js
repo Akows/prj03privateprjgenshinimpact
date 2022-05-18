@@ -3,19 +3,40 @@ import "../styles/Mainpage.css";
 const Mainpage = () => {
     return (
         <div>
-            <div className="mainpage1">
+            <div className="mainpage-background-1">
+                    <div className='mainpage-content-outer'>
+
+                            <div className='mainpage-content-title'>
+                                <h1>Genshin Impect</h1>
+                            </div>
+
+                            <div className='mainpage-content-iframe'>
+                                <iframe width="860" height="515" src="https://www.youtube.com/embed/yytFBFzJLmU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen/>
+                            </div>
+
+                            <div className='mainpage-content-introduce'>
+
+                                <h2>
+                                《원신》은 게임 개발사 미호요가 개발한 오픈 월드 어드벤처 게임입니다. <br/>
+                                
+                                이 원소의 힘으로 가득 찬 판타지 대륙 「티바트」에는 어떤 이야기들이 모험가들을 기다리고 있을까요? <br/>
+                                
+                                귀여운 페이몬과 함께 이 광활한 대지로 모험을 떠나보세요!
+                                </h2>
+
+                            </div>
+                    </div>
+            </div>
+
+            <div className="mainpage-background-2">
 
             </div>
 
-            <div className="mainpage2">
+            <div className="mainpage-background-3">
 
             </div>
 
-            <div className="mainpage3">
-
-            </div>
-
-            <div className="mainpage4">
+            <div className="mainpage-background-4">
 
             </div>
         </div>

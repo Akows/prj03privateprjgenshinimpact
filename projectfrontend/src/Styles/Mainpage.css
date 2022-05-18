@@ -1,4 +1,6 @@
-.mainpage1 {
+
+
+.mainpage-background-1 {
     color: black;
     padding: 10px;
     width: 100%;
@@ -6,7 +8,7 @@
     position: relative;
 }
 
-    .mainpage1::before {
+    .mainpage-background-1::before {
         content: "";
         background-image: url("../styles/img/1129503.jpg");
         background-size: cover;
@@ -20,12 +22,64 @@
         bottom: 0px;
     }
 
-    .mainpage1 > *
+    .mainpage-background-1 > *
     {
         color: black;
         text-align: center;
         position: relative;
     }
+
+.mainpage-content-outer {
+    width: 1600px;
+    height: 1050px;
+    margin-top: 80px;
+    display: inline-block;
+}
+
+.mainpage-content-outer > * {
+    color: black;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+}
+
+.mainpage-content-outer::before {
+    content: "";
+    background-color: white;
+    opacity: 0.6;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    border-radius: 20px;
+}
+
+.mainpage-content-title {
+    margin-top: 30px;
+    width: 80%;
+    height: 10%;
+}
+
+.mainpage-content-iframe {
+    margin-top: 60px;
+    width: 80%;
+    height: 30%
+}
+
+.mainpage-content-introduce {
+    margin-top: 40px;
+    width: 80%;
+    height: 30%
+}
+
+.mainpage-content-introduce > h2 {
+    word-spacing: 2px;
+    line-height: 50px;
+    opacity: 0.9;
+    font-family: sans-serif;
+}
+
     
     /* 
         1. 가상요소(before) 생성.
@@ -34,7 +88,7 @@
         4. 배경이미지 이외 요소들은 position: relative; 설정으로 상위로 띄우기.
     */
     
-    .mainpage2 {
+    .mainpage-background-2 {
         color: black;
         padding: 10px;
         width: 100%;
@@ -42,7 +96,7 @@
         position: relative;
     }
     
-        .mainpage2::before {
+        .mainpage-background-2::before {
             content: "";
             background-image: url("../styles/img/wallpapersden.com_genshin-impact-2020_1920x1080.jpg");
             background-size: cover;
@@ -56,14 +110,14 @@
             bottom: 0px;
         }
     
-        .mainpage2 > *
+        .mainpage-background-2 > *
         {
             color: black;
             text-align: center;
             position: relative;
         }
 
-        .mainpage3 {
+        .mainpage-background-3 {
             color: black;
             padding: 10px;
             width: 100%;
@@ -71,7 +125,7 @@
             position: relative;
         }
         
-            .mainpage3::before {
+            .mainpage-background-3::before {
                 content: "";
                 background-image: url("../styles/img/EyZEIOSXIAQNxu6.jfif");
                 background-size: cover;
@@ -85,14 +139,14 @@
                 bottom: 0px;
             }
         
-            .mainpage3 > *
+            .mainpage-background-3 > *
             {
                 color: black;
                 text-align: center;
                 position: relative;
             }
 
-            .mainpage4 {
+            .mainpage-background-4 {
                 color: black;
                 padding: 10px;
                 width: 100%;
@@ -100,7 +154,7 @@
                 position: relative;
             }
             
-                .mainpage4::before {
+                .mainpage-background-4::before {
                     content: "";
                     background-image: url("../styles/img/Genshin.Impact.full.3501128.png");
                     background-size: cover;
@@ -114,7 +168,7 @@
                     bottom: 0px;
                 }
             
-                .mainpage4 > *
+                .mainpage-background-4 > *
                 {
                     color: black;
                     text-align: center;
