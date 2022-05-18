@@ -2,8 +2,6 @@ import * as React from 'react';
 
 import "../style/css/Footer.css";
 
-import { Link } from 'react-router-dom';
-
 import gamelogo from "../style/img/emblem/genshinimpectlogo.png";
 import playgrade from "../style/img/ect/gameratingresult.png";
 import companylogo from "../style/img/emblem/hovoverselogo.png";
@@ -43,23 +41,33 @@ const Footer = () => {
 
                     <div id='generalconditionsarea'>
                         <span className='linkbutton'>
-                            <Link className='link' to="/">개인정보처리방침</Link>
+                            <a className='link' href='https://genshin.hoyoverse.com/ko/company/privacy' target='_blank' rel="noopener noreferrer"> 
+                                개인정보처리방침
+                            </a>   
                         </span>
 
                         <span className='linkbutton'>
-                            <Link className='link' to="/">이용약관</Link>
+                            <a className='link' href='https://genshin.hoyoverse.com/ko/company/terms' target='_blank' rel="noopener noreferrer"> 
+                                이용약관
+                            </a> 
                         </span>
 
                         <span className='linkbutton'>
-                            <Link className='link' to="/">About Us</Link>
+                            <a className='link' href='https://www.hoyoverse.com/ko-kr/about-us?utm_source=genshin&utm_medium=footer' target='_blank' rel="noopener noreferrer"> 
+                                About Us
+                            </a> 
                         </span>
 
                         <span className='linkbutton'>
-                            <Link className='link' to="/">개인정보 수집 및 이용</Link>
+                            <a className='link' href='https://genshin.hoyoverse.com/ko/company/fund' target='_blank' rel="noopener noreferrer"> 
+                            개인정보 수집 및 이용
+                            </a> 
                         </span>
 
                         <span className='linkbutton'>
-                            <Link className='link' to="/">고객센터</Link>
+                            <a className='link' href='mailto:genshincs_kr@hoyoverse.com' target='_blank' rel="noopener noreferrer"> 
+                                고객센터
+                            </a> 
                         </span>
                     </div>
 

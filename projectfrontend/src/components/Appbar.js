@@ -51,7 +51,7 @@ const Appbar = () => {
                         <ul id="sub-menu">
 
                             <li>
-                                <Link to="/">
+                                <Link to="/login">
                                     로그인
                                 </Link>
                             </li>

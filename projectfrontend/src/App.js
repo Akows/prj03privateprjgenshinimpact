@@ -6,6 +6,7 @@ import './App.css';
 
 import Appbar from './components/Appbar';
 import Footer from './components/Footer';
+import Loginpage from './pages/Loginpage';
 import Mainpage from './pages/Mainpage';
 
 const App = () => {
@@ -19,6 +20,8 @@ const App = () => {
         <Routes>
 
           <Route path='/' element={<Mainpage />}/>
+
+          <Route path='/login' element={<Loginpage />}/>         
 
         </Routes>
       </div>

@@ -10,7 +10,6 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/member")
-@CrossOrigin
 public class MemberController {
 
     @Autowired
@@ -28,5 +27,13 @@ public class MemberController {
     public List<MemberDto> getAllUserList()
     {
         return memberService.getAllUserList();
+    }
+
+    @PostMapping("/connecttest")
+    public String test(@RequestBody MemberDto memberDto)
+    {
+        System.out.println(memberDto);
+
+        return "Connect Complete!";
     }
 }
