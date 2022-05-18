@@ -1,0 +1,176 @@
+
+
+.mainpage-background-1 {
+    color: black;
+    padding: 10px;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+    .mainpage-background-1::before {
+        content: "";
+        background-image: url("../img/background/TravelerCelestial.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0.7;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+    }
+
+    .mainpage-background-1 > *
+    {
+        color: black;
+        text-align: center;
+        position: relative;
+    }
+
+.mainpage-content-outer {
+    width: 1600px;
+    height: 1050px;
+    margin-top: 80px;
+    display: inline-block;
+}
+
+.mainpage-content-outer > * {
+    color: black;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+}
+
+.mainpage-content-outer::before {
+    content: "";
+    background-color: white;
+    opacity: 0.6;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    border-radius: 20px;
+}
+
+.mainpage-content-title {
+    margin-top: 30px;
+    width: 80%;
+    height: 10%;
+}
+
+.mainpage-content-iframe {
+    margin-top: 60px;
+    width: 80%;
+    height: 30%
+}
+
+.mainpage-content-introduce {
+    margin-top: 40px;
+    width: 80%;
+    height: 30%
+}
+
+.mainpage-content-introduce > h2 {
+    word-spacing: 2px;
+    line-height: 50px;
+    opacity: 0.9;
+    font-family: sans-serif;
+}
+
+    
+    /* 
+        1. 가상요소(before) 생성.
+        2. 가상요소에 배경이미지 및 관련 CSS 설정.
+        3. 가상요소의 위치(top/ left / right / bottom)는 모두 0으로 설정.
+        4. 배경이미지 이외 요소들은 position: relative; 설정으로 상위로 띄우기.
+    */
+    
+    .mainpage-background-2 {
+        color: black;
+        padding: 10px;
+        width: 100%;
+        height: 100vh;
+        position: relative;
+    }
+    
+        .mainpage-background-2::before {
+            content: "";
+            background-image: url("../img/background/BarbatosMondstadt.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.7;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+        }
+    
+        .mainpage-background-2 > *
+        {
+            color: black;
+            text-align: center;
+            position: relative;
+        }
+
+        .mainpage-background-3 {
+            color: black;
+            padding: 10px;
+            width: 100%;
+            height: 100vh;
+            position: relative;
+        }
+        
+            .mainpage-background-3::before {
+                content: "";
+                background-image: url("../img/background/MoraxLiyue.jfif");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                opacity: 0.7;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+            }
+        
+            .mainpage-background-3 > *
+            {
+                color: black;
+                text-align: center;
+                position: relative;
+            }
+
+            .mainpage-background-4 {
+                color: black;
+                padding: 10px;
+                width: 100%;
+                height: 100vh;
+                position: relative;
+            }
+            
+                .mainpage-background-4::before {
+                    content: "";
+                    background-image: url("../img/background/BaalInazuma.png");
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    opacity: 0.7;
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                }
+            
+                .mainpage-background-4 > *
+                {
+                    color: black;
+                    text-align: center;
+                    position: relative;
+                }

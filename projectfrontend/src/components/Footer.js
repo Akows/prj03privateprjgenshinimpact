@@ -1,14 +1,15 @@
 import * as React from 'react';
-import "../styles/Footer.css";
+
+import "../style/css/Footer.css";
+
 import { Link } from 'react-router-dom';
 
-import gamelogo from "../styles/img/GIKR_1587984241_9146.png";
-import playgrade from "../styles/img/1c815dcb772be24409961e7d94e729c9_3752895997708255975.png";
-import companylogo from "../styles/img/eaa64d81ae6a7318a6afb91cbffd83a4_118924438105936743.png";
-
-import discordicon from "../styles/img/icons8-discord-30.png";
-import facebookicon from "../styles/img/icons8-facebook-30.png";
-import youtubeicon from "../styles/img/icons8-youtube-30.png";
+import gamelogo from "../style/img/emblem/genshinimpectlogo.png";
+import playgrade from "../style/img/ect/gameratingresult.png";
+import companylogo from "../style/img/emblem/hovoverselogo.png";
+import discordicon from "../style/img/emblem/discordicon3030.png";
+import facebookicon from "../style/img/emblem/facebookicon3030.png";
+import youtubeicon from "../style/img/emblem/youtubeicon3030.png";
 
 const Footer = () => {
     return (

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
-import "../styles/Appbar.css";
+import "../style/css/Appbar.css";
 
 const Appbar = () => {
 
@@ -15,7 +15,7 @@ const Appbar = () => {
                     </li>
 
                     <li id='ab-btn'>
-                        <Link to="/boardpage">
+                        <Link to="/">
                             자유게시판
                         </Link>
                     </li>
@@ -27,18 +27,18 @@ const Appbar = () => {
                     </li>
 
                     <li id='ab-btn'>
-                        <Link to="/charactersinfopage">
+                        <Link to="/">
                             캐릭터 소개
                         </Link>
                     </li>
                     <li id='ab-btn'>
-                        <Link to="/worldinfopage">
+                        <Link to="/">
                             티바트
                         </Link>
                     </li>
 
                     <li id='ab-btn'>
-                        <Link to="/worldinfopage">
+                        <Link to="/">
                             월드맵
                         </Link>
                     </li> 
@@ -51,13 +51,13 @@ const Appbar = () => {
                         <ul id="sub-menu">
 
                             <li>
-                                <Link to="/loginpage">
+                                <Link to="/">
                                     로그인
                                 </Link>
                             </li>
 
                             <li>                    
-                                <Link to="/MemberjoinPage">
+                                <Link to="/">
                                     회원가입
                                 </Link>
                             </li>

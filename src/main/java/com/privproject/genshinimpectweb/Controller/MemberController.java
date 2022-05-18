@@ -2,7 +2,6 @@ package com.privproject.genshinimpectweb.Controller;
 
 import com.privproject.genshinimpectweb.Entity.MemberDto;
 import com.privproject.genshinimpectweb.Service.MemberService;
-import com.privproject.genshinimpectweb.Service.MemberServiceImpl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
