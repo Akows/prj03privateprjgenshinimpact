@@ -15,7 +15,7 @@ const Appbar = () => {
                     </li>
 
                     <li id='ab-btn'>
-                        <Link to="/">
+                        <Link to="/board">
                             자유게시판
                         </Link>
                     </li>
@@ -57,8 +57,14 @@ const Appbar = () => {
                             </li>
 
                             <li>                    
-                                <Link to="/">
+                                <Link to="/memberjoin">
                                     회원가입
+                                </Link>
+                            </li>
+
+                            <li>                    
+                                <Link to="/memberadmin/memberlist">
+                                    회원목록
                                 </Link>
                             </li>
 

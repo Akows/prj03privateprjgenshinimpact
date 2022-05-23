@@ -1,0 +1,120 @@
+#b-writepage-background {
+    color: black;
+    padding: 30px;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    text-align: center;
+}
+
+    #b-writepage-background::before {
+        content: "";
+        background-image: url("../img/background/MondstadtNight.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0.7;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+    }
+
+    #b-writepage-background > * {
+        color: black;
+        text-align: center;
+        position: relative;
+    }
+
+    #b-writepage-content-outer {
+        width: 1600px;
+        height: 1050px;
+        margin-top: 80px;
+        display: inline-block;
+    }
+
+    #b-writepage-content-outer > * {
+        color: black;
+        text-align: center;
+        position: relative;
+    }
+
+    #b-writepage-content-outer::before {
+        content: "";
+        background-color: white;
+        opacity: 0.6;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        border-radius: 20px;
+    }
+
+    #b-writepage-writeform{
+        width: 30%;
+        height: 90%;
+        margin-top: 100px;
+        margin-left: 60px;
+        float: left;
+    }
+
+    @keyframes bfadeInUp {
+        0% {
+            opacity: 0;
+            transform: translate3d(0, 15%, 0);
+        }
+        to {
+            opacity: 1;
+            transform: translateZ(0);
+        }
+    }
+
+    #b-writepage-imgshow{
+        width: 60%;
+        height: 78%;
+        padding: 10px;
+        margin-right: 35px;
+        float: right;
+        content: "";
+        background-image: url("../img/character/Character_Kamisato_Ayaka_Full_Wish.webp");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: relative;
+        animation: bfadeInUp 0.6s;
+    }
+
+#b-writepage-inputform {
+    width: 95%;
+    height: 95%;
+    margin-bottom: 10px;
+}
+
+    #b-writepage-inputguide {
+        margin-bottom: 8px;
+        text-align: left;
+    }
+
+    #b-writepage-textinput {
+        width: 100%;
+        height: 30px;
+        box-sizing: border-box;
+    }
+        #b-writepage-textinput > input {
+            width: 100%;
+            height: 100%;
+        }
+
+
+#b-writepage-submitbtu {
+    width: 95%;
+    height: 15%;
+}
+    #submitbutton {
+        font-size: larger;
+        font-weight: bolder;
+        width: 120px;
+        height: 50px;
+    }

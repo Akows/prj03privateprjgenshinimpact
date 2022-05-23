@@ -3,8 +3,8 @@
 
 <mapper namespace="com.privproject.genshinimpectweb.Mapper.MemberMapper">
     <insert id="memberSignUp" parameterType="com.privproject.genshinimpectweb.Entity.MemberDto">
-        INSERT INTO member_tb(M_ID, M_PASSWORD, M_NAME, M_EMAIL)
-        VALUES (#{m_id}, #{m_password}, #{m_name}, #{m_email})
+        INSERT INTO member_tb(M_ID, M_PASSWORD, M_NAME, M_EMAIL, M_GRADE, M_POINT, M_DELETE_STATE)
+        VALUES (#{m_id}, #{m_password}, #{m_name}, #{m_email}, 'D', '0', 'N');
     </insert>
 
     <select id="getAllUserList" resultType="com.privproject.genshinimpectweb.Entity.MemberDto">

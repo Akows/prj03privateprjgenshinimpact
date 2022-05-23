@@ -10,10 +10,11 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/member")
+@CrossOrigin
 public class MemberController {
 
     @Autowired
-    MemberService memberService;
+    private MemberService memberService;
 
     @PostMapping("/signup")
     public String MemberSignUp(@RequestBody MemberDto memberDto)
@@ -28,6 +29,11 @@ public class MemberController {
     {
         return memberService.getAllUserList();
     }
+
+
+
+
+
 
     @PostMapping("/connecttest")
     public String test(@RequestBody MemberDto memberDto)

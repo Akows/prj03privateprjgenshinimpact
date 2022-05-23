@@ -1,0 +1,59 @@
+#boardpagebackground {
+    color: black;
+    padding: 10px;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+    #boardpagebackground::before {
+        content: "";
+        background-image: url("../img/background/YoimiyaAyakaInazuma.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0.7;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+    }
+
+    #boardpagebackground > *
+    {
+        color: black;
+        text-align: center;
+        position: relative;
+    }
+
+    #boardpageouter {
+        width: 1600px;
+        height: 900px;
+        margin-top: 80px;
+        display: inline-block;
+    }
+    #boardpageouter::before {
+        content: "";
+        background-color: white;
+        opacity: 0.6;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        border-radius: 20px;
+    }
+    #boardpageouter > * {
+        text-align: center;
+        position: relative;
+    }
+
+    #boardpageinner {
+        width: 90%;
+        height: 90%;
+        margin: 0 auto;
+    }
+        #boardpageinner > table {
+            width: 100%;
+        }

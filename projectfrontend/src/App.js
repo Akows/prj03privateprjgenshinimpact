@@ -6,8 +6,14 @@ import './App.css';
 
 import Appbar from './components/Appbar';
 import Footer from './components/Footer';
-import Loginpage from './pages/Loginpage';
 import Mainpage from './pages/Mainpage';
+
+import Boardpage from './pages/Boardpage';
+
+import Loginpage from './pages/Loginpage';
+import MemberAdmin from './pages/MemberAdmin';
+import MemberjoinPage from './pages/MemberjoinPage';
+import Boardwritepage from './pages/Boardwritepage';
 
 const App = () => {
   return (
@@ -21,7 +27,12 @@ const App = () => {
 
           <Route path='/' element={<Mainpage />}/>
 
-          <Route path='/login' element={<Loginpage />}/>         
+          <Route path='/board' element={<Boardpage />}/>   
+          <Route path='/board/boardwrite' element={<Boardwritepage />}/>  
+
+          <Route path='/login' element={<Loginpage />}/>   
+          <Route path='/memberjoin' element={<MemberjoinPage />}/>            
+          <Route path='/memberadmin/memberlist' element={<MemberAdmin />}/>     
 
         </Routes>
       </div>

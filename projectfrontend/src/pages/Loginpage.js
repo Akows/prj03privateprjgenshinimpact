@@ -9,8 +9,11 @@ const Loginpage = () => {
 
     const inputData = {m_id, m_password};
 
-    const clickEvent = (e) => {
+    const clickEvent = (e) => { 
         e.preventDefault();
+
+        window.location.reload();
+        alert("로그인 기능은 구현되지 않았습니다. ㅠㅠ");
 
         axios.post("/member/connecttest", inputData)
         .then(function(response) {
