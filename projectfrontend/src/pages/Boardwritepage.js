@@ -28,10 +28,10 @@ const Boardwritepage = () => {
                         <h1>글 작성</h1>
 
                                 <div id='b-writepage-writecontent'>
-                                    <h2>작성한 제목</h2>
+                                    <h2>{b_title}</h2>
                                     
                                     <div>
-                                    작성한 내용
+                                    {b_content}
                                     </div>
                                 </div>
 
@@ -50,7 +50,7 @@ const Boardwritepage = () => {
                                             <br/>
                                             <hr/>
 
-                                            <div id='b-writepage-textinput'>
+                                            <div id='b-writepage-textinput2'>
                                                 <h5 id='b-writepage-inputguide'>글내용</h5>
                                                 <input value={b_content} placeholder='내용을 입력해주세요'  onChange={(e) => setContent(e.target.value)}/>
                                             </div>

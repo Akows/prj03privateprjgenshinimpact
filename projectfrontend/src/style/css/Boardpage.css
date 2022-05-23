@@ -57,3 +57,16 @@
         #boardpageinner > table {
             width: 100%;
         }
+
+    #bp-boardpage-writebtn{
+        width: 20%;
+    }
+    #bp-boardpage-writebtn > a {
+        background-color: beige;
+        color: black;
+        font-weight: bolder;
+        font-size: larger;
+        padding: 20px 30px;
+        border-radius: 30px;
+        text-decoration: none;
+    }

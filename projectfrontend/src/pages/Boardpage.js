@@ -1,5 +1,6 @@
 import axios from 'axios';
 import * as React from 'react';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import BoardList from '../components/BoardList';
 import "../style/css/Boardpage.css";
@@ -26,27 +27,28 @@ const Boardpage = () => {
                             <h1>자유게시판</h1>
 
                             <div id='bp-boardpage-writebtn'>
-                                    <button>                                        
-                                        <Link to="/board/boardwrite">
-                                            글쓰기
-                                        </Link>
-                                    </button>
+                                    <Link to="/board/boardwrite">
+                                        글쓰기
+                                    </Link>
                             </div>
 
                             <br/>
 
                             <table>
-                                <thead>
-                                    <tr>
-                                        <th>글 번호</th>
-                                        <th>제목</th>
-                                        <th>작성시간</th>
-                                    </tr>
-                                </thead>
+                                    <thead>
+                                        <tr>
+                                            <th>글 번호</th>
+                                            <th>제목</th>
+                                            <th>작성시간</th>
+                                        </tr>
+                                    </thead>
 
-                                <BoardList data={boarddata}/>
+                                    <BoardList data={boarddata}/>
 
-                            </table>
+                                </table> 
+
+
+
                 </div>
             </div>
         </div>

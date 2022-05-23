@@ -52,42 +52,24 @@
         border-radius: 20px;
     }
 
-    #b-writepage-writeform{
-        width: 30%;
+    #b-writepage-writecontent {
+        margin: auto;
+        width: 80%;
+        border: 1px solid #333;
+        padding: 10px 0 30px 0;
+        border-radius: 5px;
+        margin-bottom : 3px;
+    }
+
+    #b-writepage-writeform {
+        margin: auto;
+        width: 80%;
         height: 90%;
-        margin-top: 100px;
-        margin-left: 60px;
-        float: left;
-    }
 
-    @keyframes bfadeInUp {
-        0% {
-            opacity: 0;
-            transform: translate3d(0, 15%, 0);
-        }
-        to {
-            opacity: 1;
-            transform: translateZ(0);
-        }
-    }
-
-    #b-writepage-imgshow{
-        width: 60%;
-        height: 78%;
-        padding: 10px;
-        margin-right: 35px;
-        float: right;
-        content: "";
-        background-image: url("../img/character/Character_Kamisato_Ayaka_Full_Wish.webp");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        position: relative;
-        animation: bfadeInUp 0.6s;
     }
 
 #b-writepage-inputform {
-    width: 95%;
+    width: 99.5%;
     height: 95%;
     margin-bottom: 10px;
 }
@@ -100,13 +82,22 @@
     #b-writepage-textinput {
         width: 100%;
         height: 30px;
-        box-sizing: border-box;
+
     }
         #b-writepage-textinput > input {
             width: 100%;
             height: 100%;
         }
 
+    #b-writepage-textinput2 {
+        width: 100%;
+        height: 400px;
+        box-sizing: border-box;
+    }
+        #b-writepage-textinput2 > input {
+            width: 100%;
+            height: 100%;
+        }
 
 #b-writepage-submitbtu {
     width: 95%;
