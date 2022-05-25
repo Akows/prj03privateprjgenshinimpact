@@ -21,3 +21,7 @@ TRUNCATE board_tb;
 
 set FOREIGN_KEY_CHECKS = 0;
 set FOREIGN_KEY_CHECKS = 1;
+
+SELECT *
+FROM board_tb
+WHERE b_delete_state != 'Y';

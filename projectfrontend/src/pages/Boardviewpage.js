@@ -21,8 +21,7 @@ const Boardviewpage = (data) => {
 
     const backtolist = (event) => { 
         event.preventDefault();
-
-        navigate(`/board`);
+        navigate(-1);
     }
 
     return (
@@ -39,7 +38,7 @@ const Boardviewpage = (data) => {
                                     <p>{loc.state.b_number_pk}</p> <p>{loc.state.b_write_time}</p>
                                     
                                     <div>
-                                    {loc.state.b_content}
+                                        {loc.state.b_content}
                                     </div>
 
                                     <button onClick={backtolist}>뒤로 가기</button>

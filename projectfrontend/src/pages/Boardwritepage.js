@@ -69,7 +69,7 @@ const Boardwritepage = () => {
                                         handleb_titleChange={onb_titleChange}
                                         handleb_contentChange={onb_contentChange}
                                         handleonSubmit={onSubmithandle}
-                                        isUpdatereq={'isUpdate'}
+                                        isUpdatereq={false}
                                     />
                                 </div>
                 </div>
