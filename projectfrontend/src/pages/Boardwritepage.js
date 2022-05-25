@@ -1,4 +1,6 @@
+import axios from 'axios';
 import * as React from 'react';
+import Boardinput from '../components/Boardinput';
 import "../style/css/Boardwritepage.css";
 
 const Boardwritepage = () => {
@@ -6,19 +8,41 @@ const Boardwritepage = () => {
     const [b_title, setTitle] = React.useState('');
     const [b_content, setContent] = React.useState('');
 
-    const boardwritedata = {b_title, b_content};
+    const onb_titleChange = (event) => {
+        setTitle(event.currentTarget.value);
+        console.log(b_title);
+    };
+
+
+    const onb_contentChange = (event) => {
+        setContent(event.currentTarget.value);
+        console.log(b_content);
+    };
 
     const handleClick = (e) => {
         e.preventDefault();
 
-        fetch(
-            "http://localhost:8090/board/write", {
-            method:"POST",
-            headers:{"Content-type": "application/json"},
-            body:JSON.stringify(boardwritedata)
-        }).then(() => {
-            console.log('New Board Contents Added!')
+        const boardwritedata = {b_title, b_content};
+
+        axios.post('http://localhost:8090/board/write', boardwritedata)
+        .then((Response) => {
+            console.log(boardwritedata);
+            console.log('New board Added!')
+            window.location.reload();
+            alert("글 작성이 완료되었습니다.");
         })
+        .catch((error)=>{
+            console.log(error);
+        })
+
+        // fetch(
+        //     "http://localhost:8090/board/write", {
+        //     method:"POST",
+        //     headers:{"Content-type": "application/json"},
+        //     body:JSON.stringify(boardwritedata)
+        // }).then(() => {
+        //     console.log('New Board Contents Added!')
+        // })
     }
 
     return (
@@ -36,36 +60,13 @@ const Boardwritepage = () => {
                                 </div>
 
                                 <div id='b-writepage-writeform'>
-                                    <form>
-                                        <div id='b-writepage-inputform'>
-
-                                            <h2>작성정보</h2>
-
-                                            <div id='b-writepage-textinput'>
-                                                <h5 id='b-writepage-inputguide'>글제목</h5>
-                                                <input value={b_title} placeholder='제목을 입력해주세요' onChange={(e) => setTitle(e.target.value)}/>
-                                            </div>
-
-                                            <br/>
-                                            <br/>
-                                            <hr/>
-
-                                            <div id='b-writepage-textinput2'>
-                                                <h5 id='b-writepage-inputguide'>글내용</h5>
-                                                <input value={b_content} placeholder='내용을 입력해주세요'  onChange={(e) => setContent(e.target.value)}/>
-                                            </div>
-
-                                            <br/>
-                                            <br/>
-                                            <hr/>
-                                        </div>
-
-                                        <br/>
-
-                                        <div id='b-writepage-submitbtu'>
-                                            <button id='submitbutton' onClick={handleClick}>글 작성</button>
-                                        </div>
-                                    </form>
+                                    <Boardinput
+                                        b_title={b_title}
+                                        b_content={b_content}
+                                        b_titleChange={onb_titleChange}
+                                        b_contentChange={onb_contentChange}
+                                        handleClick={handleClick}
+                                    />
                                 </div>
                 </div>
         </div>

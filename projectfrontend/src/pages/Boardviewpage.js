@@ -31,7 +31,7 @@ const Boardwritepage = () => {
                                     <form>
                                         <div id='b-writepage-inputform'>
 
-                                            <h2>회원정보</h2>
+                                            <h2>작성정보</h2>
 
                                             <div id='b-writepage-textinput'>
                                                 <h5 id='b-writepage-inputguide'>글제목</h5>

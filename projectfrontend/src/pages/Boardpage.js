@@ -1,6 +1,5 @@
 import axios from 'axios';
 import * as React from 'react';
-import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import BoardList from '../components/BoardList';
 import "../style/css/Boardpage.css";
@@ -32,7 +31,7 @@ const Boardpage = () => {
                                     </Link>
                             </div>
 
-                            <br/>
+                            <br/>     
 
                             <table>
                                     <thead>
@@ -44,11 +43,7 @@ const Boardpage = () => {
                                     </thead>
 
                                     <BoardList data={boarddata}/>
-
-                                </table> 
-
-
-
+                            </table> 
                 </div>
             </div>
         </div>

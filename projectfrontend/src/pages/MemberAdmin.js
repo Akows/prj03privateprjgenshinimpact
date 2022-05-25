@@ -40,7 +40,10 @@ const MemberAdmin = () => {
 
                             <br/>
 
-                            <table>
+                            {memberdata === undefined && <p>회원 데이터가 존재하지 않습니다.</p>} 
+
+                            {memberdata !== undefined &&                             
+                                <table>
                                 <thead>
                                     <tr>
                                         <th>NUMBER</th>
@@ -56,7 +59,10 @@ const MemberAdmin = () => {
 
                                 <MemberList data={memberdata}/>
 
-                            </table>
+                                </table>
+                            } 
+
+
 
                         </div>
                 </div>
