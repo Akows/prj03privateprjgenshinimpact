@@ -7,6 +7,12 @@
         FROM board_tb
     </select>
 
+    <select id="getBoardByNumber" resultType="com.privproject.genshinimpectweb.Entity.BoardDto" parameterType="com.privproject.genshinimpectweb.Entity.BoardDto">
+        SELECT *
+        FROM board_tb
+        WHERE b_number_pk = #{b_number_pk}
+    </select>
+
     <insert id="boardWrite" parameterType="com.privproject.genshinimpectweb.Entity.BoardDto">
         INSERT INTO board_tb(B_TITLE, B_CONTENT, B_WRITE_TIME, B_DELETE_STATE, B_ATTACH_FILE_INFO)
         VALUES (#{b_title}, #{b_content}, now(), 'N', '없음')

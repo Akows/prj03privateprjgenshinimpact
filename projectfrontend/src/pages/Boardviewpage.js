@@ -1,70 +1,49 @@
 import * as React from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import "../style/css/Boardviewpage.css";
 
-const Boardwritepage = () => {
+const Boardviewpage = (data) => {
 
-    const [b_title, setTitle] = React.useState('');
-    const [b_content, setContent] = React.useState('');
+    const loc = useLocation();
+    const navigate = useNavigate();
 
-    const boardwritedata = {b_title, b_content};
+    // const searchnumber = loc.state.b_number_pk;
 
-    const handleClick = (e) => {
-        e.preventDefault();
+    // const [boarddata, setBoarddata] = React.useState([]);
 
-        fetch(
-            "http://localhost:8090/board/write", {
-            method:"POST",
-            headers:{"Content-type": "application/json"},
-            body:JSON.stringify(boardwritedata)
-        }).then(() => {
-            console.log('New Board Contents Added!')
-        })
+    // React.useEffect(() => {
+    //     axios.post("http://localhost:8090/board/getboardbynumber", searchnumber) 
+    //             .then(response => {
+    //                 console.log(response.data);
+    //                 setBoarddata(response.data);
+    //             });
+    // }, []);
+
+    const backtolist = (event) => { 
+        event.preventDefault();
+
+        navigate(`/board`);
     }
 
     return (
         <div id="b-writepage-background">
                 <div id='b-writepage-content-outer'>
 
-                        <h1>글 작성</h1>
+                        <h1>작성글 보기</h1>
 
-                                <div id='b-writepage-writeform'>
-                                    <form>
-                                        <div id='b-writepage-inputform'>
+                                <div id='b-writepage-writecontent'>
+                                    <h2>{loc.state.b_title}</h2>
 
-                                            <h2>작성정보</h2>
+                                    <hr/>
 
-                                            <div id='b-writepage-textinput'>
-                                                <h5 id='b-writepage-inputguide'>글제목</h5>
-                                                <input value={b_title} placeholder='제목을 입력해주세요' onChange={(e) => setTitle(e.target.value)}/>
-                                            </div>
+                                    <p>{loc.state.b_number_pk}</p> <p>{loc.state.b_write_time}</p>
+                                    
+                                    <div>
+                                    {loc.state.b_content}
+                                    </div>
 
-                                            <br/>
-                                            <br/>
-                                            <hr/>
-
-                                            <div id='b-writepage-textinput'>
-                                                <h5 id='b-writepage-inputguide'>글내용</h5>
-                                                <input value={b_content} placeholder='내용을 입력해주세요'  onChange={(e) => setContent(e.target.value)}/>
-                                            </div>
-
-                                            <br/>
-                                            <br/>
-                                            <hr/>
-                                        </div>
-
-                                        <br/>
-
-                                        <div id='b-writepage-submitbtu'>
-                                            <button id='submitbutton' onClick={handleClick}>글 작성</button>
-                                        </div>
-                                    </form>
+                                    <button onClick={backtolist}>뒤로 가기</button>
                                 </div>
-
-                                <div id='b-writepage-imgshow'>
-
-                                </div>
-
-
                 </div>
         </div>
     );

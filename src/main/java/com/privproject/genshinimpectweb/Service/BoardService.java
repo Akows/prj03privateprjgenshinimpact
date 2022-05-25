@@ -9,4 +9,6 @@ public interface BoardService
     void boardWrite(BoardDto boardDto);
 
     public List<BoardDto> getallboardlist();
+
+    public List<BoardDto> getBoardByNumber(BoardDto boardDto);
 }

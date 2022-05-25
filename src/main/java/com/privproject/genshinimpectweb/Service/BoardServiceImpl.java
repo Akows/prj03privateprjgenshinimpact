@@ -25,4 +25,10 @@ public class BoardServiceImpl implements BoardService
     {
         return boardMapper.getallboardlist();
     }
+
+    @Override
+    public List<BoardDto> getBoardByNumber(BoardDto boardDto)
+    {
+        return boardMapper.getBoardByNumber(boardDto);
+    }
 }

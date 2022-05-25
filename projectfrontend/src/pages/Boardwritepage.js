@@ -5,6 +5,8 @@ import "../style/css/Boardwritepage.css";
 
 const Boardwritepage = () => {
 
+    // const [isUpdate, setisUpdate] = React.useState(false);
+
     const [b_title, setTitle] = React.useState('');
     const [b_content, setContent] = React.useState('');
 
@@ -13,16 +15,17 @@ const Boardwritepage = () => {
         console.log(b_title);
     };
 
-
     const onb_contentChange = (event) => {
         setContent(event.currentTarget.value);
         console.log(b_content);
     };
 
-    const handleClick = (e) => {
-        e.preventDefault();
+    const onSubmithandle = (event) => {
+        event.preventDefault();
 
-        const boardwritedata = {b_title, b_content};
+        const boardwritedata = {b_title: b_title, b_content: b_content};
+
+        console.log(boardwritedata);
 
         axios.post('http://localhost:8090/board/write', boardwritedata)
         .then((Response) => {
@@ -61,11 +64,12 @@ const Boardwritepage = () => {
 
                                 <div id='b-writepage-writeform'>
                                     <Boardinput
-                                        b_title={b_title}
-                                        b_content={b_content}
-                                        b_titleChange={onb_titleChange}
-                                        b_contentChange={onb_contentChange}
-                                        handleClick={handleClick}
+                                        valueb_title={b_title}
+                                        valueb_content={b_content}
+                                        handleb_titleChange={onb_titleChange}
+                                        handleb_contentChange={onb_contentChange}
+                                        handleonSubmit={onSubmithandle}
+                                        isUpdatereq={'isUpdate'}
                                     />
                                 </div>
                 </div>

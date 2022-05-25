@@ -1,7 +1,7 @@
 
 import "../style/css/Boardinput.css";
 
-const Boardinput = (param) => {
+const Boardinput = (props) => {
     return (
         <form>
             <div id='b-writepage-inputform'>
@@ -10,7 +10,7 @@ const Boardinput = (param) => {
 
                 <div id='b-writepage-textinput'>
                     <h5 id='b-writepage-inputguide'>글제목</h5>
-                    <input key={param.b_title} defaultValue={param.b_title} placeholder='제목을 입력해주세요' onChange={param.onb_titleChange}/>
+                    <input defaultValue={props.valueb_title} placeholder='제목을 입력해주세요' onChange={props.handleb_titleChange}/>
                 </div>
 
                 <br/>
@@ -19,7 +19,7 @@ const Boardinput = (param) => {
 
                 <div id='b-writepage-textinput2'>
                     <h5 id='b-writepage-inputguide'>글내용</h5>
-                    <input key={param.b_content} defaultValue={param.b_content} placeholder='내용을 입력해주세요' onChange={param.onb_contentChange}/>
+                    <input defaultValue={props.valueb_content} placeholder='내용을 입력해주세요' onChange={props.handleb_contentChange}/>
                 </div>
 
                 <br/>
@@ -30,7 +30,9 @@ const Boardinput = (param) => {
             <br/>
 
             <div id='b-writepage-submitbtu'>
-                <button id='submitbutton' onClick={param.handleClick}>글 작성</button>
+                <button id='submitbutton' onClick={props.handleonSubmit}>
+                    {props.isUpdatereq ? "글 수정" : "글 등록"}
+                </button>
             </div>
         </form>
     );

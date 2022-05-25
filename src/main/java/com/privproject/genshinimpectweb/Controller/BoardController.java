@@ -28,4 +28,10 @@ public class BoardController {
     {
         return boardService.getallboardlist();
     }
+
+    @PostMapping("/getboardbynumber")
+    public List<BoardDto> getBoardByNumber(@RequestBody BoardDto boardDto)
+    {
+        return boardService.getBoardByNumber(boardDto);
+    }
 }

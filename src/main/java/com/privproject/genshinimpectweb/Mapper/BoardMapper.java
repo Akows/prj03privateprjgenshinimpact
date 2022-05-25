@@ -11,4 +11,6 @@ public interface BoardMapper
     void boardWrite(BoardDto boardDto);
 
     List<BoardDto> getallboardlist();
+
+    List<BoardDto> getBoardByNumber(BoardDto boardDto);
 }
