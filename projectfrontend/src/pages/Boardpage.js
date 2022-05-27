@@ -42,7 +42,10 @@ const Boardpage = () => {
                                         </tr>
                                     </thead>
 
-                                    <BoardList data={boarddata}/>
+                                    {boarddata === "" && <p>게시글 데이터가 존재하지 않습니다.</p>} 
+
+                                    {boarddata !== "" && <BoardList data={boarddata}/>} 
+
                             </table> 
                 </div>
             </div>

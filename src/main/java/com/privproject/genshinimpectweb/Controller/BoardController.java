@@ -34,8 +34,6 @@ public class BoardController {
     {
         boardService.boardDelete(boardDto);
 
-        System.out.println(boardDto);
-
         return "Board Delete Complete!";
     }
 }

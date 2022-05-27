@@ -40,9 +40,9 @@ const MemberAdmin = () => {
 
                             <br/>
 
-                            {memberdata === undefined && <p>회원 데이터가 존재하지 않습니다.</p>} 
+                            {memberdata === "" && <p>회원 데이터가 존재하지 않습니다.</p>} 
 
-                            {memberdata !== undefined &&                             
+                            {memberdata !== "" &&                             
                                 <table>
                                 <thead>
                                     <tr>

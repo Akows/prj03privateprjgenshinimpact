@@ -52,6 +52,9 @@ const Boardviewpage = (data) => {
 
     const boardupdate = (event) => { 
         event.preventDefault();
+
+        
+
         navigate(-1);
     }
 

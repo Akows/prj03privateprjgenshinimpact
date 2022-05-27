@@ -34,6 +34,10 @@ const Boardinput = (props) => {
                     {props.isUpdatereq ? "글 수정" : "글 등록"}
                 </button>
             </div>
+
+            <button onClick={props.handleReset}>
+                초기화
+            </button>
         </form>
     );
 }
