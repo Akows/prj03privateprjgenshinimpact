@@ -15,6 +15,7 @@ import MemberAdmin from './pages/MemberAdmin';
 import MemberjoinPage from './pages/MemberjoinPage';
 import Boardwritepage from './pages/Boardwritepage';
 import Boardviewpage from './pages/Boardviewpage';
+import WorldInfopage from './pages/WorldInfopage';
 
 const App = () => {
   return (
@@ -31,6 +32,8 @@ const App = () => {
           <Route path='/board' element={<Boardpage />}/>
           <Route path='/board/view/:b_number_pk' element={<Boardviewpage />}/>    
           <Route path='/board/boardwrite' element={<Boardwritepage />}/>  
+
+          <Route path='/worldinfo' element={<WorldInfopage />}/>
 
           <Route path='/login' element={<Loginpage />}/>   
           <Route path='/memberjoin' element={<MemberjoinPage />}/>            

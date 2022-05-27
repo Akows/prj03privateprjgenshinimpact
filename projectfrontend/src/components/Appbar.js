@@ -32,7 +32,7 @@ const Appbar = () => {
                         </Link>
                     </li>
                     <li id='ab-btn'>
-                        <Link to="/">
+                        <Link to="/worldinfo">
                             티바트
                         </Link>
                     </li>

@@ -53,18 +53,15 @@
     }
 
     #b-writepage-writecontent {
-        margin: auto;
         width: 80%;
-        border: 1px solid #333;
         padding: 10px 0 30px 0;
         border-radius: 5px;
         margin-bottom : 3px;
     }
 
     #b-writepage-writeform {
-        margin: auto;
-        width: 80%;
-        height: 90%;
-
+        width: 95%;
+        height: 95%;
+        display: inline-block;
     }
 

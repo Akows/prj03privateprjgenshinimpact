@@ -1,5 +1,3 @@
-
-
 .mainpage-background-1 {
     color: black;
     padding: 10px;
@@ -46,7 +44,7 @@
 .mainpage-content-outer::before {
     content: "";
     background-color: white;
-    opacity: 0.6;
+    opacity: 0.5;
     position: absolute;
     top: 0px;
     left: 0px;
@@ -80,7 +78,16 @@
     font-family: sans-serif;
 }
 
-    
+.mainpage-content-contentsarea {
+    margin: 150px;
+    width: 80%;
+    height: 70%;
+}
+
+
+
+
+
     /* 
         1. 가상요소(before) 생성.
         2. 가상요소에 배경이미지 및 관련 CSS 설정.

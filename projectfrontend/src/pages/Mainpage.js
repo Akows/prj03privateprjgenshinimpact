@@ -1,3 +1,6 @@
+import BannerInazuma from "../components/BannerInazuma";
+import BannerLiyue from "../components/BannerLiyue";
+import BannerMondstadt from "../components/BannerMondstadt";
 import "../style/css/Mainpage.css";
 
 const Mainpage = () => {
@@ -30,14 +33,40 @@ const Mainpage = () => {
 
             <div className="mainpage-background-2">
 
+                <div className='mainpage-content-outer'>
+
+                    <div className='mainpage-content-contentsarea'>
+
+                        <BannerMondstadt/>
+                        <BannerLiyue/>
+                        <BannerInazuma/>
+
+                    </div>
+
+                </div>
+
             </div>
 
             <div className="mainpage-background-3">
+                
+                <div className='mainpage-content-outer'>
+
+                    <div className='mainpage-content-contentsarea'>
+                        <h1>contents</h1>
+                    </div>
+
+                </div>
 
             </div>
 
             <div className="mainpage-background-4">
+                <div className='mainpage-content-outer'>
 
+                    <div className='mainpage-content-contentsarea'>
+                        <h1>contents</h1>
+                    </div>
+
+                </div>
             </div>
         </div>
     );

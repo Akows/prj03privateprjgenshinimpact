@@ -1,0 +1,25 @@
+.winf-content-outer {
+    width: 1600px;
+    height: 1050px;
+    margin-top: 80px;
+    display: inline-block;
+}
+
+.winf-content-outer > * {
+    color: black;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+}
+
+.winf-content-outer::before {
+    content: "";
+    background-color: white;
+    opacity: 0.5;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    border-radius: 20px;
+}
