@@ -29,13 +29,15 @@
 }
 
 .contentsbox {
-    margin: 5px;
+    margin: 3px;
     position: relative;
+    text-align: center;
+    padding: 5px;
 }
 
 .winf-content-title {
     width: 280px;
-    height: 120px;
+    height: 110px;
     background: linear-gradient(90deg, rgba(0,255,31,0.20351890756302526) 0%, rgba(134,255,126,0.5704656862745099) 50%, rgba(212,255,215,1) 100%);
     border-radius: 5rem;
     opacity: 0.8;
@@ -66,7 +68,7 @@
 
 .winf-content-archonintroduce {
     width: 750px;
-    height: 190px;
+    height: 180px;
     font-size: larger;
     font-weight: 700;
     background: linear-gradient(90deg, rgba(0,255,31,0.20351890756302526) 0%, rgba(134,255,126,0.5704656862745099) 50%, rgba(212,255,215,1) 100%);
@@ -75,7 +77,7 @@
 }
 .winf-content-cityintroduce {
     width: 950px;
-    height: 150px;
+    height: 140px;
     font-size: larger;
     font-weight: 700;
     background: linear-gradient(90deg, rgba(0,255,31,0.20351890756302526) 0%, rgba(134,255,126,0.5704656862745099) 50%, rgba(212,255,215,1) 100%);

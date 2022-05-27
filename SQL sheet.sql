@@ -19,9 +19,9 @@ ALTER TABLE member_tb AUTO_INCREMENT = 1;
 TRUNCATE member_tb;
 TRUNCATE board_tb;
 
-set FOREIGN_KEY_CHECKS = 0;
-set FOREIGN_KEY_CHECKS = 1;
+-- set FOREIGN_KEY_CHECKS = 0;
+-- set FOREIGN_KEY_CHECKS = 1;
 
-SELECT *
-FROM board_tb
-WHERE b_delete_state != 'Y';
+UPDATE board_tb
+SET B_DELETE_STATE = 'Y'
+WHERE B_NUMBER_PK = 2;

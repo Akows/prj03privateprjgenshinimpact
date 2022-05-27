@@ -10,5 +10,5 @@ public interface BoardService
 
     public List<BoardDto> getallboardlist();
 
-    public List<BoardDto> getBoardByNumber(BoardDto boardDto);
+    void boardDelete(BoardDto boardDto);
 }

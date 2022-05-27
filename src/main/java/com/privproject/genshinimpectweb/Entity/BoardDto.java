@@ -5,8 +5,8 @@ import lombok.Data;
 @Data
 public class BoardDto
 {
-    private String b_number_pk;
-    private String m_number_fk;
+    private int b_number_pk;
+    private int m_number_fk;
     private String b_title;
     private String b_content;
     private String b_write_time;

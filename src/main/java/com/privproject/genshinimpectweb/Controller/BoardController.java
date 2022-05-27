@@ -29,9 +29,13 @@ public class BoardController {
         return boardService.getallboardlist();
     }
 
-    @PostMapping("/getboardbynumber")
-    public List<BoardDto> getBoardByNumber(@RequestBody BoardDto boardDto)
+    @PutMapping("/boarddelete")
+    public String boardDelete(@RequestBody BoardDto boardDto)
     {
-        return boardService.getBoardByNumber(boardDto);
+        boardService.boardDelete(boardDto);
+
+        System.out.println(boardDto);
+
+        return "Board Delete Complete!";
     }
 }

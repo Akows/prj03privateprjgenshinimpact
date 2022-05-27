@@ -27,8 +27,9 @@ public class BoardServiceImpl implements BoardService
     }
 
     @Override
-    public List<BoardDto> getBoardByNumber(BoardDto boardDto)
+    public void boardDelete(BoardDto boardDto)
     {
-        return boardMapper.getBoardByNumber(boardDto);
+        boardMapper.boardDelete(boardDto);
     }
+
 }
