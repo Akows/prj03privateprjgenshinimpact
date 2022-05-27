@@ -8,6 +8,7 @@
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
     "axios": "^0.27.2",
+    "gh-pages": "^4.0.0",
     "http-proxy-middleware": "^2.0.6",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
@@ -21,7 +22,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -44,5 +47,6 @@
   "proxy": "http://localhost:8090",
   "devDependencies": {
     "redux-devtools-extension": "^2.13.9"
-  }
+  },
+  "homepage": "https://Akows.github.io/prj03privateprjgenshinimpact"
 }
