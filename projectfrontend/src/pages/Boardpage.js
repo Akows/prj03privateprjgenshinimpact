@@ -33,37 +33,41 @@ const Boardpage = () => {
                 <div id='boardpageouter'>
                         <div id='boardpageinner'>
 
-                            <br/><br/><br/>
-
                             <h1>자유게시판</h1>
 
-                            <div id='bp-boardpage-writebtn'>
+                            {boarddata === "" && <p>게시글 데이터가 존재하지 않습니다.</p>} 
+
+                            {boarddata !== "" && 
+                                <>
+                                    <div id='bp-boardpage-boardlist' className='bp-boardpage-contentsarea'>
+                                        <table id='boardtable'>
+                                            <thead>
+                                                <tr>
+                                                    <th>글 번호</th>
+                                                    <th>제목</th>
+                                                    <th>작성시간</th>
+                                                </tr>
+                                            </thead>
+
+                                            <BoardList data={currentPosts(boarddata)}/>
+                                        </table> 
+                                    </div>
+
+                                    <div id='bp-boardpage-boardpage' className='bp-boardpage-contentsarea'>
+                                        <Pagination postsPerPage={postsPerPage} totalPosts={boarddata.length} paginate={setCurrentPage}></Pagination>
+                                    </div>
+
+                                </>
+                            } 
+
+                            <br></br>
+
+                            <div id='bp-boardpage-writebtn' className='bp-boardpage-contentsarea'>
                                     <Link to="/board/boardwrite">
                                         글쓰기
                                     </Link>
                             </div>
 
-                            <br/>     
-
-                            <table>
-                                    <thead>
-                                        <tr>
-                                            <th>글 번호</th>
-                                            <th>제목</th>
-                                            <th>작성시간</th>
-                                        </tr>
-                                    </thead>
-
-                                    {boarddata === "" && <p>게시글 데이터가 존재하지 않습니다.</p>} 
-
-                                    {boarddata !== "" && 
-                                        <>
-                                            <BoardList data={boarddata}/>
-                                            <Pagination postsPerPage={postsPerPage} totalPosts={boarddata.length} paginate={setCurrentPage}></Pagination>
-                                        </>
-                                    } 
-
-                            </table> 
                 </div>
             </div>
         </div>

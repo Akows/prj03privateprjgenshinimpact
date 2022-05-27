@@ -38,9 +38,9 @@ const Appbar = () => {
                     </li>
 
                     <li id='ab-btn'>
-                        <Link to="/">
+                        <a href='https://act.hoyolab.com/ys/app/interactive-map/index.html?lang=ko-kr#/map/2?shown_types=5&center=82.00,-1169.00&zoom=-2.00' target='_blank' rel="noopener noreferrer"> 
                             월드맵
-                        </Link>
+                        </a> 
                     </li> 
 
                     <li id='ab-btn'>

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import "../style/css/Pagination.css";
 
 const PageUl = styled.ul`
     float: left;
@@ -46,18 +47,16 @@ const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
     pageNumbers.push(i);
     }
     return (
-    <div>
-        <nav>
+        <div id="pageui">
             <PageUl className="pagination">
-            {pageNumbers.map((number) => (
-                <PageLi key={number} className="page-item">
-                <PageSpan onClick={() => paginate(number)} className="page-link">
-                    {number}
-                </PageSpan>
-                </PageLi>
-            ))}
+                {pageNumbers.map((number) => (
+                    <PageLi key={number} className="page-item">
+                        <PageSpan onClick={() => paginate(number)} className="page-link">
+                            {number}
+                        </PageSpan>
+                    </PageLi>
+                ))}
             </PageUl>
-        </nav>
         </div>
     );
 };
