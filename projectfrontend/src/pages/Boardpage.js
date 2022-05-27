@@ -2,6 +2,7 @@ import axios from 'axios';
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 import BoardList from '../components/BoardList';
+import Pagination from '../components/Pagination';
 import "../style/css/Boardpage.css";
 
 const Boardpage = () => {
@@ -15,6 +16,17 @@ const Boardpage = () => {
                     setBoarddata(response.data);
                 });
     }, []);
+
+    const [currentPage, setCurrentPage] = React.useState(1);
+    const [postsPerPage, setPostsPerPage] = React.useState(10);
+
+    const indexOfLast = currentPage * postsPerPage;
+    const indexOfFirst = indexOfLast - postsPerPage;
+    function currentPosts(tmp) {
+        let currentPosts = 0;
+        currentPosts = tmp.slice(indexOfFirst, indexOfLast);
+        return currentPosts;
+    }
 
     return (
         <div id="boardpagebackground">
@@ -44,7 +56,12 @@ const Boardpage = () => {
 
                                     {boarddata === "" && <p>게시글 데이터가 존재하지 않습니다.</p>} 
 
-                                    {boarddata !== "" && <BoardList data={boarddata}/>} 
+                                    {boarddata !== "" && 
+                                        <>
+                                            <BoardList data={boarddata}/>
+                                            <Pagination postsPerPage={postsPerPage} totalPosts={boarddata.length} paginate={setCurrentPage}></Pagination>
+                                        </>
+                                    } 
 
                             </table> 
                 </div>
