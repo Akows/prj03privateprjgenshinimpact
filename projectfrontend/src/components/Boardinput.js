@@ -10,7 +10,7 @@ const Boardinput = (props) => {
 
                 <div id='b-inputpage-textinput'>
                     <h5 id='b-inputpage-inputguide'>글제목</h5>
-                    <input id="b-inputpage-titlearea" defaultValue={props.valueb_title} placeholder='제목을 입력해주세요' onChange={props.handleb_titleChange}/>
+                    <input ref={props.titleInput} id="b-inputpage-titlearea" defaultValue={props.valueb_title} placeholder='제목을 입력해주세요' onChange={props.handleb_titleChange}/>
                 </div>
 
                 <br/>

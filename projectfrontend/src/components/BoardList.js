@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "../style/css/BoardList.css";
 
 const BoardList = ({data}) => {
 
@@ -9,10 +10,10 @@ const BoardList = ({data}) => {
                 return (
                     <tbody key={datas.b_number_pk}>
                         <tr>
-                            <td>{datas.b_number_pk}</td>
+                            <td id="showboardnumber">{datas.b_number_pk}</td>
 
                             <td>
-                                <Link to={`/board/view/${datas.b_number_pk}`} state={{  b_number_pk: datas.b_number_pk,
+                                <Link id="viewboard" to={`/board/view/${datas.b_number_pk}`} state={{  b_number_pk: datas.b_number_pk,
                                                                                         b_title: datas.b_title,
                                                                                         b_content: datas.b_content,
                                                                                         b_write_time : datas.b_write_time}} >
@@ -20,7 +21,7 @@ const BoardList = ({data}) => {
                                 </Link>
                             </td>
 
-                            <td>{datas.b_write_time}</td>
+                            <td id="showboardtime">{datas.b_write_time}</td>
                         </tr>
                     </tbody>
                 );

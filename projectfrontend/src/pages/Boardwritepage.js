@@ -23,6 +23,8 @@ const Boardwritepage = () => {
         console.log(b_content);
     };
 
+    const titleInput = React.useRef();
+
     const resethandle = (event) => {
         event.preventDefault();
 
@@ -87,6 +89,7 @@ const Boardwritepage = () => {
                                         handleonSubmit={onSubmithandle}
                                         handleReset={resethandle}
                                         isUpdatereq={false}
+                                        titleInput={titleInput}
                                     />
                                 </div>
                 </div>

@@ -1,0 +1,16 @@
+#showboardnumber{
+    font-weight: 600;
+    font-size: medium;    
+}
+
+#viewboard {
+    text-decoration: none;
+    color: brown;
+    font-weight: bolder;
+    font-size: larger;
+}
+
+#showboardtime{
+    font-weight: 600;
+    font-size: medium;    
+}
