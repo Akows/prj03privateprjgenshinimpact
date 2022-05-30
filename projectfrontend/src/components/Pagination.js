@@ -42,13 +42,17 @@ const PageSpan = styled.span`
 `;
 
 const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
+
     const pageNumbers = [];
+
     for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {
-    pageNumbers.push(i);
+        pageNumbers.push(i);
     }
+
     return (
         <div id="pageui">
             <PageUl className="pagination">
+
                 {pageNumbers.map((number) => (
                     <PageLi key={number} className="page-item">
                         <PageSpan onClick={() => paginate(number)} className="page-link">
@@ -56,6 +60,7 @@ const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
                         </PageSpan>
                     </PageLi>
                 ))}
+                
             </PageUl>
         </div>
     );

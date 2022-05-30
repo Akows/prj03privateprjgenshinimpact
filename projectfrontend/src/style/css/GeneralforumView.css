@@ -1,0 +1,207 @@
+/* 자유게시판 상세보기 CSS */
+/* 페이지 배경화면 설정 */
+/* 배경화면 위에 컨텐츠 영역이 배치됨. */
+#GFV-Background {
+    color: black;
+    padding: 10px;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+    #GFV-Background::before {
+        content: "";
+        background-image: url("../img/background/MondstadtNight.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0.7;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+    }
+    #GFV-Background > * {
+        color: black;
+        text-align: center;
+        position: relative;
+    }
+
+/* 배경화면 위에 배치될 컨텐츠 영역 설정 */
+#GFV-Content-Outer {
+    width: 1600px;
+    height: 1200px;
+    margin-top: 60px;
+    display: inline-block;
+}
+    #GFV-Content-Outer::before {
+        content: "";
+        background-color: white;
+        opacity: 0.6;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        border-radius: 20px;
+    }
+    #GFV-Content-Outer > * {
+        text-align: center;
+        position: relative;
+    }
+
+/* 컨텐츠 영역 내부에 배치될 실제 컨텐츠 내용들 설정 */
+#GFV-Content-Inner {
+    width: 97.5%;
+    height: 97.5%;
+    margin: 0 auto;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black; */
+}
+
+#GFV-Content-Title {
+    width: 95%;
+    height: 5%;
+    margin: 20px;
+
+    font-size: xx-large;
+    font-weight: bolder;
+
+    background-color: #6496FF;
+    border-radius: 20px;
+    opacity: 0.8;
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black; */
+}
+
+#GFV-Content-PostTitle {
+    width: 95%;
+    height: 10%;
+    margin: 15px;
+
+    display: inline-flex;
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black; */
+}
+    .Infoarea {
+        margin: 3px
+    }
+
+    .GFV-Content-PostTitle-Title {
+        width: 30%;
+        height: 90%;
+
+        background-color: #6496FF;
+        border-radius: 20px;
+        opacity: 0.8;
+
+        /* 영역 확인용 경계선 설정 */
+        /* border: 1px solid black; */
+    }
+
+    #GFV-Content-PostTitle-TitleArea {
+        margin: 20px;
+
+        font-size: xx-large;
+        font-weight: bolder;
+    }
+
+    .GFV-Content-PostTitle-Writetime {
+        width: 20%;
+        height: 90%;
+
+        background-color: #6496FF;
+        border-radius: 20px;
+        opacity: 0.8;
+
+        /* 영역 확인용 경계선 설정 */
+        /* border: 1px solid black; */
+    }
+
+    #GFV-Content-PostTitle-WriteTimeArea {
+        margin: 35px;
+
+        font-size: large;
+        font-weight: 600;
+    }
+
+    .GFV-Content-PostTitle-Backward {
+        width: 10%;
+        height: 90%;
+
+        margin-left: 550px;
+
+        background-color: #6496FF;
+        border-radius: 20px;
+        opacity: 0.8;
+
+        /* 영역 확인용 경계선 설정 */
+        /* border: 1px solid black; */
+    }
+
+    #GFV-Content-PostTitle-BackwardButton {
+        width: 100px;
+        height: 50px;
+        margin-top: 20px;
+    }
+
+#GFV-Content-PostContents {
+    width: 95%;
+    height: 80%;
+    margin: 20px;
+
+    background-color: #6496FF;
+    border-radius: 20px;
+    opacity: 0.8;
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black; */
+}
+    #GFV-Content-PostTitle-ContentArea {
+        margin: 40px;
+
+        font-size: large;
+        font-weight: bolder;
+
+        text-align: left;
+    }
+
+#GFV-Content-Tools {
+    width: 95%;
+    height: 5%;
+    margin: 20px;
+
+    background-color: #6496FF;
+    border-radius: 20px;
+    opacity: 0.8;
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black; */
+}
+
+.GFVButtonarea {
+    margin: 0 auto;
+    float: left;
+    margin-left: 5px;
+}
+
+#GFV-Content-Tools-Edit-EditButton {
+    width: 100px;
+    height: 40px;
+
+    margin-top: 5px;
+    margin-left: 20px;
+}
+
+#GFV-Content-Tools-Delete-DeleteButton {
+    width: 100px;
+    height: 40px;
+
+    margin-top: 5px;
+}

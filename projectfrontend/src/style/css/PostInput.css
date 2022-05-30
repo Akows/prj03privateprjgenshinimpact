@@ -1,0 +1,86 @@
+#PI-Content-ShowSubTitle{
+    width: 95%;
+    height: 5%;
+    margin: 20px;
+    margin-top: 30px;
+
+    background-color: #6496FF;
+    border-radius: 20px;
+    opacity: 0.8;
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black; */
+}
+    #PI-Content-ShowSubTitle-SubTitleArea{
+        font-size: x-large;
+        font-weight: bolder;
+        text-align: left;
+        padding: 15px;
+    }
+
+#PI-Content-InputTitle{
+    width: 90%;
+    height: 80px;
+    margin: 10px;
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black; */
+}
+    #PI-Content-InputTitle-Script{
+        width: 100%;
+
+        text-align: left;
+        font-size: large;
+        font-weight: 700;
+    }
+        #PI-Content-InputTitle-Script-ShowScript {
+            width: 7%;
+            padding: 5px;
+
+            background-color: #6496FF;
+            border-radius: 20px;
+            opacity: 0.8;
+        }
+
+    #PI-Content-InputTitle-InputArea{
+        height: 40%;
+        margin-top: 2px;
+    }
+        #PI-Content-InputTitle-InputArea > input{
+            width: 98%;
+            height: 100%;
+        }
+
+#PI-Content-InputContent{
+    width: 90%;
+    height: 300px;
+    margin: 20px;
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black; */
+}
+    #PI-Content-InputContent-Script{
+        width: 100%;
+        height: 8%;
+
+        text-align: left;
+        font-size: large;
+        font-weight: 700;
+    }
+        #PI-Content-InputContent-Script-ShowScript {
+            width: 7%;
+            height: 100%;
+            padding: 5px;
+
+            background-color: #6496FF;
+            border-radius: 20px;
+            opacity: 0.8;
+        }
+    #PI-Content-InputContent-InputArea{
+        height: 80%;
+        margin-top: 12px;
+    }
+        #PI-Content-InputContent-InputArea > input{
+            width: 98%;
+            height: 100%;
+        }

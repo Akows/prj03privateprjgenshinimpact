@@ -17,6 +17,8 @@ import Boardwritepage from './pages/Boardwritepage';
 import Boardviewpage from './pages/Boardviewpage';
 import WorldInfopage from './pages/WorldInfopage';
 import Generalforum from './pages/Generalforum';
+import GeneralforumView from './pages/GeneralforumView';
+import GeneralforumWriteAndEdit from './pages/GeneralforumWriteAndEdit';
 
 const App = () => {
   return (
@@ -36,6 +38,10 @@ const App = () => {
 
 
           <Route path='/generalforum' element={<Generalforum/> }/>
+          <Route path='/generalforum/view/:b_number_pk' element={<GeneralforumView/> }/>
+          <Route path='/generalforum/writeoredit' element={<GeneralforumWriteAndEdit/> }/>
+
+
 
 
           <Route path='/worldinfo' element={<WorldInfopage />}/>

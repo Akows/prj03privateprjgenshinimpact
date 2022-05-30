@@ -4,7 +4,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import Boardinput from '../components/Boardinput';
 import "../style/css/Boardwritepage.css";
 
-const Boardwritepage = (props) => {
+const Boardwritepage = () => {
 
     const [isUpdate, setisUpdate] = React.useState(false);
     const [b_title, setTitle] = React.useState('');

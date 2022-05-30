@@ -4,7 +4,6 @@ import axios from "axios";
 
 import "../style/css/Generalforum.css";
 import Pagination from '../components/Pagination';
-import BoardList from '../components/BoardList';
 
 const Generalforum = () => {
 
@@ -23,6 +22,7 @@ const Generalforum = () => {
         axios.get("http://localhost:8090/board/getallboardlist")
                 .then(response => {
                     setPostdata(response.data);
+                    console.log(response.data);
                 });
     }, []);
 
@@ -35,23 +35,15 @@ const Generalforum = () => {
     console.log(setPostsPerPage); 
 
     // 기능 구현을 위해 필요한 index의 첫 위치와 마지막 위치를 계산하는 수식과 결과값을 담을 변수.
-    const indexOfLast = currentPage * postsPerPage;
-    const indexOfFirst = indexOfLast - postsPerPage;
+    const indexOfLast = currentPage * postsPerPage; // 1 x 10 =  10
+    const indexOfFirst = indexOfLast - postsPerPage; // 10 - 10 = 0
 
-    //
+    //게시글 데이터의 JSON 배열을 매개변수로 받아 
     const currentPosts = (param) => {
         let currentPosts = 0;
         currentPosts = param.slice(indexOfFirst, indexOfLast);
         return currentPosts;
     }
-
-
-
-    // function currentPosts(tmp) {
-    //     let currentPosts = 0;
-    //     currentPosts = tmp.slice(indexOfFirst, indexOfLast);
-    //     return currentPosts;
-    // }
 
     // **
     // 여기부터는 리액트 프론트
@@ -63,7 +55,9 @@ const Generalforum = () => {
                 <div id="GF-Content-Inner">
 
                     <div id="GF-Content-Title">
-                        자유게시판
+                        <div id="GF-Content-Title-ShowTitle">
+                            자유게시판
+                        </div>
                     </div>
 
                     <div id="GF-Content-PostList">
@@ -71,22 +65,41 @@ const Generalforum = () => {
                             <table id="GF-Content-PostList-List-Table">
                                 <thead>
                                     <tr>
-                                        <th>
+                                        <th id='GF-Content-PostList-List-Table-ShowNumber'>
                                             <h3>Number</h3>
                                         </th>
-                                        <th>
+                                        <th id='GF-Content-PostList-List-Table-ShowTitle'>
                                             <h3>Title</h3>
                                         </th>
-                                        <th>
+                                        <th id='GF-Content-PostList-List-Table-ShowWriteTime'>
                                             <h3>Write Time</h3>
-                                        </th>
-                                        <th>
-
                                         </th>
                                     </tr>
                                 </thead>
 
-                                <BoardList data={currentPosts(postdata)}/>
+                                {currentPosts(postdata).map(datas => {
+                                    return (
+                                        <tbody key={datas.b_number_pk}>
+                                            <tr>
+                                                <td>{datas.b_number_pk}</td>
+
+                                                <td>
+                                                    <Link to={`/generalforum/view/${datas.b_number_pk}`} 
+                                                        state={{b_number_pk: datas.b_number_pk,
+                                                                b_title: datas.b_title,
+                                                                b_content: datas.b_content,
+                                                                b_write_time : datas.b_write_time,
+                                                                isModify : false}}
+                                                    >
+                                                        {datas.b_title}
+                                                    </Link>
+                                                </td>
+
+                                                <td>{datas.b_write_time}</td>
+                                            </tr>
+                                        </tbody>
+                                    );
+                                })}
 
                             </table> 
                         </div>
@@ -94,7 +107,7 @@ const Generalforum = () => {
 
                     <div id="GF-Content-tools">
 
-                        <div className="Buttonarea GF-Content-tools-PostPaging">
+                        <div className="GVButtonarea GF-Content-tools-PostPaging">
                             <Pagination 
                                 postsPerPage={postsPerPage} 
                                 totalPosts={postdata.length} 
@@ -102,8 +115,12 @@ const Generalforum = () => {
                             />
                         </div>
 
-                        <div className="Buttonarea GF-Content-tools-PostWrite">
-                            <Link to="/board/boardwrite">
+                        <div className="GVButtonarea GF-Content-tools-PostWrite">
+                            <Link to="/generalforum/writeoredit" state={{isModify : false,
+                                                                number: '',
+                                                                title: '',
+                                                                content: ''
+                                                                }}>
                                 <button id='GF-Content-tools-PostWrite-WriteButton'>
                                     WRITE
                                 </button>

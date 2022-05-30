@@ -78,6 +78,10 @@
         /* border: 1px solid black; */
     }
 
+        #GF-Content-Title-ShowTitle {
+            margin-top: 5px;
+        }
+
     #GF-Content-PostList {
         width: 95%;
         height: 80%;
@@ -113,6 +117,16 @@
                     background-color: #F0AA5F;
                 }
 
+                #GF-Content-PostList-List-Table-ShowNumber{
+                    width: 10%;
+                }
+                #GF-Content-PostList-List-Table-ShowTitle{
+                    width: 70%;
+                }
+                #GF-Content-PostList-List-Table-ShowWriteTime{
+                    width: 20%;
+                }
+
     #GF-Content-tools {
         width: 95%;
         height: 5%;
@@ -127,7 +141,7 @@
         /* border: 1px solid black;         */
     }
 
-.Buttonarea {
+.GVButtonarea {
     margin: 0 auto;
     margin-top: 5px;
 }
