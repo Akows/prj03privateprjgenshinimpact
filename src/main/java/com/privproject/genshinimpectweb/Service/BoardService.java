@@ -10,5 +10,7 @@ public interface BoardService
 
     public List<BoardDto> getallboardlist();
 
+    void boardUpdate(BoardDto boardDto);
+
     void boardDelete(BoardDto boardDto);
 }

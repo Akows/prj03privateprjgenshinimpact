@@ -13,6 +13,12 @@
         VALUES (#{b_title}, #{b_content}, now(), 'N', '없음')
     </insert>
 
+    <update id="boardUpdate" parameterType="com.privproject.genshinimpectweb.Entity.BoardDto">
+        UPDATE board_tb
+        SET B_TITLE = #{b_title}, B_CONTENT = #{b_content}, B_WRITE_TIME = now()
+        WHERE B_NUMBER_PK = #{b_number_pk}
+    </update>
+
     <update id="boardDelete" parameterType="com.privproject.genshinimpectweb.Entity.BoardDto">
         UPDATE board_tb
         SET B_DELETE_STATE = 'Y'

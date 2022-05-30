@@ -27,6 +27,11 @@ public class BoardServiceImpl implements BoardService
     }
 
     @Override
+    public void boardUpdate(BoardDto boardDto) {
+        boardMapper.boardUpdate(boardDto);
+    }
+
+    @Override
     public void boardDelete(BoardDto boardDto)
     {
         boardMapper.boardDelete(boardDto);

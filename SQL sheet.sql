@@ -16,12 +16,12 @@ alter table board_tb add FOREIGN KEY(M_NUMBER_PK) REFERENCES member_tb(M_NUMBER_
 
 ALTER TABLE member_tb AUTO_INCREMENT = 1;
 
-TRUNCATE member_tb;
-TRUNCATE board_tb;
+-- TRUNCATE member_tb;
+-- TRUNCATE board_tb;
 
 -- set FOREIGN_KEY_CHECKS = 0;
 -- set FOREIGN_KEY_CHECKS = 1;
 
 UPDATE board_tb
-SET B_DELETE_STATE = 'Y'
-WHERE B_NUMBER_PK = 2;
+SET B_TITLE = 'aaaa', B_CONTENT = 'AAAA', B_WRITE_TIME = now()
+WHERE B_NUMBER_PK = 1;

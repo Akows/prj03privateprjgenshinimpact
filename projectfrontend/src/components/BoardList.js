@@ -16,12 +16,23 @@ const BoardList = ({data}) => {
                                 <Link id="viewboard" to={`/board/view/${datas.b_number_pk}`} state={{  b_number_pk: datas.b_number_pk,
                                                                                         b_title: datas.b_title,
                                                                                         b_content: datas.b_content,
-                                                                                        b_write_time : datas.b_write_time}} >
+                                                                                        b_write_time : datas.b_write_time,
+                                                                                        isUpdatereq : false}} >
                                     {datas.b_title}
                                 </Link>
                             </td>
 
                             <td id="showboardtime">{datas.b_write_time}</td>
+
+                            <td id="showboardtime"> 
+                                <Link id="updataboard" to={`/board/boardwrite`} state={{  b_number_pk: datas.b_number_pk,
+                                                                                        b_title: datas.b_title,
+                                                                                        b_content: datas.b_content,
+                                                                                        b_write_time : datas.b_write_time,
+                                                                                        isUpdatereq : true}} >
+                                    글 수정하기
+                                </Link>
+                            </td>
                         </tr>
                     </tbody>
                 );

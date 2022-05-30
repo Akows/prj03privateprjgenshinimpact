@@ -38,9 +38,9 @@ const Boardpage = () => {
 
                             <h1>자유게시판</h1>
 
-                            {boarddata == "" && <p>게시글 데이터가 존재하지 않습니다.</p>} 
+                            {boarddata === "" && <p>게시글 데이터가 존재하지 않습니다.</p>} 
 
-                            {boarddata != "" && 
+                            {boarddata !== "" && 
                                 <>
                                     <div id='bp-boardpage-boardpage' className='bp-boardpage-contentsarea'>
                                         <Pagination postsPerPage={postsPerPage} totalPosts={boarddata.length} paginate={setCurrentPage}></Pagination>
@@ -53,6 +53,7 @@ const Boardpage = () => {
                                                     <th><h3>글 번호</h3></th>
                                                     <th><h3>제목</h3></th>
                                                     <th><h3>작성시간</h3></th>
+                                                    <th></th>
                                                 </tr>
                                             </thead>
 
@@ -65,7 +66,7 @@ const Boardpage = () => {
                             <br></br>
 
                             <div id='bp-boardpage-writebtn' className='bp-boardpage-contentsarea'>
-                                    <Link to="/board/boardwrite">
+                                    <Link to="/board/boardwrite" state={{ b_number_pk: '' }}>
                                         글쓰기
                                     </Link>
                             </div>

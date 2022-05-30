@@ -50,14 +50,6 @@ const Boardviewpage = (data) => {
         // })
     }
 
-    const boardupdate = (event) => { 
-        event.preventDefault();
-
-        
-
-        navigate(-1);
-    }
-
     const backtolist = (event) => { 
         event.preventDefault();
         navigate(-1);
@@ -81,7 +73,6 @@ const Boardviewpage = (data) => {
                                     </div>
 
                                     <button onClick={backtolist}>뒤로 가기</button>
-                                    <button onClick={boardupdate}>글 수정</button>
                                     <button onClick={boarddelete}>글 삭제</button>
                                 </div>
                 </div>

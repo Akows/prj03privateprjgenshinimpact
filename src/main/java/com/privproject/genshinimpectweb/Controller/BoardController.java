@@ -29,6 +29,14 @@ public class BoardController {
         return boardService.getallboardlist();
     }
 
+    @PutMapping("/boardupdate")
+    public String boardUpdate(@RequestBody BoardDto boardDto)
+    {
+        boardService.boardUpdate(boardDto);
+
+        return "Board Update Complete!";
+    }
+
     @PutMapping("/boarddelete")
     public String boardDelete(@RequestBody BoardDto boardDto)
     {

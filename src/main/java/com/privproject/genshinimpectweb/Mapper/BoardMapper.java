@@ -12,5 +12,7 @@ public interface BoardMapper
 
     List<BoardDto> getallboardlist();
 
+    void boardUpdate(BoardDto boardDto);
+
     void boardDelete(BoardDto boardDto);
 }
