@@ -1,0 +1,184 @@
+/* 자유게시판 CSS */
+/* 페이지 배경화면 설정 */
+/* 배경화면 위에 컨텐츠 영역이 배치됨. */
+#GF-Background {
+    color: black;
+    padding: 10px;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+    #GF-Background::before {
+        content: "";
+        background-image: url("../img/background/YoimiyaAyakaInazuma.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0.7;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+    }
+    #GF-Background > * {
+        color: black;
+        text-align: center;
+        position: relative;
+    }
+
+/* 배경화면 위에 배치될 컨텐츠 영역 설정 */
+#GF-Content-Outer {
+    width: 1600px;
+    height: 1200px;
+    margin-top: 60px;
+    display: inline-block;
+}
+    #GF-Content-Outer::before {
+        content: "";
+        background-color: white;
+        opacity: 0.6;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        border-radius: 20px;
+    }
+    #GF-Content-Outer > * {
+        text-align: center;
+        position: relative;
+    }
+
+/* 컨텐츠 영역 내부에 배치될 실제 컨텐츠 내용들 설정 */
+#GF-Content-Inner {
+    width: 97.5%;
+    height: 97.5%;
+    margin: 0 auto;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black; */
+}
+
+    #GF-Content-Title {
+        width: 95%;
+        height: 5%;
+        margin: 20px;
+
+        font-size: xx-large;
+        font-weight: bolder;
+
+        background-color: #FF6E6E;
+        border-radius: 20px;
+
+        /* 영역 확인용 경계선 설정 */
+        /* border: 1px solid black; */
+    }
+
+    #GF-Content-PostList {
+        width: 95%;
+        height: 80%;
+        margin: 10px;
+
+        border-radius: 20px;
+        
+        /* 영역 확인용 경계선 설정 */
+        /* border: 1px solid black;         */
+    }
+
+        #GF-Content-PostList-List {
+            width: 98%;
+            height: 95%;
+            margin: 15px;
+
+            /* 영역 확인용 경계선 설정 */
+            /* border: 1px solid black;        */
+        }
+            #GF-Content-PostList-List-Table {
+                width: 100%;
+            }            
+                #GF-Content-PostList-List-Table > table {
+                    border-collapse: collapse;
+                    border-spacing: 10px 10px;
+                    border: 1px black solid;
+                }
+                #GF-Content-PostList-List-Table > thead > tr {
+                    background-color: #FF98FE;
+                    opacity: 0.8;
+                }
+                #GF-Content-PostList-List-Table > thead > th {
+                    background-color: #F0AA5F;
+                }
+
+    #GF-Content-tools {
+        width: 95%;
+        height: 5%;
+        margin: 10px;
+
+        display: inline-flex;
+
+        background-color: #FF6E6E;
+        border-radius: 20px;
+
+        /* 영역 확인용 경계선 설정 */
+        /* border: 1px solid black;         */
+    }
+
+.Buttonarea {
+    margin: 0 auto;
+    margin-top: 5px;
+}
+
+.GF-Content-tools-PostPaging {
+    width: 45%;
+    height: 80%;
+    margin-top: 9px;
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black;      */
+}
+
+.GF-Content-tools-PostWrite {
+    width: 45%;
+    height: 80%;
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black;      */
+}
+    #GF-Content-tools-PostWrite-WriteButton {
+        width: 120px;
+        height: 40px;
+
+        margin-top: 3px;
+        margin-left: 550px;
+
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: larger;
+        font-weight: 500;
+        color: #000;
+
+        background-color: #B24BE5;
+        border-radius: 10px;
+
+        opacity: 0.8;
+    }
+    #GF-Content-tools-PostWrite-WriteButton:hover {
+        width: 120px;
+        height: 40px;
+
+        margin-top: 3px;
+        margin-left: 550px;
+
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: x-large;
+        font-weight: bolder;
+        color: #000;
+
+        background-color: #B24BE5;
+        border-radius: 20px;
+
+        opacity: 1;
+    }

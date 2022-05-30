@@ -16,6 +16,7 @@ import MemberjoinPage from './pages/MemberjoinPage';
 import Boardwritepage from './pages/Boardwritepage';
 import Boardviewpage from './pages/Boardviewpage';
 import WorldInfopage from './pages/WorldInfopage';
+import Generalforum from './pages/Generalforum';
 
 const App = () => {
   return (
@@ -32,6 +33,10 @@ const App = () => {
           <Route path='/board' element={<Boardpage />}/>
           <Route path='/board/view/:b_number_pk' element={<Boardviewpage />}/>    
           <Route path='/board/boardwrite' element={<Boardwritepage />}/>  
+
+
+          <Route path='/generalforum' element={<Generalforum/> }/>
+
 
           <Route path='/worldinfo' element={<WorldInfopage />}/>
 
