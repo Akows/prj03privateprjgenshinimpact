@@ -7,21 +7,27 @@ const Loginpage = () => {
     const [m_id, setM_id] = React.useState('');
     const [m_password, setM_password] = React.useState('');
 
-    const inputData = {m_id, m_password};
+    // const inputData = {m_id, m_password};
 
     const clickEvent = (e) => { 
         e.preventDefault();
 
         window.location.reload();
+        alert("입력한 ID : " + m_id);
+        alert("입력한 PWD : " + m_password);
         alert("로그인 기능은 구현되지 않았습니다. ㅠㅠ");
 
-        axios.post("/member/connecttest", inputData)
-        .then(function(response) {
-            console.log(response);
-        })
-        .catch(function(error) {
-            console.log(error);
-        });
+        // 스프링 시큐리티 사용시 리액트-스프링부트 사이 CORS 문제가 발생함.
+        // 기존 해결 방법이 무력화되며, 구글링으로 찾아본 여러가지 수단이 모두 실패로 돌아감.
+        // 시간이 촉박하므로 아쉽지만 로그인 기능 구현은 후순위로 보류함.
+
+        // axios.post("/member/connecttest", inputData)
+        // .then(function(response) {
+        //     console.log(response);
+        // })
+        // .catch(function(error) {
+        //     console.log(error);
+        // });
     }
 
     return (

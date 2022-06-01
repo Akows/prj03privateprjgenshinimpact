@@ -19,13 +19,13 @@ const Appbar = () => {
                     </li>
 
                     <li id='ab-btn'>
-                        <Link to="/">
+                        <Link to="/incomplete">
                             event
                         </Link>
                     </li>
 
                     <li id='ab-btn'>
-                        <Link to="/">
+                        <Link to="/incomplete">
                             캐릭터 소개
                         </Link>
                     </li>
@@ -42,7 +42,7 @@ const Appbar = () => {
                     </li> 
 
                     <li id='ab-btn'>
-                        <Link to="/">
+                        <Link to="/incomplete">
                             Profile                     
                         </Link>
 
