@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import "../style/css/Footer.css";
+import "../style/css/componentsCSS/Footer.css";
 
 import gamelogo from "../style/img/emblem/genshinimpectlogo.png";
 import playgrade from "../style/img/ect/gameratingresult.png";

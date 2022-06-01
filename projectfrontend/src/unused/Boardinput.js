@@ -1,5 +1,5 @@
 
-import "../style/css/Boardinput.css";
+// import "../style/css/Boardinput.css";
 
 const Boardinput = (props) => {
     return (

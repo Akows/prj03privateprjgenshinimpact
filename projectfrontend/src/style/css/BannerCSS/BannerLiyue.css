@@ -8,11 +8,11 @@
 .banner2 {
     width: 100%;
     height: 100%;
-    background-image: url("../img/background/banner/Liyue.jpg");
+    background-image: url("../../img/background/banner/Liyue.jpg");
     position: absolute;
 }
 .banner2:hover {
-    background-image: url("../img/character/Banner/Character_Xiao_banner.png"), url("../img/emblem/Emblem_Liyue.webp"), url("../img/background/banner/Liyue.jpg");
+    background-image: url("../../img/character/Banner/Character_Xiao_banner.png"), url("../../img/emblem/Emblem_Liyue.webp"), url("../../img/background/banner/Liyue.jpg");
     background-size: 600px 200px, 200px 200px, 1920px 260px;
     background-position: 0 0, 920px 0px, 0 0;
     background-repeat: no-repeat;

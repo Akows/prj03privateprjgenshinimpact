@@ -1,8 +1,8 @@
 import axios from 'axios';
 import * as React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import Boardinput from '../components/Boardinput';
-import "../style/css/Boardwritepage.css";
+// import Boardinput from '../unused/Boardinput';
+// import "../style/css/Boardwritepage.css";
 
 const Boardwritepage = () => {
 

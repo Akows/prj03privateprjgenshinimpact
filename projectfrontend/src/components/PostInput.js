@@ -1,4 +1,4 @@
-import "../style/css/PostInput.css";
+import "../style/css/componentsCSS/PostInput.css";
 
 const PostInput = (props) => {
 

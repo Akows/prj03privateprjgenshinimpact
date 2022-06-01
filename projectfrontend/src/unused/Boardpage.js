@@ -1,9 +1,9 @@
 import axios from 'axios';
 import * as React from 'react';
 import { Link } from 'react-router-dom';
-import BoardList from '../components/BoardList';
-import Pagination from '../components/Pagination';
-import "../style/css/Boardpage.css";
+// import BoardList from '../components/BoardList';
+// import Pagination from '../components/Pagination';
+// import "../style/css/Boardpage.css";
 
 const Boardpage = () => {
 

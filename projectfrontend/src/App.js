@@ -6,19 +6,19 @@ import './App.css';
 
 import Appbar from './components/Appbar';
 import Footer from './components/Footer';
-import Mainpage from './pages/Mainpage';
 
-import Boardpage from './pages/Boardpage';
+import Mainpage from './pages/Mainpage';
 
 import Loginpage from './pages/Loginpage';
 import MemberAdmin from './pages/MemberAdmin';
 import MemberjoinPage from './pages/MemberjoinPage';
-import Boardwritepage from './pages/Boardwritepage';
-import Boardviewpage from './pages/Boardviewpage';
+
 import WorldInfopage from './pages/WorldInfopage';
+
 import Generalforum from './pages/Generalforum';
 import GeneralforumView from './pages/GeneralforumView';
 import GeneralforumWriteAndEdit from './pages/GeneralforumWriteAndEdit';
+
 import Incomplete from './pages/Incomplete';
 
 const App = () => {
@@ -33,24 +33,16 @@ const App = () => {
 
           <Route path='/' element={<Mainpage />}/>
 
-          <Route path='/board' element={<Boardpage />}/>
-          <Route path='/board/view/:b_number_pk' element={<Boardviewpage />}/>    
-          <Route path='/board/boardwrite' element={<Boardwritepage />}/>  
+          <Route path='/login' element={<Loginpage />}/>   
+          <Route path='/memberjoin' element={<MemberjoinPage />}/>            
+          <Route path='/memberadmin/memberlist' element={<MemberAdmin />}/>    
 
+          <Route path='/worldinfo' element={<WorldInfopage />}/>
 
           <Route path='/generalforum' element={<Generalforum/> }/>
           <Route path='/generalforum/view/:b_number_pk' element={<GeneralforumView/> }/>
           <Route path='/generalforum/writeoredit' element={<GeneralforumWriteAndEdit/> }/>
 
-
-
-
-
-          <Route path='/worldinfo' element={<WorldInfopage />}/>
-
-          <Route path='/login' element={<Loginpage />}/>   
-          <Route path='/memberjoin' element={<MemberjoinPage />}/>            
-          <Route path='/memberadmin/memberlist' element={<MemberAdmin />}/>    
 
           <Route path='/incomplete' element={<Incomplete />}/>    
 

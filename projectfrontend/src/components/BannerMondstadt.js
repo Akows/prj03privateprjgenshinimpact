@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "../style/css/BannerMondstadt.css";
+import "../style/css/BannerCSS/BannerMondstadt.css";
 
 const BannerMondstadt = () => {
     return (

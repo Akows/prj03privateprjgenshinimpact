@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import "../style/css/IntroduceMondstadt.css";
 
-
 const IntroduceMondstadt = () => {
     return (
         <div className="winf-content-outer">

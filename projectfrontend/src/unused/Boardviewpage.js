@@ -1,7 +1,7 @@
 import axios from 'axios';
 import * as React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import "../style/css/Boardviewpage.css";
+// import "../style/css/Boardviewpage.css";
 
 const Boardviewpage = (data) => {
 

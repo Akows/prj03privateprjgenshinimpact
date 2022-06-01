@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "../style/css/BannerInazuma.css";
+import "../style/css/BannerCSS/BannerInazuma.css";
 
 const BannerInazuma = () => {
     return (

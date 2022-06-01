@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import "../style/css/Pagination.css";
+import "../style/css/componentsCSS/Pagination.css";
 
 const PageUl = styled.ul`
     float: left;
