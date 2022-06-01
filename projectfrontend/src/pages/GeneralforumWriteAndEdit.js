@@ -27,6 +27,7 @@ const GeneralforumWriteAndEdit = () => {
     const location = useLocation();
 
     // useLocation으로 가져온 데이터를 변수에 삽입.
+    // submit 함수를 작동시키는 부분이 컴포넌트로 내려갈 경우, location.state에 문제가 생겨 에러를 일으키니 주의.
     const postnumber = location.state.number;
     const posttitle = location.state.title;
     const postcontent = location.state.content;
@@ -111,6 +112,13 @@ const GeneralforumWriteAndEdit = () => {
         <div id="GFWAE-Background">
             <div id="GFWAE-Content-Outer">
                 <div id="GFWAE-Content-Inner">
+
+                    {/* 매개변수 쓰임새.
+                        title / content : 게시글 수정 시 기존 데이터를 받아와 출력해주는데 사용.
+                        submitevent : submit 이벤트가 작성된 함수를 작동시키는데 사용.
+                        isModify : 게시글 작성-수정 여부를 판별하는 기준 변수.
+                        setTitle / setContent : 게시글 작성-수정 시 입력받은 데이터를 받아와 set함수에 사용.
+                    */}
 
                     {isModify === false &&
                         <>

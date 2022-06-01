@@ -3,9 +3,7 @@ import { Link } from 'react-router-dom';
 import "../style/css/Appbar.css";
 
 const Appbar = () => {
-
     return (
-
         <nav>
             <ul id="main-menu">
                     <li id='ab-btn'>
@@ -22,7 +20,7 @@ const Appbar = () => {
 
                     <li id='ab-btn'>
                         <Link to="/">
-                            이벤트
+                            event
                         </Link>
                     </li>
 

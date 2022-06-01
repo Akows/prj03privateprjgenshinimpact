@@ -1,0 +1,94 @@
+/* 미완성 페이지 CSS */
+/* 페이지 배경화면 설정 */
+/* 배경화면 위에 컨텐츠 영역이 배치됨. */
+#IC-Background {
+    color: black;
+    padding: 10px;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+    #IC-Background::before {
+        content: "";
+        background-image: url("../img/background/InazumaIC.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0.7;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+    }
+    #IC-Background > * {
+        color: black;
+        text-align: center;
+        position: relative;
+    }
+
+/* 배경화면 위에 배치될 컨텐츠 영역 설정 */
+#IC-Content-Outer {
+    width: 1600px;
+    height: 1200px;
+    margin-top: 60px;
+    display: inline-block;
+}
+    #IC-Content-Outer::before {
+        content: "";
+        background-color: white;
+        opacity: 0.6;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        border-radius: 20px;
+    }
+    #IC-Content-Outer > * {
+        text-align: center;
+        position: relative;
+    }
+
+/* 컨텐츠 영역 내부에 배치될 실제 컨텐츠 내용들 설정 */
+#IC-Content-Inner {
+    width: 97.5%;
+    height: 97.5%;
+    margin: 0 auto;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black; */
+}
+
+#IC-Content {
+    width: 95%;
+    height: 95%;
+    margin-top: 30px;
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black; */
+}
+
+#IC-Content-MainContents {
+    width: 100%;
+    height: 15%;
+    margin-top: 200px;
+
+    font-size: xx-large;
+    font-weight: bolder;
+    font-family: 'Courier New', Courier, monospace;
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black; */
+}
+
+#IC-Content-ShowIMG {
+    width: 100%;
+    height: 35%;
+
+    /* 영역 확인용 경계선 설정 */
+    border: 1px solid black;
+}

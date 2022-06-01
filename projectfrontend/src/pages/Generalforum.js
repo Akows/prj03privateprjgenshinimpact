@@ -8,7 +8,7 @@ import Pagination from '../components/Pagination';
 const Generalforum = () => {
 
     // 자유게시판의 최상단.
-    // 이 곳에서 게시물 데이터를 모두 불러받아 출력하고, 적절한 컴포넌트의 매개변수로 넘겨져 기능 구현에 사용될 것임.
+    // 이 곳에서 게시물 데이터를 모두 불러받아 출력하고, 하위 페이지 혹은 컴포넌트의 매개변수로 넘겨져 기능 구현에 사용될 것임.
 
     // **
     // 여기부터는 리액트 스크립트
@@ -38,7 +38,7 @@ const Generalforum = () => {
     const indexOfLast = currentPage * postsPerPage; // 1 x 10 =  10
     const indexOfFirst = indexOfLast - postsPerPage; // 10 - 10 = 0
 
-    //게시글 데이터의 JSON 배열을 매개변수로 받아 
+    //게시글 데이터의 JSON 배열을 매개변수로 받아 전체 데이터의 길이를 계산.
     const currentPosts = (param) => {
         let currentPosts = 0;
         currentPosts = param.slice(indexOfFirst, indexOfLast);
@@ -77,6 +77,8 @@ const Generalforum = () => {
                                     </tr>
                                 </thead>
 
+                                {/* map 함수로 DB에서 받아온 데이터들을 적절한 형식으로 모두 출력. */}
+                                {/* currentPosts 함수를 이용하여 전체 데이터들의 갯수도 계산한다. */}
                                 {currentPosts(postdata).map(datas => {
                                     return (
                                         <tbody key={datas.b_number_pk}>

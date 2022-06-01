@@ -19,6 +19,7 @@ import WorldInfopage from './pages/WorldInfopage';
 import Generalforum from './pages/Generalforum';
 import GeneralforumView from './pages/GeneralforumView';
 import GeneralforumWriteAndEdit from './pages/GeneralforumWriteAndEdit';
+import Incomplete from './pages/Incomplete';
 
 const App = () => {
   return (
@@ -44,11 +45,14 @@ const App = () => {
 
 
 
+
           <Route path='/worldinfo' element={<WorldInfopage />}/>
 
           <Route path='/login' element={<Loginpage />}/>   
           <Route path='/memberjoin' element={<MemberjoinPage />}/>            
-          <Route path='/memberadmin/memberlist' element={<MemberAdmin />}/>     
+          <Route path='/memberadmin/memberlist' element={<MemberAdmin />}/>    
+
+          <Route path='/incomplete' element={<Incomplete />}/>    
 
         </Routes>
       </div>
