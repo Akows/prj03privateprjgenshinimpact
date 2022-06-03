@@ -41,7 +41,7 @@ ul, li {
 
 
 #AB-Content-Inner-Pagemenuarea {
-    width: 79.5%;
+    width: 78.5%;
     height: 100%;
 
     /* 영역 확인용 경계선 설정 */
@@ -103,11 +103,21 @@ ul, li {
         text-decoration: none;
         font-size: large;
         font-weight: bolder;
+
+        background-image: linear-gradient(transparent calc(100% - 3px), #000 3px);
     }
 
     #AB-Content-Inner-Pagemenuarea-Button-box > *:hover {
-        color: red;
+        /* color: red; */
+        border-bottom: 3px solid red; 
+        line-height: 1.2;
+        transition: all 250ms ease-out;
+
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff;
+
+        background-image: linear-gradient(transparent 60%, gray 40%);
     }
+
 
 
 
@@ -134,10 +144,19 @@ ul, li {
     text-decoration: none;
     font-size: large;
     font-weight: bolder;
+
+    background-image: linear-gradient(transparent calc(100% - 3px), #000 3px);
 }
 
 #AB-Content-Inner-Usermenu-Button-box > *:hover {
-    color: red;
+    /* color: red; */
+    border-bottom: 3px solid blue; 
+    line-height: 1.2;
+    transition: all 250ms ease-out;
+
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff;
+
+    background-image: linear-gradient(transparent 60%, gray 40%);
 }
 
 /* 하단 메뉴를 숨김, 커서가 올라갈 때에만 메뉴가 드러나도록 조치 */
