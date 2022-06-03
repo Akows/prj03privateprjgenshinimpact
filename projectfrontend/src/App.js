@@ -4,7 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 
 import './App.css';
 
-import Appbar from './components/Appbar';
+import Appbarv2 from './components/Appbarv2';
 import Footer from './components/Footer';
 
 import Mainpage from './pages/Mainpage';
@@ -21,12 +21,12 @@ import GeneralforumWriteAndEdit from './pages/GeneralforumWriteAndEdit';
 
 import Incomplete from './pages/Incomplete';
 
+
 const App = () => {
   return (
     <div className="App">
-      
       <div>
-        <Appbar/>
+        <Appbarv2/>
       </div>
       <div>      
         <Routes>
