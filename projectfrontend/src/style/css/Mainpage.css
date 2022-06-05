@@ -110,7 +110,7 @@
     
         .mainpage-background-2::before {
             content: "";
-            background-image: url("../img/background/BarbatosMondstadt.jpg");
+            background-image: url("../img/background/TravelerCelestial.jpg");
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -139,7 +139,7 @@
     
         .mainpage-background-3::before {
             content: "";
-            background-image: url("../img/background/MoraxLiyue.jfif");
+            background-image: url("../img/background/TravelerCelestial.jpg");
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -168,7 +168,7 @@
         
             .mainpage-background-4::before {
                 content: "";
-                background-image: url("../img/background/BaalInazuma.png");
+                background-image: url("../img/background/TravelerCelestial.jpg");
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-position: center;

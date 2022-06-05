@@ -10,7 +10,7 @@
 }
     #GFV-Background::before {
         content: "";
-        background-image: url("../img/background/MondstadtNight.jpg");
+        background-image: url("../img/background/city/Mondstadt.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
