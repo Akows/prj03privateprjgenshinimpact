@@ -10,11 +10,11 @@ const Mainpage = () => {
                     <div className='mainpage-content-outer'>
 
                             <div className='mainpage-content-title'>
-                                <h1>Genshin Impect</h1>
+                                {/* <h1>Genshin Impect</h1> */}
                             </div>
 
                             <div className='mainpage-content-iframe'>
-                                <iframe width="860" height="515" src="https://www.youtube.com/embed/yytFBFzJLmU" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen/>
+                                {/* <iframe width="860" height="515" src="https://www.youtube.com/embed/yytFBFzJLmU" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen/> */}
                             </div>
 
                             <div className='mainpage-content-introduce'>
@@ -52,7 +52,20 @@ const Mainpage = () => {
                 <div className='mainpage-content-outer'>
 
                     <div className='mainpage-content-contentsarea'>
-                        <h1>contents</h1>
+
+                        <div id="MP-Content-Bannarouter">
+
+                            <div id="MP-Content-Bannar1">
+                                <div id="MP-Content-Bannar1-HoverIMG"></div>
+                            </div>
+                            <div id="MP-Content-Bannar2">
+
+                            </div>
+                            <div id="MP-Content-Bannar3">
+
+                            </div>
+                        </div>
+
                     </div>
 
                 </div>

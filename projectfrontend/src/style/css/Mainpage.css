@@ -56,19 +56,24 @@
 .mainpage-content-title {
     margin-top: 30px;
     width: 80%;
-    height: 10%;
+    height: 20%;
+
+    background-image: url("../img/ect/Genshin_Impact_logo.svg.png");
+    background-size: 550px 200px;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .mainpage-content-iframe {
     margin-top: 60px;
     width: 80%;
-    height: 30%
+    height: 20%
 }
 
 .mainpage-content-introduce {
     margin-top: 40px;
     width: 80%;
-    height: 30%
+    height: 20%
 }
 
 .mainpage-content-introduce > h2 {
@@ -79,9 +84,9 @@
 }
 
 .mainpage-content-contentsarea {
-    margin: 150px;
-    width: 80%;
-    height: 70%;
+    margin: 50px;
+    width: 90%;
+    height: 90%;
 }
 
 
@@ -124,7 +129,127 @@
             position: relative;
         }
 
-        .mainpage-background-3 {
+    .mainpage-background-3 {
+        color: black;
+        padding: 10px;
+        width: 100%;
+        height: 100vh;
+        position: relative;
+    }
+    
+        .mainpage-background-3::before {
+            content: "";
+            background-image: url("../img/background/MoraxLiyue.jfif");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.7;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+        }
+    
+        .mainpage-background-3 > *
+        {
+            color: black;
+            text-align: center;
+            position: relative;
+        }
+
+        #MP-Content-Bannarouter {
+            width: 100%;
+            height: 100%;      
+            display: inline-flex;
+
+            /* 영역 확인용 경계선 설정 */
+            /* border: 1px solid black; */
+        }
+
+        #MP-Content-Bannar1 {
+            width: 33.3%;
+            height: 100%;
+            
+            background-image: url("../img/background/city/Mondstadt.jpg");
+            background-size: 1800px 1000px;
+            background-repeat: no-repeat;
+            background-position: -400px 0px;
+
+            /* 영역 확인용 경계선 설정 */
+            /* border: 1px solid black; */
+        }
+        #MP-Content-Bannar1:hover {
+            background-image: url("../img/character/Character_Venti_Full_Wish.webp"), url("../img/background/city/Mondstadt.jpg");
+            background-size: 800px 800px, 1800px 1000px;
+            background-repeat: no-repeat;
+            background-position: -150px 0px, -400px 0px;
+            animation: fadeInUp 0.6s;
+        }
+
+        #MP-Content-Bannar2 {
+            width: 33.3%;
+            height: 100%; 
+
+            background-image: url("../img/background/city/Liyue.jpg");
+            background-size: 1800px 1000px;
+            background-repeat: no-repeat;
+            background-position: 0px 0px;
+
+            /* 영역 확인용 경계선 설정 */
+            /* border: 1px solid black; */
+        }
+        #MP-Content-Bannar2:hover {
+            background-image: url("../img/character/Character_Zhongli_Full_Wish.webp"), url("../img/background/city/Liyue.jpg");
+        }
+
+        #MP-Content-Bannar3 {
+            width: 33.3%;
+            height: 100%; 
+
+            background-image: url("../img/background/city/Inazuma.jpg");
+            background-size: 1800px 1000px;
+            background-repeat: no-repeat;
+            background-position: -1100px 0px;
+
+            /* 영역 확인용 경계선 설정 */
+            /* border: 1px solid black; */
+        }
+        #MP-Content-Bannar3:hover {
+            background-image: url("../img/character/Character_Raiden_Shogun_Full_Wish.webp"), url("../img/background/city/Inazuma.jpg");
+        }
+
+        @keyframes fadeUp {
+            0% {
+                opacity: 0;
+                transform: translate3d(0, 15%, 0);
+            }
+            to {
+                opacity: 1;
+                transform: translateZ(0);
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .mainpage-background-4 {
             color: black;
             padding: 10px;
             width: 100%;
@@ -132,9 +257,9 @@
             position: relative;
         }
         
-            .mainpage-background-3::before {
+            .mainpage-background-4::before {
                 content: "";
-                background-image: url("../img/background/MoraxLiyue.jfif");
+                background-image: url("../img/background/BaalInazuma.png");
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-position: center;
@@ -146,38 +271,9 @@
                 bottom: 0px;
             }
         
-            .mainpage-background-3 > *
+            .mainpage-background-4 > *
             {
                 color: black;
                 text-align: center;
                 position: relative;
             }
-
-            .mainpage-background-4 {
-                color: black;
-                padding: 10px;
-                width: 100%;
-                height: 100vh;
-                position: relative;
-            }
-            
-                .mainpage-background-4::before {
-                    content: "";
-                    background-image: url("../img/background/BaalInazuma.png");
-                    background-size: cover;
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    opacity: 0.7;
-                    position: absolute;
-                    top: 0px;
-                    left: 0px;
-                    right: 0px;
-                    bottom: 0px;
-                }
-            
-                .mainpage-background-4 > *
-                {
-                    color: black;
-                    text-align: center;
-                    position: relative;
-                }
