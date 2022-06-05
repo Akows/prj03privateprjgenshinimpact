@@ -1,10 +1,17 @@
 import axios from "axios";
-import React from "react";
+import React, { useRef } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import PostInput from "../components/PostInput";
 import "../style/css/GeneralforumWriteAndEdit.css";
 
 const GeneralforumWriteAndEdit = () => {
+    // 페이지를 이동하였을 때, 페이지 가장 맨 위 위치로 스크롤을 자동 위치시키는 기능
+    // useRef로 이동 지점을 설정하고 useEffect로 함수가 자동 실행되도록 설정
+    const pagestartpoint = useRef();
+
+    React.useEffect(() => {
+        pagestartpoint.current.scrollIntoView();
+    }, [pagestartpoint]);
 
     // 자유게시판 글 작성 페이지.
     // Generalforum에서 받아온 게시글 데이터로 수정을 하거나, 글을 작성하여 DB에 저장.
@@ -109,7 +116,7 @@ const GeneralforumWriteAndEdit = () => {
     // **
 
     return (
-        <div id="GFWAE-Background">
+        <div id="GFWAE-Background" ref={pagestartpoint}>
             <div id="GFWAE-Content-Outer">
                 <div id="GFWAE-Content-Inner">
 

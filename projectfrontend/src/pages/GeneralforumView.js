@@ -5,6 +5,13 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import "../style/css/GeneralforumView.css";
 
 const GeneralforumView = () => {
+    // 페이지를 이동하였을 때, 페이지 가장 맨 위 위치로 스크롤을 자동 위치시키는 기능
+    // useRef로 이동 지점을 설정하고 useEffect로 함수가 자동 실행되도록 설정
+    const pagestartpoint = React.useRef();
+
+    React.useEffect(() => {
+        pagestartpoint.current.scrollIntoView();
+    }, [pagestartpoint]);
 
     // 자유게시판의 게시물 상세보기.
     // Generalforum에서 게시물 데이터를 전달받아 내용을 출력.
@@ -58,7 +65,7 @@ const GeneralforumView = () => {
     // **
 
     return (
-        <div id="GFV-Background">
+        <div id="GFV-Background" ref={pagestartpoint}>
             <div id="GFV-Content-Outer">
                 <div id="GFV-Content-Inner">
 

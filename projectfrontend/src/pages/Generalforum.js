@@ -6,6 +6,13 @@ import "../style/css/Generalforum.css";
 import Pagination from '../components/Pagination';
 
 const Generalforum = () => {
+    // 페이지를 이동하였을 때, 페이지 가장 맨 위 위치로 스크롤을 자동 위치시키는 기능
+    // useRef로 이동 지점을 설정하고 useEffect로 함수가 자동 실행되도록 설정
+    const pagestartpoint = React.useRef();
+
+    React.useEffect(() => {
+        pagestartpoint.current.scrollIntoView();
+    }, [pagestartpoint]);
 
     // 자유게시판의 최상단.
     // 이 곳에서 게시물 데이터를 모두 불러받아 출력하고, 하위 페이지 혹은 컴포넌트의 매개변수로 넘겨져 기능 구현에 사용될 것임.
@@ -50,7 +57,7 @@ const Generalforum = () => {
     // **
 
     return (
-        <div id="GF-Background">
+        <div id="GF-Background" ref={pagestartpoint}>
             <div id="GF-Content-Outer">
                 <div id="GF-Content-Inner">
 

@@ -1,11 +1,20 @@
+import React, { useRef } from "react";
 import BannerInazuma from "../components/BannerInazuma";
 import BannerLiyue from "../components/BannerLiyue";
 import BannerMondstadt from "../components/BannerMondstadt";
 import "../style/css/Mainpage.css";
 
 const Mainpage = () => {
+    // 페이지를 이동하였을 때, 페이지 가장 맨 위 위치로 스크롤을 자동 위치시키는 기능
+    // useRef로 이동 지점을 설정하고 useEffect로 함수가 자동 실행되도록 설정
+    const pagestartpoint = useRef();
+
+    React.useEffect(() => {
+        pagestartpoint.current.scrollIntoView();
+    }, [pagestartpoint]);
+
     return (
-        <div>
+        <div ref={pagestartpoint}>
             <div className="mainpage-background-1">
                     <div className='mainpage-content-outer'>
 

@@ -168,6 +168,16 @@
     align-items: center;
 }
 
+/* div들을 중앙 기준 수평 정렬할 때 사용할 CSS */
+#WINFM-Content-ContentAreaInnerorizontal{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+}
+
+/* 몬드 개괄 */
+/* 몬드 개괄 */
 /* 몬드 개괄 */
 /* 몬드 개괄 */
 #WINFM-Content-ContentArea-IntroTitle {
@@ -335,4 +345,68 @@
     border-radius: 150px 150px 150px 150px;
 
     animation: ShowUp 1s;
+}
+
+/* 바르바토스 소개 */
+/* 바르바토스 소개 */
+/* 바르바토스 소개 */
+/* 바르바토스 소개 */
+#WINFM-Content-ContentArea-IntroBarbatosIMGArea {
+    width: 45%;
+    height: 100%;
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black; */
+}
+#WINFM-Content-ContentArea-IntroBarbatosIMG {
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/character/character_venti_portrait-min.png");
+    background-size: 680px 1000px;
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+
+    animation: FadeUp 1s;
+}
+
+#WINFM-Content-ContentArea-IntroBarbatosScriptArea{
+    width: 55%;
+    height: 100%;
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black; */
+}
+
+#WINFM-Content-ContentArea-IntroBarbatosScriptTitle {
+    width: 100%;
+    height: 15%;
+
+    font-family: 'GIfont';
+    font-size: xx-large;
+    font-weight: 500;
+
+    animation: ShowUp 1s;
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black; */
+}
+#WINFM-Content-ContentArea-IntroBarbatosScriptIntro {
+    width: 100%;
+    height: 65%;
+
+    font-family: 'GIfont';
+    font-size: x-large;
+    font-weight: 500;
+
+    animation: ShowUp 1s;
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black; */
+}
+#WINFM-Content-ContentArea-IntroBarbatosScriptblank {
+    width: 100%;
+    height: 10%;
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black; */
 }
