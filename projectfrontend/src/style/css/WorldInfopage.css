@@ -1,13 +1,16 @@
-.winf-backgroundMondstadt {
+/* 월드 소개 페이지 CSS */
+/* 페이지 배경화면 설정 */
+/* 배경화면 위에 흰색 투명 바탕의 컨텐츠 영역이 배치됨. */
+#WINF-Background {
     color: black;
     padding: 10px;
     width: 100%;
     height: 100vh;
     position: relative;
 }
-.winf-backgroundMondstadt::before {
+#WINF-Background::before {
     content: "";
-    background-image: url("../img/background/MondstadtInfo.jpg");
+    background-image: url("../img/background/ConsulTravelerPaimonTeyvat.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -18,61 +21,208 @@
     right: 0px;
     bottom: 0px;
 }
-.winf-backgroundMondstadt > * {
+#WINF-Background > * {
     color: black;
     text-align: center;
     position: relative;
 }
 
-.winf-backgroundLiyue {
-    color: black;
-    padding: 10px;
-    width: 100%;
-    height: 100vh;
-    position: relative;
+#WINF-Content-outer {
+    width: 1600px;
+    height: 1050px;
+    margin-top: 80px;
+    display: inline-block;
 }
-.winf-backgroundLiyue::before {
+
+#WINF-Content-outer > * {
+    color: black;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+}
+
+#WINF-Content-outer::before {
     content: "";
-    background-image: url("../img/background/LiyueInfo.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0.7;
+    background-color: white;
+    opacity: 0.5;
     position: absolute;
     top: 0px;
     left: 0px;
     right: 0px;
     bottom: 0px;
-}
-.winf-backgroundLiyue > * {
-    color: black;
-    text-align: center;
-    position: relative;
+    border-radius: 20px;
 }
 
-.winf-backgroundInazuma {
-    color: black;
-    padding: 10px;
+#WINF-Content-ContentArea {
+    margin: 50px;
+    width: 92%;
+    height: 90%;
+}
+
+#WINF-Content-Bannarouter {
     width: 100%;
-    height: 100vh;
-    position: relative;
-}
-.winf-backgroundInazuma::before {
-    content: "";
-    background-image: url("../img/background/InazumaInfo.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0.7;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-}
-.winf-backgroundInazuma > * {
-    color: black;
-    text-align: center;
-    position: relative;
+    height: 100%;      
+    display: inline-flex;
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black; */
 }
 
+/* 각 월드 소개 페이지로 이동하는 배너 CSS */
+/* 애니메이션 효과 선언부 */
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 15%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translateZ(0);
+    }
+}
+
+@keyframes ShowUp {
+    0% {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* 배너 영역 CSS */
+
+/* 몬드 배너 */
+/* 몬드 배너 */
+#WINF-Content-Bannar1 {
+    width: 33.3%;
+    height: 100%;
+    
+    background-image: url("../img/background/city/Mondstadt.jpg");
+    background-size: 1800px 1000px;
+    background-repeat: no-repeat;
+    background-position: -400px 0px;
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black; */
+}
+
+#WINF-Content-Bannar1-Emblem {
+    width: 100%;
+    height: 25%;
+    
+    background-image: url("../img/emblem/Emblem_Mondstadt.webp");
+    background-size: 250px 250px;
+    background-repeat: no-repeat;
+    background-position: 115px 0px;
+    display: none;
+}
+#WINF-Content-Bannar1-HoverIMG {
+    width: 100%;
+    height: 75%;
+    
+    background-image: url("../img/character/Character_Venti_Full_Wish.webp");
+    background-size: 900px 900px;
+    background-repeat: no-repeat;
+    background-position: -200px -120px;
+    display: none;
+}
+
+#WINF-Content-Bannar1:hover #WINF-Content-Bannar1-Emblem {
+    display: block;
+    animation: fadeInUp 0.6s;
+}
+#WINF-Content-Bannar1:hover #WINF-Content-Bannar1-HoverIMG {
+    display: block;
+    animation: ShowUp 0.6s;
+}
+
+/* 리월 배너 */
+/* 리월 배너 */
+#WINF-Content-Bannar2 {
+    width: 33.3%;
+    height: 100%;
+    
+    background-image: url("../img/background/city/Liyue.jpg");
+    background-size: 1800px 1000px;
+    background-repeat: no-repeat;
+    background-position: -180px 0px;
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black; */
+}
+
+#WINF-Content-Bannar2-Emblem {
+    width: 100%;
+    height: 25%;
+    
+    background-image: url("../img/emblem/Emblem_Liyue.webp");
+    background-size: 250px 250px;
+    background-repeat: no-repeat;
+    background-position: 115px 0px;
+    display: none;
+}
+#WINF-Content-Bannar2-HoverIMG {
+    width: 100%;
+    height: 75%;
+    
+    background-image: url("../img/character/Character_Zhongli_Full_Wish.webp");
+    background-size: 1200px 1500px;
+    background-repeat: no-repeat;
+    background-position: -300px -80px;
+    display: none;
+}
+
+#WINF-Content-Bannar2:hover #WINF-Content-Bannar2-Emblem {
+    display: block;
+    animation: fadeInUp 0.6s;
+}
+#WINF-Content-Bannar2:hover #WINF-Content-Bannar2-HoverIMG {
+    display: block;
+    animation: ShowUp 0.6s;
+}
+
+/* 이나즈마 배너 */
+/* 이나즈마 배너 */
+#WINF-Content-Bannar3 {
+    width: 33.3%;
+    height: 100%;
+    
+    background-image: url("../img/background/city/Inazuma.jpg");
+    background-size: 1800px 1000px;
+    background-repeat: no-repeat;
+    background-position: -1150px 0px;
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black; */
+}
+
+#WINF-Content-Bannar3-Emblem {
+    width: 100%;
+    height: 25%;
+    
+    background-image: url("../img/emblem/Emblem_Inazuma.webp");
+    background-size: 250px 250px;
+    background-repeat: no-repeat;
+    background-position: 115px 0px;
+    display: none;
+}
+#WINF-Content-Bannar3-HoverIMG {
+    width: 100%;
+    height: 75%;
+    
+    background-image: url("../img/character/Character_Raiden_Shogun_Full_Wish.webp");
+    background-size: 900px 800px;
+    background-repeat: no-repeat;
+    background-position: -200px 0px;
+    display: none;
+}
+
+#WINF-Content-Bannar3:hover #WINF-Content-Bannar3-Emblem {
+    display: block;
+    animation: fadeInUp 0.6s;
+}
+#WINF-Content-Bannar3:hover #WINF-Content-Bannar3-HoverIMG {
+    display: block;
+    animation: ShowUp 0.6s;
+}

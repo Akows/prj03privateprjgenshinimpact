@@ -52,20 +52,7 @@ const Mainpage = () => {
                 <div className='mainpage-content-outer'>
 
                     <div className='mainpage-content-contentsarea'>
-
-                        <div id="MP-Content-Bannarouter">
-
-                            <div id="MP-Content-Bannar1">
-                                <div id="MP-Content-Bannar1-HoverIMG"></div>
-                            </div>
-                            <div id="MP-Content-Bannar2">
-
-                            </div>
-                            <div id="MP-Content-Bannar3">
-
-                            </div>
-                        </div>
-
+                        <h1>contents</h1>
                     </div>
 
                 </div>
