@@ -16,23 +16,9 @@
     text-align: center;
     position: relative;
 }
-.WINFM-BackgroundIMG1::before {
+.WINFM-BackgroundIMG::before {
     content: "";
     background-image: url("../img/background/MondstadtInfo.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0.7;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-}
-
-.WINFM-BackgroundIMG2::before {
-    content: "";
-    background-image: url("../img/background/BaalInazuma.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
