@@ -3,7 +3,6 @@ import { useLocation } from "react-router-dom";
 import "../style/css/WorldInfoMondstadt.css";
 
 const WorldInfoMondstadt = () => {
-
     // 페이지를 이동하였을 때, 페이지 가장 맨 위 위치로 스크롤을 자동 위치시키는 기능
     // useRef로 이동 지점을 설정하고 useEffect로 함수가 자동 실행되도록 설정
     const pagestartpoint = useRef();
@@ -132,7 +131,61 @@ const WorldInfoMondstadt = () => {
             <div className="WINFM-BackgroundArea WINFM-BackgroundIMG3" ref={introduceKnightsofFavonius}>
                 <div id='WINFM-Content-outer'>
                     <div id='WINFM-Content-ContentArea'>
-                        정부조직? 군대?
+
+                        <div id='WINFM-Content-ContentAreaInnerorizontal' className="FavoniusArea">
+
+                            <div id='WINFM-Content-ContentArea-FavoniusArea1'>
+                                <div id='WINFM-Content-ContentArea-FavoniusArea1-Script'>
+                                    <p>페보니우스 기사단</p>
+                                    <p>Knights of Favonius</p>
+
+                                    <div id='WINFM-Content-ContentArea-FavoniusArea1-Script-Emblem'/>
+                                </div>
+                                <div id='WINFM-Content-ContentArea-FavoniusArea1-IMG'>
+                                    
+                                </div>
+                            </div>
+
+                            <div id='WINFM-Content-ContentArea-FavoniusArea2'>
+                                <div id='WINFM-Content-ContentArea-FavoniusArea2-Script'>
+                                    <p>1000년 전, '민들레 기사' 바네사가 세운 몬드의 정규 기사단</p>
+                                    <p>'사자의 이빨' 바네사는 자신의 부족을 지키기 위해 몬드의 노예 검투사로 사투를 이어왔다.</p>
+
+                                    <p>귀족의 압제에 고통받는 민중을 보다 못한 그녀는 동료들과 혁명을 일으켜 부패한 귀족들을 몰아내었다.</p>
+                                        
+                                    <p>새로운 몬드는 세운 그녀는 질서를 유지하기 위해 페보니우스 기사단을 창립하였다.</p>
+
+                                    <p>초대 기사단장으로 취임한 바네사는 몬드의 자유를 대표하는 영웅으로 칭송받으며 시민들을 지키다가 죽었다.</p>
+
+                                    <p>바네사는 사후 자신의 위업이 신들에게 인정받아 셀레스티아에 도달하여 새로운 신이 되었다고 한다.</p>
+
+                                    <p>몬드 시민 사이에서는 바네사가 매의 모습으로 다시 나타나 자신들을 언제나 지켜보고 있다고 믿고있다.</p>
+                                </div>
+                                <div id='WINFM-Content-ContentArea-FavoniusArea2-IMG'>
+                                    
+                                </div>
+                            </div>
+
+                            <div id='WINFM-Content-ContentArea-FavoniusArea3'>
+                                <div id='WINFM-Content-ContentArea-FavoniusArea3-Script'>
+                                    
+                                </div>
+                                <div id='WINFM-Content-ContentArea-FavoniusArea3-IMG'>
+
+                                </div>
+                            </div>
+
+                            <div id='WINFM-Content-ContentArea-FavoniusArea4'>
+                                <div id='WINFM-Content-ContentArea-FavoniusArea4-Script'>
+                                    
+                                </div>
+                                <div id='WINFM-Content-ContentArea-FavoniusArea4-IMG'>
+                                    
+                                </div>
+                            </div>
+
+                        </div>
+
                     </div>
                 </div>
             </div>

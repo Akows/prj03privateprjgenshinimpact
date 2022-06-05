@@ -28,6 +28,23 @@
     }
 }
 
+/* 위에서 아래로 올라오는 애니매이션 */
+@keyframes FadeDown {
+    0% {
+        opacity: 0;
+        transform: translateZ(0);
+    }
+    100% {
+        opacity: 1;
+        transform: translateZ(0);
+    }
+}
+
+hr {
+    border: 0px;
+    height: 3px;
+    background-color: greenyellow;
+}
 
 /* 페이지 배경화면 설정 */
 /* 배경화면 위에 흰색 투명 바탕의 컨텐츠 영역이 배치됨. */
@@ -385,7 +402,7 @@
     font-size: xx-large;
     font-weight: 500;
 
-    animation: ShowUp 1s;
+    animation: ShowUp 3s;
 
     /* 영역 확인용 경계선 설정 */
     /* border: 1px solid black; */
@@ -398,7 +415,7 @@
     font-size: x-large;
     font-weight: 500;
 
-    animation: ShowUp 1s;
+    animation: ShowUp 3s;
 
     /* 영역 확인용 경계선 설정 */
     /* border: 1px solid black; */
@@ -409,4 +426,172 @@
 
     /* 영역 확인용 경계선 설정 */
     /* border: 1px solid black; */
+}
+
+/* 페보니우스 기사단 소개 */
+/* 페보니우스 기사단 소개 */
+/* 페보니우스 기사단 소개 */
+/* 페보니우스 기사단 소개 */
+
+/* 구역 설정 */
+/* 구역 설정 */
+#WINFM-Content-ContentArea-FavoniusArea1 {
+    width: 25%;
+    height: 100%;
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black; */
+}
+#WINFM-Content-ContentArea-FavoniusArea2{
+    width: 25%;
+    height: 100%;
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black; */
+}
+#WINFM-Content-ContentArea-FavoniusArea3{
+    width: 25%;
+    height: 100%;
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black; */
+}
+#WINFM-Content-ContentArea-FavoniusArea4{
+    width: 25%;
+    height: 100%;
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black; */
+}
+
+/* 스크립트-이미지 설정 */
+/* 스크립트-이미지 설정 */
+#WINFM-Content-ContentArea-FavoniusArea1-Script {
+    width: 100%;
+    height: 100%;
+
+    font-family: 'GIfont';
+    font-size: x-large;
+    font-weight: 500;
+
+    display: none;
+}
+#WINFM-Content-ContentArea-FavoniusArea1-Script-Emblem {
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/emblem/Knights_of_Favonius_Coat_of_Arms.webp");
+    background-size: 300px 300px;
+    background-repeat: no-repeat;
+    background-position: 50px 300px;
+}
+
+#WINFM-Content-ContentArea-FavoniusArea1-IMG {
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/character/character_Albedo_portrait.webp");
+    background-size: 700px 1200px;
+    background-repeat: no-repeat;
+    background-position: -150px 0px;
+
+    animation: ShowUp 1s;
+}
+#WINFM-Content-ContentArea-FavoniusArea2-Script {
+    width: 100%;
+    height: 100%;
+
+    font-family: 'GIfont';
+    font-size: x-large;
+    font-weight: 500;
+
+    display: none;
+}
+#WINFM-Content-ContentArea-FavoniusArea2-IMG {
+    width: 100%;
+    height: 100%;
+
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/character/character_eula_portrait.png");
+    background-size: 1200px 1750px;
+    background-repeat: no-repeat;
+    background-position: -350px -300px;
+
+    animation: ShowUp 1s;
+}
+#WINFM-Content-ContentArea-FavoniusArea3-Script {
+    width: 100%;
+    height: 100%;
+
+    font-family: 'GIfont';
+    font-size: x-large;
+    font-weight: 500;
+
+    display: none;
+}
+#WINFM-Content-ContentArea-FavoniusArea3-IMG {
+    width: 100%;
+    height: 100%;
+
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/character/character_Diluc_portrait.webp");
+    background-size: 600px 1450px;
+    background-repeat: no-repeat;
+    background-position: -135px 0px;
+
+    animation: ShowUp 1s;
+}
+#WINFM-Content-ContentArea-FavoniusArea4-Script {
+    width: 100%;
+    height: 100%;
+
+    font-family: 'GIfont';
+    font-size: x-large;
+    font-weight: 500;
+
+    display: none;
+}
+#WINFM-Content-ContentArea-FavoniusArea4-IMG {
+    width: 100%;
+    height: 100%;
+
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/character/character_jean_portrait.png");
+    background-size: 900px 1400px;
+    background-repeat: no-repeat;
+    background-position: -400px 0px;
+
+    animation: ShowUp 1s;
+}
+
+/* 스크립트-이미지 전환 설정 */
+/* 스크립트-이미지 전환 설정 */
+#WINFM-Content-ContentArea-FavoniusArea1:hover #WINFM-Content-ContentArea-FavoniusArea1-Script {
+    animation: FadeUp 1s;
+    display: block;
+}
+#WINFM-Content-ContentArea-FavoniusArea1:hover #WINFM-Content-ContentArea-FavoniusArea1-IMG {
+    display: none;
+}
+#WINFM-Content-ContentArea-FavoniusArea2:hover #WINFM-Content-ContentArea-FavoniusArea2-Script {
+    animation: FadeUp 1s;
+    display: block;
+}
+#WINFM-Content-ContentArea-FavoniusArea2:hover #WINFM-Content-ContentArea-FavoniusArea2-IMG {
+    display: none;
+}
+#WINFM-Content-ContentArea-FavoniusArea3:hover #WINFM-Content-ContentArea-FavoniusArea3-Script {
+    animation: FadeUp 1s;
+    display: block;
+}
+#WINFM-Content-ContentArea-FavoniusArea3:hover #WINFM-Content-ContentArea-FavoniusArea3-IMG {
+    display: none;
+}
+#WINFM-Content-ContentArea-FavoniusArea4:hover #WINFM-Content-ContentArea-FavoniusArea4-Script {
+    animation: FadeUp 1s;
+    display: block;
+}
+#WINFM-Content-ContentArea-FavoniusArea4:hover #WINFM-Content-ContentArea-FavoniusArea4-IMG {
+    display: none;
 }

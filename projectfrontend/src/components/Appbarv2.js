@@ -22,7 +22,7 @@ const Appbarv2 = () => {
                     </div>
                     <div id='AB-Content-Inner-Pagemenuarea-Button-box'>
                         <Link to="/incomplete">
-                            event
+                            이벤트
                         </Link>
                     </div>
                     <div id='AB-Content-Inner-Pagemenuarea-Button-box'>
