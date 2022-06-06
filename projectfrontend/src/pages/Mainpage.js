@@ -36,6 +36,9 @@ const Mainpage = () => {
                     <div id="MG-Content-RWebArea-Paimon">
                         
                     </div>
+                    <div id="MG-Content-RWebArea-Text">
+                        <p>페이몬!</p>
+                    </div>
                 </div>
             </div>
 
