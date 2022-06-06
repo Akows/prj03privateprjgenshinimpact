@@ -1,5 +1,11 @@
 /* 상단 메뉴바 CSS */
 
+/* 원신 폰트 설정 */
+@font-face {
+    font-family: 'GIfont';
+    src: url('../../font/ja-jp.ttf') format('truetype');
+}
+
 /* ul, li 태그의 기본 스타일을 제거 */
 ul, li {
     margin: 0;
@@ -12,19 +18,15 @@ ul, li {
     height: 70px;
 
     position: fixed;
-
     z-index: 999;
 
     background-color: black;
     opacity: 0.7;
 }
-
 #AB-Content-Outer > * {
     float: left;
     display : inline-flex;
 }
-
-
 
 
 #AB-Content-Inner-Logoarea {
@@ -38,8 +40,6 @@ ul, li {
     /* 영역 확인용 경계선 설정 */
     /* border: 1px solid black; */
 }
-
-
 #AB-Content-Inner-Pagemenuarea {
     width: 78.5%;
     height: 100%;
@@ -47,15 +47,22 @@ ul, li {
     /* 영역 확인용 경계선 설정 */
     /* border: 1px solid black; */
 }
-
-#AB-Content-Inner-Usermenu {
+#AB-Content-Inner-Usermenuarea {
     width: 8%;
     height: 100%;
 
     /* 영역 확인용 경계선 설정 */
     /* border: 1px solid black; */
 }
+#AB-Content-Inner-ResponsiveWebMenuarea {
+    width: 0%;
+    height: 0%;
 
+    display: none;
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black; */
+}
 
 
 
@@ -101,9 +108,10 @@ ul, li {
         color: white;
 
         text-decoration: none;
+        font-family: 'GIfont';
         font-size: large;
-        font-weight: bolder;
-
+        font-weight: 100;
+    
         /* 커서가 올라가면 글자 뒤에 배경색이 띄워지는 CSS (아래 절반만 배경)  */
         /* background-image: linear-gradient(transparent calc(100% - 3px), #000 3px); */
     }
@@ -143,8 +151,9 @@ ul, li {
     color: white;
 
     text-decoration: none;
+    font-family: 'GIfont';
     font-size: large;
-    font-weight: bolder;
+    font-weight: 100;
 
     /* 커서가 올라가면 글자 뒤에 배경색이 띄워지는 CSS (아래 절반만 배경)  */
     /* background-image: linear-gradient(transparent calc(100% - 3px), #000 3px); */
@@ -185,4 +194,142 @@ ul, li {
 #AB-Content-Inner-Usermenu-Button-box-li:hover #AB-Content-Inner-Usermenu-Button-box-li-ul {
     opacity: 1;
     visibility: visible;
+}
+
+/* 반응형 웹 CSS 설정 */
+/* 950px 이하에서는 유저 메뉴가 사라지도록 */
+@media ( max-width: 950px ) {
+    #AB-Content-Inner-Logoarea {
+        width: 15%;
+        height: 100%;
+    
+        background-image: url("../../img/emblem/genshinimpectlogo.png");
+        background-size: 150px 70px;
+        background-repeat: no-repeat;
+    
+        /* 영역 확인용 경계선 설정 */
+        /* border: 1px solid black; */
+    }
+
+    #AB-Content-Inner-Pagemenuarea {
+        width: 85%;
+        height: 100%;
+    
+        /* 영역 확인용 경계선 설정 */
+        /* border: 1px solid black; */
+    }
+    
+    #AB-Content-Inner-Usermenuarea {
+        width: 0%;
+        height: 0%;
+    
+        /* 영역 확인용 경계선 설정 */
+        /* border: 1px solid black; */
+    }
+
+    #AB-Content-Inner-ResponsiveWebMenuarea {
+        width: 0%;
+        height: 0%;
+    }
+}
+
+/* 700px 이하에서는 페이지 메뉴도 사라지도록 */
+@media ( max-width: 700px ) {
+    #AB-Content-Inner-Logoarea {
+        width: 80%;
+        height: 100%;
+    
+        background-image: url("../../img/emblem/genshinimpectlogo.png");
+        background-size: 150px 70px;
+        background-repeat: no-repeat;
+    
+        /* 영역 확인용 경계선 설정 */
+        /* border: 1px solid black; */
+    }
+    
+    #AB-Content-Inner-Pagemenuarea {
+        width: 0%;
+        height: 0%;
+
+        display: none;
+    
+        /* 영역 확인용 경계선 설정 */
+        /* border: 1px solid black; */
+    }
+    
+    #AB-Content-Inner-Usermenuarea {
+        width: 0%;
+        height: 0%;
+
+        display: none;
+    
+        /* 영역 확인용 경계선 설정 */
+        /* border: 1px solid black; */
+    }
+
+    #AB-Content-Inner-ResponsiveWebMenuarea {
+        width: 20%;
+        height: 100%;
+
+        display: block;
+    }
+
+    #AB-Content-Inner-ResponsiveWebMenuarea-Button {
+
+
+        /* 영역 확인용 경계선 설정 */
+        /* border: 1px solid white; */
+    }
+    #AB-Content-Inner-ResponsiveWebMenuarea-Button-box {
+        width: 100px;
+        height: 45px;
+    
+        margin-top: 25px;
+    }
+    
+    #AB-Content-Inner-ResponsiveWebMenuarea-Button-box > * {
+        color: white;
+    
+        text-decoration: none;
+        font-family: 'GIfont';
+        font-size: large;
+        font-weight: 100;
+    
+        /* 커서가 올라가면 글자 뒤에 배경색이 띄워지는 CSS (아래 절반만 배경)  */
+        /* background-image: linear-gradient(transparent calc(100% - 3px), #000 3px); */
+    }
+    
+    #AB-Content-Inner-ResponsiveWebMenuarea-Button-box > *:hover {
+        /* color: red; */
+        border-bottom: 3px solid blue; 
+        line-height: 1.2;
+    
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff;
+    
+        /* 커서가 올라가면 글자 뒤에 배경색이 띄워지는 CSS (아래 절반만 배경)  */
+        /* background-image: linear-gradient(transparent 60%, gray 40%); */
+    }
+    
+    /* 하단 메뉴를 숨김, 커서가 올라갈 때에만 메뉴가 드러나도록 조치 */
+
+    
+    #AB-Content-Inner-ResponsiveWebMenuarea-Button-box-li-ul {
+        background: black;
+        position: absolute;
+        visibility: hidden;
+
+        /* 영역 확인용 경계선 설정 */
+        /* border: 1px solid white; */
+    }
+    
+    #AB-Content-Inner-ResponsiveWebMenuarea-Button-box-li:hover #AB-Content-Inner-ResponsiveWebMenuarea-Button-box-li-ul {
+        visibility: visible;
+    }
+
+
+
+
+
+
+
 }

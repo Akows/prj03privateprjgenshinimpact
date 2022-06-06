@@ -16,18 +16,8 @@ const Appbarv2 = () => {
             <div id='AB-Content-Inner-Pagemenuarea'>
                 <div id='AB-Content-Inner-Pagemenuarea-Button'>
                     <div id='AB-Content-Inner-Pagemenuarea-Button-box'>
-                        <Link to="/generalforum">
-                            자유게시판
-                        </Link>
-                    </div>
-                    <div id='AB-Content-Inner-Pagemenuarea-Button-box'>
                         <Link to="/incomplete">
-                            이벤트
-                        </Link>
-                    </div>
-                    <div id='AB-Content-Inner-Pagemenuarea-Button-box'>
-                        <Link to="/incomplete">
-                            캐릭터 소개
+                            원신
                         </Link>
                     </div>
                     <div id='AB-Content-Inner-Pagemenuarea-Button-box'>
@@ -36,14 +26,19 @@ const Appbarv2 = () => {
                         </Link>
                     </div>
                     <div id='AB-Content-Inner-Pagemenuarea-Button-box'>
-                        <a href='https://act.hoyolab.com/ys/app/interactive-map/index.html' target='_blank' rel="noopener noreferrer"> 
-                            월드맵
-                        </a> 
+                        <Link to="/incomplete">
+                            이벤트
+                        </Link>
+                    </div>
+                    <div id='AB-Content-Inner-Pagemenuarea-Button-box'>
+                        <Link to="/generalforum">
+                            자유게시판
+                        </Link>
                     </div>
                 </div>
             </div>
 
-            <div id='AB-Content-Inner-Usermenu'>
+            <div id='AB-Content-Inner-Usermenuarea'>
                 <div id='AB-Content-Inner-Usermenu-Button'>
                     <li id='AB-Content-Inner-Usermenu-Button-box-li'>
                         <div id='AB-Content-Inner-Usermenu-Button-box'>
@@ -78,13 +73,55 @@ const Appbarv2 = () => {
                             </li>
                         </ul>
                     </li>
-                    
                 </div>
             </div>
+
+            <div id='AB-Content-Inner-ResponsiveWebMenuarea'>
+
+                <div id='AB-Content-Inner-ResponsiveWebMenuarea-Button'>
+                    <li id='AB-Content-Inner-ResponsiveWebMenuarea-Button-box-li'>
+                        <div id='AB-Content-Inner-ResponsiveWebMenuarea-Button-box'>
+                            <Link to="/">
+                                ==
+                            </Link> 
+                        </div>
+
+                        <ul id="AB-Content-Inner-ResponsiveWebMenuarea-Button-box-li-ul">
+                            <li>                   
+                                <div id='AB-Content-Inner-ResponsiveWebMenuarea-Button-box'> 
+                                    <Link to="/incomplete">
+                                        원신
+                                    </Link>
+                                </div>
+                            </li>
+                            <li>               
+                                <div id='AB-Content-Inner-ResponsiveWebMenuarea-Button-box'>     
+                                    <Link to="/worldinfo">
+                                        티바트
+                                    </Link>
+                                </div>
+                            </li>
+                            <li>               
+                                <div id='AB-Content-Inner-ResponsiveWebMenuarea-Button-box'>     
+                                    <Link to="/incomplete">
+                                        이벤트
+                                    </Link>
+                                </div>
+                            </li>
+                            <li>               
+                                <div id='AB-Content-Inner-ResponsiveWebMenuarea-Button-box'>     
+                                    <Link to="/generalforum">
+                                        자유게시판
+                                    </Link>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </div>
+
+
+            </div>
         </div>
-        
-
-
     );
 }
 

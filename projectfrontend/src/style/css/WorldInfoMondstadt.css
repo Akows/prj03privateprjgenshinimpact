@@ -40,12 +40,6 @@
     }
 }
 
-hr {
-    border: 0px;
-    height: 3px;
-    background-color: greenyellow;
-}
-
 /* 페이지 배경화면 설정 */
 /* 배경화면 위에 흰색 투명 바탕의 컨텐츠 영역이 배치됨. */
 
@@ -333,6 +327,10 @@ hr {
 
     /* 영역 확인용 경계선 설정 */
     /* border: 1px solid black; */
+}
+#WINFM-Content-ContentArea-MoveMondCastleIMG:hover {
+    border: 4px solid red;
+    animation: ShowUp 2s;
 }
 
 #WINFM-Content-ContentArea-MovePoint{
