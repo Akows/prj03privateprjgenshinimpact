@@ -76,8 +76,8 @@ const Appbarv2 = () => {
                 </div>
             </div>
 
-            <div id='AB-Content-Inner-ResponsiveWebMenuarea'>
-
+            {/* 다른 CSS와 충돌이 발생하여 해결까지 임시보류 */}
+            {/* <div id='AB-Content-Inner-ResponsiveWebMenuarea'>
                 <div id='AB-Content-Inner-ResponsiveWebMenuarea-Button'>
                     <li id='AB-Content-Inner-ResponsiveWebMenuarea-Button-box-li'>
                         <div id='AB-Content-Inner-ResponsiveWebMenuarea-Button-box'>
@@ -118,9 +118,8 @@ const Appbarv2 = () => {
                         </ul>
                     </li>
                 </div>
-
-
-            </div>
+            </div> */}
+            
         </div>
     );
 }

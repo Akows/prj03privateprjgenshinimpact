@@ -236,23 +236,22 @@ ul, li {
 /* 700px 이하에서는 페이지 메뉴도 사라지도록 */
 @media ( max-width: 700px ) {
     #AB-Content-Inner-Logoarea {
-        width: 80%;
+        width: 20%;
         height: 100%;
     
         background-image: url("../../img/emblem/genshinimpectlogo.png");
-        background-size: 150px 70px;
+        background-size: 120px 60px;
         background-repeat: no-repeat;
+        background-position: 0px 5px;
     
         /* 영역 확인용 경계선 설정 */
         /* border: 1px solid black; */
     }
     
     #AB-Content-Inner-Pagemenuarea {
-        width: 0%;
-        height: 0%;
+        width: 80%;
+        height: 100%;
 
-        display: none;
-    
         /* 영역 확인용 경계선 설정 */
         /* border: 1px solid black; */
     }
@@ -267,18 +266,11 @@ ul, li {
         /* border: 1px solid black; */
     }
 
+    /* 반응형 전용 메뉴 CSS */
+    /* hover 사용시 원인불명의 CSS 충돌 현상이 생겨 해결시까지 사용 중단 */
     #AB-Content-Inner-ResponsiveWebMenuarea {
-        width: 20%;
-        height: 100%;
-
-        display: block;
-    }
-
-    #AB-Content-Inner-ResponsiveWebMenuarea-Button {
-
-
-        /* 영역 확인용 경계선 설정 */
-        /* border: 1px solid white; */
+        width: 0%;
+        height: 0%;
     }
     #AB-Content-Inner-ResponsiveWebMenuarea-Button-box {
         width: 100px;
@@ -315,6 +307,7 @@ ul, li {
     
     #AB-Content-Inner-ResponsiveWebMenuarea-Button-box-li-ul {
         background: black;
+
         position: absolute;
         visibility: hidden;
 
@@ -325,11 +318,4 @@ ul, li {
     #AB-Content-Inner-ResponsiveWebMenuarea-Button-box-li:hover #AB-Content-Inner-ResponsiveWebMenuarea-Button-box-li-ul {
         visibility: visible;
     }
-
-
-
-
-
-
-
 }
