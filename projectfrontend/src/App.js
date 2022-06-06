@@ -21,7 +21,7 @@ import GeneralforumWriteAndEdit from './pages/GeneralforumWriteAndEdit';
 
 import Incomplete from './pages/Incomplete';
 import WorldInfoMondstadt from './pages/WorldInfoMondstadt';
-
+import GenshinIntroduce from './pages/GenshinIntroduce';
 
 const App = () => {
 
@@ -49,9 +49,7 @@ const App = () => {
 
           <Route path='/' element={<Mainpage />}/>
 
-          <Route path='/login' element={<Loginpage />}/>   
-          <Route path='/memberjoin' element={<MemberjoinPage />}/>            
-          <Route path='/memberadmin/memberlist' element={<MemberAdmin />}/>    
+          <Route path='/genshinintroduce' element={<GenshinIntroduce />}/>
 
           <Route path='/worldinfo' element={<WorldInfopage />}/>
           <Route path='/worldinfo/mondstadt' element={<WorldInfoMondstadt />}/>
@@ -59,6 +57,12 @@ const App = () => {
           <Route path='/generalforum' element={<Generalforum/> }/>
           <Route path='/generalforum/view/:b_number_pk' element={<GeneralforumView/> }/>
           <Route path='/generalforum/writeoredit' element={<GeneralforumWriteAndEdit/> }/>
+
+
+
+          <Route path='/login' element={<Loginpage />}/>   
+          <Route path='/memberjoin' element={<MemberjoinPage />}/>            
+          <Route path='/memberadmin/memberlist' element={<MemberAdmin />}/>    
 
           <Route path='/incomplete' element={<Incomplete />}/>    
 

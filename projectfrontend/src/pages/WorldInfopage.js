@@ -21,19 +21,28 @@ const WorldInfopage = () => {
                             <div id="WINF-Content-Bannar1">
                                 <Link to={"/worldinfo/mondstadt"}>
                                 <div id="WINF-Content-Bannar1-Emblem"></div>
-                                <div id="WINF-Content-Bannar1-HoverIMG"></div>
+                                <div id="WINF-Content-Bannar1-Text">
+                                    몬드성
+                                    <div id="WINF-Content-Bannar1-HoverIMG"></div>
+                                </div>
                                 </Link>
                             </div>
                             <div id="WINF-Content-Bannar2">
                                 <Link to={"/"}>
                                 <div id="WINF-Content-Bannar2-Emblem"></div>
-                                <div id="WINF-Content-Bannar2-HoverIMG"></div>
+                                <div id="WINF-Content-Bannar2-Text">
+                                    리월항
+                                    <div id="WINF-Content-Bannar2-HoverIMG"></div>
+                                </div>
                                 </Link>
                             </div>
                             <div id="WINF-Content-Bannar3">
                                 <Link to={"/"}>
                                 <div id="WINF-Content-Bannar3-Emblem"></div>
-                                <div id="WINF-Content-Bannar3-HoverIMG"></div>
+                                <div id="WINF-Content-Bannar3-Text">
+                                    이나즈마섬
+                                    <div id="WINF-Content-Bannar3-HoverIMG"></div>
+                                </div>
                                 </Link>
                             </div>
                         </div>

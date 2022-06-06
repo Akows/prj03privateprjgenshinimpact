@@ -6,21 +6,23 @@ const WorldInfoMondstadt = () => {
     // 페이지를 이동하였을 때, 페이지 가장 맨 위 위치로 스크롤을 자동 위치시키는 기능
     // useRef로 이동 지점을 설정하고 useEffect로 함수가 자동 실행되도록 설정
     const pagestartpoint = useRef();
-
-    React.useEffect(() => {
-        pagestartpoint.current.scrollIntoView();
-    }, [pagestartpoint]);
-
-    // 
     const introduceBarbatos = useRef();
     const introduceKnightsofFavonius = useRef();
     const introduceMondCastle = useRef();
     const introduceMondPoint = useRef();
 
+    React.useEffect(() => {
+        pagestartpoint.current.scrollIntoView();
+    }, [pagestartpoint]);
+
     // 페이지 새로고침을 위한 useLocation.
     const location = useLocation();
 
     // 페이지 특정 지점으로 이동하는 기능 코드.
+    const moveToStart = () => {
+        pagestartpoint.current.scrollIntoView({behavior: 'smooth'});
+    };
+
     const moveToGodIntroduce = () => {
         introduceBarbatos.current.scrollIntoView({behavior: 'smooth'});
         location.reload();
@@ -203,6 +205,23 @@ const WorldInfoMondstadt = () => {
                     <div id='WINFM-Content-ContentArea'>
                         주요 거점
                     </div>
+                </div>
+            </div>
+
+            <div id='WINFM-Menu-Remote'>
+                <div id="WINFM-Menu-Remote-Icon" onClick={moveToStart}/>
+
+                <div id="WINFM-Menu-Remote-Movebtu" onClick={moveToGodIntroduce}>
+                    <div id="WINFM-Menu-Remote-Movebtu-Textbox">신</div>
+                </div>
+                <div id="WINFM-Menu-Remote-Movebtu" onClick={moveTointroduceKnightsofFavonius}>
+                    <div id="WINFM-Menu-Remote-Movebtu-Textbox">기사단</div>
+                </div>
+                <div id="WINFM-Menu-Remote-Movebtu" onClick={moveTointroduceMondCastle}>
+                    <div id="WINFM-Menu-Remote-Movebtu-Textbox">몬드성</div>
+                </div>
+                <div id="WINFM-Menu-Remote-Movebtu" onClick={moveTointroduceMondPoint}>
+                    <div id="WINFM-Menu-Remote-Movebtu-Textbox">거점</div>
                 </div>
             </div>
         </>

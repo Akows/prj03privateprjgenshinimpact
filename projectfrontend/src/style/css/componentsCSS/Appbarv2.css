@@ -117,14 +117,24 @@ ul, li {
     }
 
     #AB-Content-Inner-Pagemenuarea-Button-box > *:hover {
-        /* color: red; */
-        border-bottom: 3px solid red; 
         line-height: 1.2;
-
         text-shadow: 0 0 10px #fff, 0 0 20px #fff;
 
         /* 커서가 올라가면 글자 뒤에 배경색이 띄워지는 CSS (아래 절반만 배경)  */
         /* background-image: linear-gradient(transparent 60%, gray 40%); */
+    }
+
+    .Pagemenuarea-Button-box1 > *:hover {
+        border-bottom: 3px solid red; 
+    }
+    .Pagemenuarea-Button-box2 > *:hover {
+        border-bottom: 3px solid blue; 
+    }
+    .Pagemenuarea-Button-box3 > *:hover {
+        border-bottom: 3px solid yellow; 
+    }
+    .Pagemenuarea-Button-box4 > *:hover {
+        border-bottom: 3px solid green; 
     }
 
 

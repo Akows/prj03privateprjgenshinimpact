@@ -1,0 +1,133 @@
+/* 원신 소개 페이지 CSS */
+/* 원신 폰트 설정 */
+@font-face {
+    font-family: 'GIfont';
+    src: url('../font/ja-jp.ttf') format('truetype');
+}
+
+/* 투명화 애니매이션 */
+@keyframes ShowUp {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* 아래에서 위로 올라오는 애니매이션 */
+@keyframes FadeUp {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 15%, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: translateZ(0);
+    }
+}
+
+/* 페이지 배경화면 설정 */
+/* 배경화면 위에 흰색 투명 바탕의 컨텐츠 영역이 배치됨. */
+
+/* 페이지 배경화면 설정 */
+/* 페이지 배경화면 설정 */
+.EV-BackgroundArea {
+    color: black;
+    padding: 10px;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.EV-BackgroundArea > * {
+    color: black;
+    text-align: center;
+    position: relative;
+}
+
+/* 페이지 배경화면 - 배경 이미지 설정 */
+/* 페이지 배경화면 - 배경 이미지 설정 */
+.EV-BackgroundIMG1::before {
+    content: "";
+    background-image: url("../img/background/BarbatosMondstadt.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.7;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+/* 컨텐츠 배치구역 설정 */
+/* 컨텐츠 배치구역 설정 */
+#EV-Content-outer {
+    width: 1600px;
+    height: 1050px;
+    margin-top: 80px;
+    display: inline-block;
+}
+
+#EV-Content-outer > * {
+    color: black;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+}
+
+#EV-Content-outer::before {
+    content: "";
+    background-color: white;
+    opacity: 0.5;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    border-radius: 20px;
+}
+
+/* 실제컨텐츠 배치영역 설정 - 구역 틀 */
+/* 실제컨텐츠 배치영역 설정 - 구역 틀 */
+#EV-Content-ContentArea {
+    margin: 15px;
+    width: 97%;
+    height: 97%;
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black; */
+}
+
+/* div들을 중앙 기준 수직 정렬할 때 사용할 CSS */
+#EV-Content-ContentAreaInnerverticality {
+    width: 100%;
+    height: 100%;
+
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* div들을 중앙 기준 수평 정렬할 때 사용할 CSS */
+#EV-Content-ContentAreaInnerorizontal{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+}
+
+/* 페이지 이동용 리모콘 CSS */
+#EV-Menu-Remote {
+    width: 120px;
+    height: 300px;
+    right: 50%; 
+    top: 180px; 
+    margin-right: -1000px;
+
+    border: 2px wheat solid;
+
+    position: fixed; 
+    text-align: center;
+}

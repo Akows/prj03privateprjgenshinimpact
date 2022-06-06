@@ -1,4 +1,11 @@
 /* 월드 소개 페이지 CSS */
+
+/* 원신 폰트 설정 */
+@font-face {
+    font-family: 'GIfont';
+    src: url('../font/ja-jp.ttf') format('truetype');
+}
+
 /* 페이지 배경화면 설정 */
 /* 배경화면 위에 흰색 투명 바탕의 컨텐츠 영역이 배치됨. */
 #WINF-Background {
@@ -106,6 +113,19 @@
     /* 영역 확인용 경계선 설정 */
     /* border: 1px solid black; */
 }
+#WINF-Content-Bannar1-Text {
+    width: 100%;
+    height: 100%;
+
+    color: white;
+    font-family: 'GIfont';
+    font-size: xx-large;
+    font-weight: 500;
+
+    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+
+    display: none;
+}
 
 #WINF-Content-Bannar1-Emblem {
     width: 100%;
@@ -114,7 +134,7 @@
     background-image: url("../img/emblem/Emblem_Mondstadt.webp");
     background-size: 250px 250px;
     background-repeat: no-repeat;
-    background-position: 115px 0px;
+    background-position: 120px 0px;
     display: none;
 }
 #WINF-Content-Bannar1-HoverIMG {
@@ -136,6 +156,10 @@
     display: block;
     animation: ShowUp 0.6s;
 }
+#WINF-Content-Bannar1:hover #WINF-Content-Bannar1-Text {
+    display: block;
+    animation: ShowUp 0.6s;
+}
 
 /* 리월 배너 */
 /* 리월 배너 */
@@ -151,6 +175,19 @@
     /* 영역 확인용 경계선 설정 */
     /* border: 1px solid black; */
 }
+#WINF-Content-Bannar2-Text {
+    width: 100%;
+    height: 100%;
+
+    color: white;
+    font-family: 'GIfont';
+    font-size: xx-large;
+    font-weight: 500;
+
+    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+
+    display: none;
+}
 
 #WINF-Content-Bannar2-Emblem {
     width: 100%;
@@ -159,15 +196,15 @@
     background-image: url("../img/emblem/Emblem_Liyue.webp");
     background-size: 250px 250px;
     background-repeat: no-repeat;
-    background-position: 115px 0px;
+    background-position: 121px 0px;
     display: none;
 }
 #WINF-Content-Bannar2-HoverIMG {
     width: 100%;
-    height: 75%;
+    height: 71%;
     
     background-image: url("../img/character/Character_Zhongli_Full_Wish.webp");
-    background-size: 1200px 1500px;
+    background-size: 1200px 1450px;
     background-repeat: no-repeat;
     background-position: -300px -80px;
     display: none;
@@ -178,6 +215,10 @@
     animation: fadeInUp 0.6s;
 }
 #WINF-Content-Bannar2:hover #WINF-Content-Bannar2-HoverIMG {
+    display: block;
+    animation: ShowUp 0.6s;
+}
+#WINF-Content-Bannar2:hover #WINF-Content-Bannar2-Text {
     display: block;
     animation: ShowUp 0.6s;
 }
@@ -196,6 +237,18 @@
     /* 영역 확인용 경계선 설정 */
     /* border: 1px solid black; */
 }
+#WINF-Content-Bannar3-Text {
+    width: 100%;
+    height: 100%;
+
+    color: white;
+    font-family: 'GIfont';
+    font-size: xx-large;
+    font-weight: 500;
+    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+
+    display: none;
+}
 
 #WINF-Content-Bannar3-Emblem {
     width: 100%;
@@ -204,7 +257,7 @@
     background-image: url("../img/emblem/Emblem_Inazuma.webp");
     background-size: 250px 250px;
     background-repeat: no-repeat;
-    background-position: 115px 0px;
+    background-position: 122px 0px;
     display: none;
 }
 #WINF-Content-Bannar3-HoverIMG {
@@ -223,6 +276,10 @@
     animation: fadeInUp 0.6s;
 }
 #WINF-Content-Bannar3:hover #WINF-Content-Bannar3-HoverIMG {
+    display: block;
+    animation: ShowUp 0.6s;
+}
+#WINF-Content-Bannar3:hover #WINF-Content-Bannar3-Text {
     display: block;
     animation: ShowUp 0.6s;
 }

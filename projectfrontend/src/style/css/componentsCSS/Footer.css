@@ -11,9 +11,12 @@
     text-align: left;
     display: inline-block;
 }
-    #pagelinkarea > span {
-        margin-top: 10px;
-    }
+#pagelinkbtn {
+    width: 100%;
+    height: 100%;
+
+    margin-top: 5px;
+}
     #pagelinkarea > a {
         text-decoration: none;
     }
@@ -68,4 +71,18 @@
         height: 14%;
         color: white;
         font-size: small;
+    }
+
+    #blankarea {
+        height: 10%;
+        display: none;
+    }
+
+    @media ( max-width: 1190px ) {
+        #playrightarea {
+            display: none;
+        }
+        #blankarea {
+            display: block;
+        }
     }

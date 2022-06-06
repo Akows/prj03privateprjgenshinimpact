@@ -15,22 +15,17 @@ const Appbarv2 = () => {
 
             <div id='AB-Content-Inner-Pagemenuarea'>
                 <div id='AB-Content-Inner-Pagemenuarea-Button'>
-                    <div id='AB-Content-Inner-Pagemenuarea-Button-box'>
-                        <Link to="/incomplete">
+                    <div id='AB-Content-Inner-Pagemenuarea-Button-box' className='Pagemenuarea-Button-box1'>
+                        <Link to="/genshinintroduce">
                             원신
                         </Link>
                     </div>
-                    <div id='AB-Content-Inner-Pagemenuarea-Button-box'>
+                    <div id='AB-Content-Inner-Pagemenuarea-Button-box' className='Pagemenuarea-Button-box2'>
                         <Link to="/worldinfo">
                             티바트
                         </Link>
                     </div>
-                    <div id='AB-Content-Inner-Pagemenuarea-Button-box'>
-                        <Link to="/incomplete">
-                            이벤트
-                        </Link>
-                    </div>
-                    <div id='AB-Content-Inner-Pagemenuarea-Button-box'>
+                    <div id='AB-Content-Inner-Pagemenuarea-Button-box' className='Pagemenuarea-Button-box4'>
                         <Link to="/generalforum">
                             자유게시판
                         </Link>
@@ -38,7 +33,8 @@ const Appbarv2 = () => {
                 </div>
             </div>
 
-            <div id='AB-Content-Inner-Usermenuarea'>
+            {/* 프로필-로그인 메뉴 구역, 로그인 기능 구현 이후 사용예정 */}
+            {/* <div id='AB-Content-Inner-Usermenuarea'>
                 <div id='AB-Content-Inner-Usermenu-Button'>
                     <li id='AB-Content-Inner-Usermenu-Button-box-li'>
                         <div id='AB-Content-Inner-Usermenu-Button-box'>
@@ -74,8 +70,9 @@ const Appbarv2 = () => {
                         </ul>
                     </li>
                 </div>
-            </div>
+            </div> */}
 
+            {/* 반응형 웹 전용 메뉴 구역 */}
             {/* 다른 CSS와 충돌이 발생하여 해결까지 임시보류 */}
             {/* <div id='AB-Content-Inner-ResponsiveWebMenuarea'>
                 <div id='AB-Content-Inner-ResponsiveWebMenuarea-Button'>

@@ -11,27 +11,28 @@ import youtubeicon from "../style/img/emblem/youtubeicon3030.png";
 
 const Footer = () => {
     return (
-        <div>
+        <>
             <footer id='footerarea'>
-
                 <div id='pagelinkarea'>
-                    <span className='iconbutton'>
-                        <a href='https://discord.com/invite/genshinimpact' target='_blank' rel="noopener noreferrer"> 
-                            <img src={discordicon} alt="img error!"/> 
-                        </a>
-                    </span>
+                    <div id='pagelinkbtn'>
+                        <span className='iconbutton'>
+                            <a href='https://discord.com/invite/genshinimpact' target='_blank' rel="noopener noreferrer"> 
+                                <img src={discordicon} alt="img error!"/> 
+                            </a>
+                        </span>
 
-                    <span className='iconbutton'>
-                        <a href='https://www.facebook.com/Genshinimpact' target='_blank' rel="noopener noreferrer">
-                            <img src={facebookicon} alt="img error!"/> 
-                        </a>
-                    </span>
+                        <span className='iconbutton'>
+                            <a href='https://www.facebook.com/Genshinimpact' target='_blank' rel="noopener noreferrer">
+                                <img src={facebookicon} alt="img error!"/> 
+                            </a>
+                        </span>
 
-                    <span className='iconbutton'>
-                        <a href='https://www.youtube.com/c/GenshinImpact' target='_blank' rel="noopener noreferrer"> 
-                            <img src={youtubeicon} alt="img error!"/> 
-                        </a>                        
-                    </span>
+                        <span className='iconbutton'>
+                            <a href='https://www.youtube.com/c/GenshinImpact' target='_blank' rel="noopener noreferrer"> 
+                                <img src={youtubeicon} alt="img error!"/> 
+                            </a>                        
+                        </span>
+                    </div>
                 </div>
 
                 <div id='contentarea'>
@@ -71,6 +72,8 @@ const Footer = () => {
                         </span>
                     </div>
 
+                    <div id='blankarea'/>
+
                     <div id='playgradearea'>
                         <img src={playgrade} alt='img error!' width="210" height="70"/>
                     </div>
@@ -81,6 +84,8 @@ const Footer = () => {
                         Epic, Epic Games, Epic Games Store, the Epic Games Store logo, and Epic Online Services are trademarks and/or registered trademarks of Epic Games. All other trademarks are the property of their respective owners.
                     </div>
 
+                    <div id='blankarea'/>
+
                     <div id='companylogoarea'>
                         <img src={companylogo} alt='img error!' width="320" height="60"/>
                     </div>
@@ -89,9 +94,8 @@ const Footer = () => {
                         Copyright © COGNOSPHERE. All Rights Reserved.
                     </div>
                 </div>
-
             </footer>
-        </div>
+        </>
     );
 }
 
