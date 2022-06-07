@@ -117,7 +117,7 @@
 #EV-Content-Outer-Content-Container::before {
     content: "";
     background-color: white;
-    opacity: 0.1;
+    opacity: 0;
     position: absolute;
     top: 0px;
     left: 0px;
@@ -126,25 +126,65 @@
     border-radius: 20px;
 }
 
-
 /* 페이지 이동용 리모콘 CSS */
-#EV-Content-Outer-Content-MenuRemote {
-    width: 120px;
-    height: 300px;
+#EV-Content-MenuRemote {
+    width: 110px;
+    height: 320px;
     top: 180px; 
-    margin-left: 1785px;
+    margin-left: 1985px;
 
-    border: 2px wheat solid;
+    background-color: #EBF5FF;
+    border-radius: 20px;
+    opacity: 0.8;
 
     position: sticky; 
     text-align: center;
 }
 
+#EV-Content-MenuRemote-Icon {
+    width: 100px;
+    height: 100px;
+
+    margin-left: 5px;
+    
+    background-image: url("../img/ect/genshinimpectlogo.png");
+    background-size: 180px 90px;
+    background-repeat: no-repeat;
+    background-position: -40px 10px;
+}
+
+#EV-Content-MenuRemote-Movebtu {
+    width: 80px;
+    height: 40px;
+
+    margin-top: 9px;
+    margin-left: 13px;
+
+    font-family: 'GIfont';
+    font-size: large;
+    font-weight: 500;
+
+    border-radius: 30px;
+
+    border: 2px #EBF5FF solid;
+}
+#EV-Content-MenuRemote-Movebtu:hover {
+    background-color: #464646;
+    color: white;
+}
+#EV-Content-MenuRemote-Movebtu:active {
+    background-color: #a0a0a0;
+    color: white;
+}
+#EV-Content-MenuRemote-Movebtu-Textbox {
+    margin-top: 10px;
+}
+
 /* 실제컨텐츠 배치영역 설정 - 구역 틀 */
 /* 실제컨텐츠 배치영역 설정 - 구역 틀 */
-#EV-Content-Outer-Content-Content {
-    width: 95%;
-    height: 95%;
+#EV-Content-Outer-Content-ContentsArea {
+    width: 97%;
+    height: 99%;
 
     /* 영역 확인용 경계선 설정 */
     /* border: 1px solid black; */
@@ -179,7 +219,7 @@
     width: 100%;
     height: 100%;
 
-    background-image: url("../img/emblem/genshinimpectlogo\(blue\).png");
+    background-image: url("../img/ect/genshinimpectlogo\(blue\).png");
     background-size: 320px 200px;
     background-repeat: no-repeat;
     background-position: 100px 0;
@@ -210,13 +250,239 @@
     width: 100%;
     height: 100%;
 
-    background-image: url("../img/emblem/2.7maintitle.png");
+    background-image: url("../img/ect/2.7maintitle.png");
     background-size: 900px 400px;
     background-repeat: no-repeat;
     background-position: 650px 500px;
+}
+
+/* 하단 컨텐츠 배치영역 설정 */
+/* 하단 컨텐츠 배치영역 설정 */
+#EV-Content-Outer-Content-PV {
+    width: 100%;
+    height: 20%;
+
+    /* 영역 확인용 설정 */
+    /* border: 2px black solid; */
+}
+#EV-Content-Outer-Content-VersionInfo{
+    width: 100%;
+    height: 20%;
+
+    /* 영역 확인용 설정 */
+    /* border: 2px black solid; */
+}
+
+#EV-Content-Outer-Content-GameFeature{
+    width: 100%;
+    height: 20%;
+
+    /* 영역 확인용 설정 */
+    /* border: 2px black solid; */
+}
+
+#EV-Content-Outer-Content-Productlaunch {
+    width: 100%;
+    height: 40%;
+
+    /* 영역 확인용 설정 */
+    /* border: 2px black solid; */
+}
+
+/* 하단 컨텐츠 내부영역 설정 */
+/* 하단 컨텐츠 내부영역 설정 */
+
+/* 영상 영역 설정 */
+#EV-Content-Outer-Content-Movietitle {
+    width: 95%;
+    height: 20%;
+
+    margin: 20px;
+
+    background-image: url("../img/ect/playbtuconti.png");
+    background-size: 500px 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    /* 영역 확인용 설정 */
+    /* border: 2px black solid; */
+}
+#EV-Content-Outer-Content-Movietitleplaybtn {
+    width: 100%;
+    height: 100%;
+
+    opacity: 0.8;
+
+    background-image: url("../img/ect/play.png");
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#EV-Content-Outer-Content-Movie {
+    width: 95%;
+    height: 80%;
+
+    margin: 20px;
+
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* 영역 확인용 설정 */
+    /* border: 2px black solid; */
+}
+#EV-Content-Outer-Content-trailer {
+    width: 85%;
+    height: 85%;
+
+    margin: 20px;
+}
+
+/* 버전 정보 영역 설정 */
+#EV-Content-Outer-Content-VItitle {
+    width: 95%;
+    height: 20%;
+
+    margin: 20px;
+
+    background-image: url("../img/ect/VersionInfo.png");
+    background-size: 1500px 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    /* 영역 확인용 설정 */
+    /* border: 2px black solid; */
+}
+
+#EV-Content-Outer-Content-VI {
+    width: 95%;
+    height: 80%;
+
+    margin: 20px;
+
+    /* 영역 확인용 설정 */
+    border: 2px black solid;
+}
+
+#EV-Content-Outer-Content-VI-Leftbtn {
+    width: 5%;
+    height: 95%;
+
+    margin-left: 30px;
+
+    /* 영역 확인용 설정 */
+    border: 2px black solid;
+}
+#EV-Content-Outer-Content-VI-Silde {
+    width: 10%;
+    height: 95%;
+
+    /* 영역 확인용 설정 */
+    border: 2px black solid;
+}
+#EV-Content-Outer-Content-VI-Rightbtn {
+    width: 5%;
+    height: 95%;
+
+    /* 영역 확인용 설정 */
+    border: 2px black solid;
 }
 
 
 
 
 
+
+/* 게임 특징 영역 설정 */
+#EV-Content-Outer-Content-GFtitle {
+    width: 95%;
+    height: 20%;
+
+    margin: 20px;
+
+    background-image: url("../img/ect/GameFeature.png");
+    background-size: 1500px 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    /* 영역 확인용 설정 */
+    border: 2px black solid;
+}
+
+#EV-Content-Outer-Content-GF {
+    width: 95%;
+    height: 80%;
+
+    margin: 20px;
+
+    /* 영역 확인용 설정 */
+    border: 2px black solid;
+}
+
+/* 게임 출시 정보 영역 설정 */
+#EV-Content-Outer-Content-PI {
+    width: 95%;
+    height: 70%;
+
+    margin-top: 500px;
+
+    /* 영역 확인용 설정 */
+    /* border: 2px black solid; */
+}
+
+#EV-Content-Outer-Content-PI-MainLogo {
+    width: 100%;
+    height: 15%;
+
+    margin-top: 300px;
+
+    background-image: url("../img/ect/genshinimpectlogo\(white\).png");
+    background-size: 400px 250px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#EV-Content-Outer-Content-PI-Slogan{
+    width: 100%;
+    height: 5%;
+
+    background-image: url("../img/ect/gameslogan.png");
+    background-size: 1000px 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#EV-Content-Outer-Content-PI-Launchinfo{
+    width: 100%;
+    height: 15%;
+
+    background-image: url("../img/ect/launchinfo.png");
+    background-size: 700px 170px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#EV-Content-Outer-Content-PI-Platforminfo {
+    width: 100%;
+    height: 10%;
+
+    display: flex;
+    justify-content: center;
+
+}
+
+#EV-Content-Outer-Content-PI-Platforminfo-Paimon {
+    width: 100%;
+    height: 50%;
+
+    background-image: url("../img/character/paimon.png");
+    background-size: 650px 850px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    display: none;
+}
+
+#EV-Content-Outer-Content-Productlaunch:hover #EV-Content-Outer-Content-PI-Platforminfo-Paimon {
+    animation: ShowUp 3s;
+    display: block;
+}

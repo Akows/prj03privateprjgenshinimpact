@@ -2,12 +2,12 @@ import * as React from 'react';
 
 import "../style/css/componentsCSS/Footer.css";
 
-import gamelogo from "../style/img/emblem/genshinimpectlogo.png";
+import gamelogo from "../style/img/ect/genshinimpectlogo.png";
 import playgrade from "../style/img/ect/gameratingresult.png";
-import companylogo from "../style/img/emblem/hovoverselogo.png";
-import discordicon from "../style/img/emblem/discordicon3030.png";
-import facebookicon from "../style/img/emblem/facebookicon3030.png";
-import youtubeicon from "../style/img/emblem/youtubeicon3030.png";
+import companylogo from "../style/img/ect/hovoverselogo.png";
+import discordicon from "../style/img/ect/discordicon3030.png";
+import facebookicon from "../style/img/ect/facebookicon3030.png";
+import youtubeicon from "../style/img/ect/youtubeicon3030.png";
 
 const Footer = () => {
     return (

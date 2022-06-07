@@ -22,7 +22,6 @@ const WorldInfoMondstadt = () => {
     const moveToStart = () => {
         pagestartpoint.current.scrollIntoView({behavior: 'smooth'});
     };
-
     const moveToGodIntroduce = () => {
         introduceBarbatos.current.scrollIntoView({behavior: 'smooth'});
         location.reload();
