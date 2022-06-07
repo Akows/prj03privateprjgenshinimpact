@@ -30,6 +30,11 @@ const Appbarv2 = () => {
                             자유게시판
                         </Link>
                     </div>
+                    <div id='AB-Content-Inner-Pagemenuarea-Button-box' className='Pagemenuarea-Button-box4'>
+                        <Link to="/incomplete">
+                            테스트존
+                        </Link>
+                    </div>
                 </div>
             </div>
 

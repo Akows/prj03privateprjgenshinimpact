@@ -92,3 +92,17 @@
     /* 영역 확인용 경계선 설정 */
     /* border: 1px solid black; */
 }
+
+
+
+/* .slick-prev:before {
+    content: "<";
+    color: red;
+    font-size: 30px;
+  }
+  
+  .slick-next:before {
+    content: ">";
+    color: red;
+    font-size: 30px;
+  } */

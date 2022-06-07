@@ -131,13 +131,14 @@
     width: 110px;
     height: 320px;
     top: 180px; 
-    margin-left: 1985px;
+    right: 50px;
+    /* margin-left: 1985px; */
 
     background-color: #EBF5FF;
     border-radius: 20px;
     opacity: 0.8;
 
-    position: sticky; 
+    position: fixed; 
     text-align: center;
 }
 
@@ -267,7 +268,7 @@
 }
 #EV-Content-Outer-Content-VersionInfo{
     width: 100%;
-    height: 20%;
+    height: 25%;
 
     /* 영역 확인용 설정 */
     /* border: 2px black solid; */
@@ -283,7 +284,7 @@
 
 #EV-Content-Outer-Content-Productlaunch {
     width: 100%;
-    height: 40%;
+    height: 35%;
 
     /* 영역 확인용 설정 */
     /* border: 2px black solid; */
@@ -342,9 +343,7 @@
 /* 버전 정보 영역 설정 */
 #EV-Content-Outer-Content-VItitle {
     width: 95%;
-    height: 20%;
-
-    margin: 20px;
+    height: 15%;
 
     background-image: url("../img/ect/VersionInfo.png");
     background-size: 1500px 200px;
@@ -356,48 +355,99 @@
 }
 
 #EV-Content-Outer-Content-VI {
-    width: 95%;
-    height: 80%;
+    width: 100%;
+    height: 85%;
 
-    margin: 20px;
-
-    /* 영역 확인용 설정 */
-    border: 2px black solid;
-}
-
-#EV-Content-Outer-Content-VI-Leftbtn {
-    width: 5%;
-    height: 95%;
-
-    margin-left: 30px;
+    margin: 10px;
 
     /* 영역 확인용 설정 */
-    border: 2px black solid;
+    /* border: 2px black solid; */
 }
+
 #EV-Content-Outer-Content-VI-Silde {
-    width: 10%;
-    height: 95%;
+    width: 100%;
+    height: 100%;
+
+    margin-top: 20px;
+
+    font-family: 'GIfont';
+    font-size: x-large;
+    font-weight: 200;
+    color: white;
 
     /* 영역 확인용 설정 */
-    border: 2px black solid;
-}
-#EV-Content-Outer-Content-VI-Rightbtn {
-    width: 5%;
-    height: 95%;
-
-    /* 영역 확인용 설정 */
-    border: 2px black solid;
+    /* border: 2px black solid; */
 }
 
+#EV-Content-Outer-Content-VI-Sildediv {
+    width: 100px;
+    height: 100px;
 
+        /* 영역 확인용 설정 */
+    /* border: 2px black solid; */
+}
 
+.Sildefile {
+    width: 100%;
+    height: 100%;
 
+    background-size: 500px 750px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 
+#EV-Content-Outer-Content-VI-Silde1 {
+    background-image: url("../img/gameInfo/silde1.png");
+}
+#EV-Content-Outer-Content-VI-Silde2 {
+    background-image: url("../img/gameInfo/silde2.png");
+}
+#EV-Content-Outer-Content-VI-Silde3 {
+    background-image: url("../img/gameInfo/silde3.png");
+}
+#EV-Content-Outer-Content-VI-Silde4 {
+    background-image: url("../img/gameInfo/silde4.png");
+}
+#EV-Content-Outer-Content-VI-Silde5 {
+    background-image: url("../img/gameInfo/silde5.png");
+}
+#EV-Content-Outer-Content-VI-Silde6 {
+    background-image: url("../img/gameInfo/silde6.png");
+}
+
+/* react-slick의 기존 화살표 안보이도록 조치 */
+.slick-next:before {
+    display: none;
+}
+.slick-prev:before {
+    display: none;
+}
+
+/* react-slick의 커스텀 화살표 */
+/* 화살표가 위치하는 영역 크기 조절이 안되어 사용보류 */
+#prevarrow {
+    width: 100%;
+    height: 100%;
+
+    background-image: url("../img/ect/leftbtn.png");
+    background-size: 100px 100px;
+    background-repeat: no-repeat;
+    background-position: 0px, 0px;
+}
+#nextarrow {
+    width: 100%;
+    height: 100%;
+    
+    background-image: url("../img/ect/rightbtn.png");
+    background-size: 100px 100px;
+    background-repeat: no-repeat;
+    background-position: 0px, 0px;
+}
 
 /* 게임 특징 영역 설정 */
 #EV-Content-Outer-Content-GFtitle {
     width: 95%;
-    height: 20%;
+    height: 30%;
 
     margin: 20px;
 
@@ -435,7 +485,7 @@
     width: 100%;
     height: 15%;
 
-    margin-top: 300px;
+    margin-top: 50px;
 
     background-image: url("../img/ect/genshinimpectlogo\(white\).png");
     background-size: 400px 250px;
@@ -472,7 +522,7 @@
 
 #EV-Content-Outer-Content-PI-Platforminfo-Paimon {
     width: 100%;
-    height: 50%;
+    height: 60%;
 
     background-image: url("../img/character/paimon.png");
     background-size: 650px 850px;
