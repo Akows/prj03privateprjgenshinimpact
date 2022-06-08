@@ -1,0 +1,55 @@
+/* 몬드 배너 가로 */
+/* 몬드 배너 가로 */
+#MBannerHor-Outer {
+    width: 100%;
+    height: 25%;
+
+    background-image: url("../../img/background/banner/Mondstadt.jpg");
+    background-size: 1900px 300px;
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+
+    display : flex;
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black; */
+}
+
+#MBannerHor-Emblem {
+    width: 50%;
+    height: 100%;
+    
+    background-image: url("../../img/emblem/Emblem_Mondstadt.webp");
+    background-size: 250px 250px;
+    background-repeat: no-repeat;
+    background-position: 500px 20px;
+
+    visibility: hidden;
+
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black; */
+}
+#MBannerHor-HoverIMG {
+    width: 50%;
+    height: 100%;
+    
+    background-image: url("../../img/character/Character_Venti_Full_Wish.webp");
+    background-size: 900px 900px;
+    background-repeat: no-repeat;
+    background-position: -150px -260px;
+
+    visibility: hidden;
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black; */
+}
+
+#MBannerHor-Outer:hover #MBannerHor-Emblem {
+    visibility: visible;
+    animation: ShowUp 1s;
+}
+#MBannerHor-Outer:hover #MBannerHor-HoverIMG {
+    visibility: visible;
+    animation: ShowUp 1s;
+}

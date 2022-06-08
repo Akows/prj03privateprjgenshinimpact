@@ -1,0 +1,49 @@
+/* 여러 CSS에서 공통적으로 사용되는 부분들은 이곳에 기재. */
+/* import "../style/css/Global.css"; */
+
+/* 원신 폰트 설정 */
+@font-face {
+    font-family: 'GIfont';
+    src: url('../font/ja-jp.ttf') format('truetype');
+}
+
+/* 애니메이션 효과 */
+/* 아래에서 위로 등장하는 fadeUp */
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 15%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translateZ(0);
+    }
+}
+
+/* 투명도 100에서 0으로 낮아지는 fadeUp */
+@keyframes ShowUp {
+    0% {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* div들을 중앙 기준 수직 정렬할 때 사용할 CSS */
+#Content-Inner-verticality {
+    width: 100%;
+    height: 100%;
+
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* div들을 중앙 기준 수평 정렬할 때 사용할 CSS */
+#Content-Inner-horizontal{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+}

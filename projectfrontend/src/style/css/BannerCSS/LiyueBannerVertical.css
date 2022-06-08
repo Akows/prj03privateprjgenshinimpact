@@ -1,0 +1,61 @@
+/* 리월 배너 */
+/* 리월 배너 */
+#LBannerVer-Outer {
+    width: 33.3%;
+    height: 100%;
+    
+    background-image: url("../../img/background/city/Liyue.jpg");
+    background-size: 1800px 1000px;
+    background-repeat: no-repeat;
+    background-position: -180px 0px;
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black; */
+}
+#LBannerVer-Text {
+    width: 100%;
+    height: 100%;
+
+    color: white;
+    font-family: 'GIfont';
+    font-size: xx-large;
+    font-weight: 500;
+
+    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+
+    display: none;
+}
+
+#LBannerVer-Emblem {
+    width: 100%;
+    height: 25%;
+    
+    background-image: url("../../img/emblem/Emblem_Liyue.webp");
+    background-size: 250px 250px;
+    background-repeat: no-repeat;
+    background-position: 121px 0px;
+    display: none;
+}
+#LBannerVer-HoverIMG {
+    width: 100%;
+    height: 71%;
+    
+    background-image: url("../../img/character/Character_Zhongli_Full_Wish.webp");
+    background-size: 1200px 1450px;
+    background-repeat: no-repeat;
+    background-position: -300px -80px;
+    display: none;
+}
+
+#LBannerVer-Outer:hover #LBannerVer-Emblem {
+    display: block;
+    animation: fadeInUp 0.6s;
+}
+#LBannerVer-Outer:hover #LBannerVer-HoverIMG {
+    display: block;
+    animation: ShowUp 0.6s;
+}
+#LBannerVer-Outer:hover #LBannerVer-Text {
+    display: block;
+    animation: ShowUp 0.6s;
+}

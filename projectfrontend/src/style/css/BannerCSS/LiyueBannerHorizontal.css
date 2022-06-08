@@ -1,0 +1,55 @@
+/* 리월 배너 가로 */
+/* 리월 배너 가로 */
+#LBannerHor-Outer {
+    width: 100%;
+    height: 25%;
+
+    background-image: url("../../img/background/banner/Liyue.jpg");
+    background-size: 1900px 300px;
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+
+    display : flex;
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black; */
+}
+
+#LBannerHor-Emblem {
+    width: 30%;
+    height: 100%;
+    
+    background-image: url("../../img/emblem/Emblem_Liyue.webp");
+    background-size: 250px 250px;
+    background-repeat: no-repeat;
+    background-position: 200px 20px;
+
+    visibility: hidden;
+
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black; */
+}
+#LBannerHor-HoverIMG {
+    width: 70%;
+    height: 100%;
+    
+    background-image: url("../../img/character/Character_Zhongli_Full_Wish.webp");
+    background-size: 1200px 1500px;
+    background-repeat: no-repeat;
+    background-position: -250px -460px;
+
+    visibility: hidden;
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black; */
+}
+
+#LBannerHor-Outer:hover #LBannerHor-Emblem {
+    visibility: visible;
+    animation: ShowUp 1s;
+}
+#LBannerHor-Outer:hover #LBannerHor-HoverIMG {
+    visibility: visible;
+    animation: ShowUp 1s;
+}

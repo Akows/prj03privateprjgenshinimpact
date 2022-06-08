@@ -9,10 +9,12 @@ const Mainpage = () => {
     // useRef로 이동 지점을 설정하고 useEffect로 함수가 자동 실행되도록 설정
     const pagestartpoint = useRef();
 
+    // 페이지가 로딩되면 자동적으로 스크롤을 시작 지점으로 이동시키는 기능
     React.useEffect(() => {
         pagestartpoint.current.scrollIntoView();
     }, [pagestartpoint]);
 
+    // 하단 푸터 버튼의 외부링크 이동 기능
     const moveSony = () => {
         window.open('https://www.playstation.com/ko-kr/games/genshin-impact/');
     }
@@ -28,20 +30,7 @@ const Mainpage = () => {
 
     return (
         <>
-            <div id="MG-Content-RWebBackground">
-                <div id="MG-Content-RWebArea">
-                    <div id="MG-Content-RWebArea-Logo">
-                        
-                    </div>
-                    <div id="MG-Content-RWebArea-Paimon">
-                        
-                    </div>
-                    <div id="MG-Content-RWebArea-Text">
-                        <p>페이몬!</p>
-                    </div>
-                </div>
-            </div>
-
+            {/* 화면 가로 길이가 일정 이상으로 올라가면 작동 (반응형 웹) */}
             <div id="MG-Content-Videobackground" ref={pagestartpoint}>
                 <ReactPlayer
                     url={background}
@@ -67,7 +56,24 @@ const Mainpage = () => {
                         <p>귀여운 페이몬과 함께 이 광활한 대지로 모험을 떠나보세요!</p>
                     </div>
                 </div>
+
             </div>
+
+            {/* 화면 가로 길이가 일정 이하로 내려가면 작동 (반응형 웹) */}
+            <div id="MG-Content-RWebBackground">
+                <div id="MG-Content-RWebArea">
+                    <div id="MG-Content-RWebArea-Logo">
+                        
+                    </div>
+                    <div id="MG-Content-RWebArea-Paimon">
+                        
+                    </div>
+                    <div id="MG-Content-RWebArea-Text">
+                        <p>페이몬!</p>
+                    </div>
+                </div>
+            </div>
+
 
             <div id="MG-Content-Footer">
                 <div id="MG-Content-Footer-ButtonArea">
