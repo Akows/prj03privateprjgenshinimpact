@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import { useLocation } from "react-router-dom";
 import "../style/css/WorldInfoMondstadt.css";
+import "../style/css/Global.css";
 
 const WorldInfoMondstadt = () => {
     // 페이지를 이동하였을 때, 페이지 가장 맨 위 위치로 스크롤을 자동 위치시키는 기능
@@ -16,6 +17,7 @@ const WorldInfoMondstadt = () => {
     }, [pagestartpoint]);
 
     // 페이지 새로고침을 위한 useLocation.
+    // 새로고침이 작동하지 않아서 테스트 중.
     const location = useLocation();
 
     // 페이지 특정 지점으로 이동하는 기능 코드.
@@ -46,8 +48,6 @@ const WorldInfoMondstadt = () => {
                             <div id="WINFM-Content-ContentArea-IntroTitle">
                                 <p>Mondstadt</p> 
                                 <p>몬드성</p>
-
-                                
                             </div>
 
                             <div id="WINFM-Content-ContentArea-IntroLogo">

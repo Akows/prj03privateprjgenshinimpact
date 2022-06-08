@@ -31,7 +31,7 @@ const Appbarv2 = () => {
                         </Link>
                     </div>
                     <div id='AB-Content-Inner-Pagemenuarea-Button-box' className='Pagemenuarea-Button-box4'>
-                        <Link to="/incomplete">
+                        <Link to="/testzone">
                             테스트존
                         </Link>
                     </div>

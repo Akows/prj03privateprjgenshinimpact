@@ -2,12 +2,14 @@
 /* 리월 배너 가로 */
 #LBannerHor-Outer {
     width: 100%;
-    height: 25%;
-
+    height: 100%;
+    
     background-image: url("../../img/background/banner/Liyue.jpg");
     background-size: 1900px 300px;
     background-repeat: no-repeat;
     background-position: 0px 0px;
+
+    border-radius: 35px;
 
     display : flex;
 
@@ -15,14 +17,45 @@
     /* border: 1px solid black; */
 }
 
+#LBannerHor-HoverIMG {
+    width: 65%;
+    height: 100%;
+    
+    background-image: url("../../img/character/Character_Zhongli_Full_Wish.webp");
+    background-size: 1000px 1200px;
+    background-repeat: no-repeat;
+    background-position: -70px -350px;
+
+    visibility: hidden;
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black; */
+}
+
+#LBannerHor-Text {
+    width: 20%;
+    height: 100%;
+
+    margin-top: 60px;
+    margin-right: 100px;
+
+    font-family: 'GIfont';
+    font-size: xx-large;
+
+    visibility: hidden;
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black; */
+}
+
 #LBannerHor-Emblem {
-    width: 30%;
+    width: 15%;
     height: 100%;
     
     background-image: url("../../img/emblem/Emblem_Liyue.webp");
     background-size: 250px 250px;
     background-repeat: no-repeat;
-    background-position: 200px 20px;
+    background-position: 0px 0px;
 
     visibility: hidden;
 
@@ -30,26 +63,17 @@
     /* 영역 확인용 경계선 설정 */
     /* border: 1px solid black; */
 }
-#LBannerHor-HoverIMG {
-    width: 70%;
-    height: 100%;
-    
-    background-image: url("../../img/character/Character_Zhongli_Full_Wish.webp");
-    background-size: 1200px 1500px;
-    background-repeat: no-repeat;
-    background-position: -250px -460px;
 
-    visibility: hidden;
-
-    /* 영역 확인용 경계선 설정 */
-    /* border: 1px solid black; */
-}
-
-#LBannerHor-Outer:hover #LBannerHor-Emblem {
-    visibility: visible;
-    animation: ShowUp 1s;
-}
 #LBannerHor-Outer:hover #LBannerHor-HoverIMG {
     visibility: visible;
     animation: ShowUp 1s;
 }
+#LBannerHor-Outer:hover #LBannerHor-Text {
+    visibility: visible;
+    animation: ShowUp 1s;
+}
+#LBannerHor-Outer:hover #LBannerHor-Emblem {
+    visibility: visible;
+    animation: ShowUp 1s;
+}
+

@@ -1,31 +1,4 @@
 /* 원신 소개 페이지 CSS */
-/* 원신 폰트 설정 */
-@font-face {
-    font-family: 'GIfont';
-    src: url('../font/ja-jp.ttf') format('truetype');
-}
-
-/* 투명화 애니매이션 */
-@keyframes ShowUp {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-/* 아래에서 위로 올라오는 애니매이션 */
-@keyframes FadeUp {
-    0% {
-        opacity: 0;
-        transform: translate3d(0, 15%, 0);
-    }
-    100% {
-        opacity: 1;
-        transform: translateZ(0);
-    }
-}
 
 /* 페이지 배경화면 설정 */
 /* 배경화면 위에 흰색 투명 바탕의 컨텐츠 영역이 배치됨. */

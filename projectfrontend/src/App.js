@@ -15,9 +15,13 @@ import Generalforum from './pages/Generalforum';
 import GeneralforumView from './pages/GeneralforumView';
 import GeneralforumWriteAndEdit from './pages/GeneralforumWriteAndEdit';
 
-import Incomplete from './pages/Incomplete';
 import WorldInfoMondstadt from './pages/WorldInfoMondstadt';
 import GenshinIntroduce from './pages/GenshinIntroduce';
+
+import Testzone from './pages/Testzone';
+import WorldInfoMond from './pages/WorldInfoMond';
+import WorldInfoLiyue from './pages/WorldInfoLiyue';
+import WorldInfoInazuma from './pages/WorldInfoInazuma';
 
 const App = () => {
 
@@ -54,7 +58,11 @@ const App = () => {
           <Route path='/generalforum/view/:b_number_pk' element={<GeneralforumView/> }/>
           <Route path='/generalforum/writeoredit' element={<GeneralforumWriteAndEdit/> }/>
 
-          <Route path='/incomplete' element={<Incomplete />}/>    
+          <Route path='/testzone' element={<Testzone/> }/>  
+
+          <Route path='/test1' element={<WorldInfoMond/> }/>
+          <Route path='/test2' element={<WorldInfoLiyue/> }/>  
+          <Route path='/test3' element={<WorldInfoInazuma/> }/>  
 
         </Routes>
       </div>

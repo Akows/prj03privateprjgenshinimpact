@@ -6,6 +6,7 @@ import "../style/css/SlickCustomCSS/slick.css";
 import "../style/css/SlickCustomCSS/slick-theme.css";
 
 import "../style/css/GenshinIntroduce.css";
+import "../style/css/Global.css";
 
 import trailer from "D:/Coding Archive/Git Repo/PrivateProject/prj03privateprjgenshinimpact/projectfrontend/src/style/video/trailer.mp4";
 import sildeimg1 from "D:/Coding Archive/Git Repo/PrivateProject/prj03privateprjgenshinimpact/projectfrontend/src/style/img/gameInfo/silde1.png";
