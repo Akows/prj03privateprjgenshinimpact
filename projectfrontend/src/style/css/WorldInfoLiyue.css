@@ -136,7 +136,7 @@
     height: 10%;
 
     /* 영역 확인용 경계선 설정 */
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 /* 컨텐츠 Outer 영역 컨텐츠 배치 방식 설정 */
@@ -190,7 +190,7 @@
     height: 95%;
 
     /* 영역 확인용 경계선 설정 */
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 /* 컨텐츠 영역 설정 */
@@ -238,3 +238,40 @@
         /* 영역 확인용 경계선 설정 */
         border: 1px solid black;
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* 로고 영역 설정 */
+/* 로고 영역 설정 */
+.WIFL-Logo-ContentInner-MainLogo {
+    width: 100%;
+    height: 40%;
+
+    margin-top: 100px;
+    
+    background-image: url("../img/ect/genshinimpectlogo\(white\).png");
+    background-size: 400px 250px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.WIFL-Logo-ContentInner-Slogan{
+    width: 100%;
+    height: 20%;
+
+    background-image: url("../img/ect/gameslogan.png");
+    background-size: 800px 80px;
+    background-repeat: no-repeat;
+    background-position: center;
+}

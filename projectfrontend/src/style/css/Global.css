@@ -30,6 +30,17 @@
     }
 }
 
+@keyframes FadeIn{
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
 /* CSS 공부용도로 작성해둔 코드 */
 
 /* 내부 아이템 세로 정렬 */

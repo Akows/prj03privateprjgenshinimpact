@@ -82,7 +82,8 @@ const WorldInfoInazuma = () => {
 
             <div className='WIFI-Logo-ContentOuter WIFI-ContentOuter-SectionConfig'>
                 <div className='WIFI-Logo-ContentInner'>
-
+                    <div className="WIFI-Logo-ContentInner-MainLogo"/>
+                    <div className="WIFI-Logo-ContentInner-Slogan"/>
                 </div>
             </div>
 

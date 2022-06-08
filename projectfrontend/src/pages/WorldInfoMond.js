@@ -83,7 +83,8 @@ const WorldInfoMond = () => {
 
             <div className='WIFM-Logo-ContentOuter WIFM-ContentOuter-SectionConfig'>
                 <div className='WIFM-Logo-ContentInner'>
-
+                    <div className="WIFM-Logo-ContentInner-MainLogo"/>
+                    <div className="WIFM-Logo-ContentInner-Slogan"/>
                 </div>
             </div>
 

@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import axios from "axios";
 
 import "../style/css/Generalforum.css";
+import "../style/css/Global.css";
+
 import Pagination from '../components/Pagination';
 
 const Generalforum = () => {
@@ -22,7 +24,7 @@ const Generalforum = () => {
     // **
 
     // 서버에서 호출된 JSON 형식의 게시물 데이터들을 받을 state을 선언.
-    const [postdata, setPostdata] = React.useState([]);
+    const [postdata, setPostdata] = React.useState(['', '', '', '', '', '', '', '', '', '']);
 
     // 서버에서 게시물 데이터들을 호출하여 postdata state에 set.
     React.useEffect(() => {
@@ -57,29 +59,30 @@ const Generalforum = () => {
     // **
 
     return (
-        <div id="GF-Background" ref={pagestartpoint}>
-            <div id="GF-Content-Outer">
-                <div id="GF-Content-Inner">
-
-                    <div id="GF-Content-Title">
-                        <div id="GF-Content-Title-ShowTitle">
-                            자유게시판
+        <div className="GF-BackgroundArea GF-BackgroundIMG GF-Background-SectionConfig" ref={pagestartpoint}>
+            <div className='GF-ForumView-ContentOuter GF-Pagetitle-SectionConfig'>
+                <div className='GF-ForumView-ContentInner'>
+                    <div className='GF-Pagetitle-Title'>
+                        <div className='GF-Pagetitle-TitleBanner'>
+                            <div className='GF-Pagetitle-TitleBannerText'> 
+                                <p>자유게시판</p> 
+                            </div>
                         </div>
                     </div>
 
-                    <div id="GF-Content-PostList">
-                        <div id="GF-Content-PostList-List">
-                            <table id="GF-Content-PostList-List-Table">
-                                <thead>
+                    <div className='GF-Pagetitle-List'>
+                        <div className='GF-Pagetitle-ListTable'>
+                            <table className='GF-Forumlist-Listtable-Table'>
+                                <thead className='GF-Forumlist-Listtable-Thead'>
                                     <tr>
-                                        <th id='GF-Content-PostList-List-Table-ShowNumber'>
-                                            <h3>Number</h3>
+                                        <th className='GF-Forumlist-Listtable-ShowNumber'>
+                                            <h3>글 번호</h3>
                                         </th>
-                                        <th id='GF-Content-PostList-List-Table-ShowTitle'>
-                                            <h3>Title</h3>
+                                        <th className='GF-Forumlist-Listtable-ShowTitle'>
+                                            <h3>글 제목</h3>
                                         </th>
-                                        <th id='GF-Content-PostList-List-Table-ShowWriteTime'>
-                                            <h3>Write Time</h3>
+                                        <th className='GF-Forumlist-Listtable-ShowWriteTime'>
+                                            <h3>작성 시간</h3>
                                         </th>
                                     </tr>
                                 </thead>
@@ -88,11 +91,13 @@ const Generalforum = () => {
                                 {/* currentPosts 함수를 이용하여 전체 데이터들의 갯수도 계산한다. */}
                                 {currentPosts(postdata).map(datas => {
                                     return (
-                                        <tbody key={datas.b_number_pk}>
+                                        <tbody key={datas.b_number_pk} className='GF-Forumlist-Listtable-tbody'>
                                             <tr>
-                                                <td>{datas.b_number_pk}</td>
+                                                <td className='GF-Forumlist-Listtable-ShowNumber'>
+                                                    {datas.b_number_pk}
+                                                </td>
 
-                                                <td>
+                                                <td className='GF-Forumlist-Listtable-ShowTitle'>
                                                     <Link to={`/generalforum/view/${datas.b_number_pk}`} 
                                                         state={{b_number_pk: datas.b_number_pk,
                                                                 b_title: datas.b_title,
@@ -100,43 +105,60 @@ const Generalforum = () => {
                                                                 b_write_time : datas.b_write_time,
                                                                 isModify : false}}
                                                     >
-                                                        {datas.b_title}
+                                                        <p>{datas.b_title}</p>
                                                     </Link>
                                                 </td>
 
-                                                <td>{datas.b_write_time}</td>
+                                                <td className='GF-Forumlist-Listtable-ShowWriteTime'>
+                                                    {datas.b_write_time}
+                                                </td>
                                             </tr>
                                         </tbody>
                                     );
                                 })}
-
-                            </table> 
+                            </table>
                         </div>
                     </div>
 
-                    <div id="GF-Content-tools">
-
-                        <div className="GVButtonarea GF-Content-tools-PostPaging">
-                            <Pagination 
-                                postsPerPage={postsPerPage} 
-                                totalPosts={postdata.length} 
-                                paginate={setCurrentPage}
-                            />
+                    <div className='GF-Pagetitle-Button'>
+                        <div className='GF-Pagetitle-Button-Paging'>
+                            <div className='GF-Pagetitle-Button-PagingButton'>
+                                <Pagination 
+                                    postsPerPage={postsPerPage} 
+                                    totalPosts={postdata.length} 
+                                    paginate={setCurrentPage}
+                                />
+                            </div>
                         </div>
 
-                        <div className="GVButtonarea GF-Content-tools-PostWrite">
-                            <Link to="/generalforum/writeoredit" state={{isModify : false,
-                                                                number: '',
-                                                                title: '',
-                                                                content: ''
-                                                                }}>
-                                <button id='GF-Content-tools-PostWrite-WriteButton'>
-                                    WRITE
-                                </button>
+                        <div className='GF-Pagetitle-Button-Write'>
+                            <Link to="/generalforum/writeoredit" 
+                                state={{isModify : false,
+                                        number: '',
+                                        title: '',
+                                        content: ''
+                                        }}>
+                                <div className='GF-Pagetitle-Button-WriteButton'>
+                                    <div className='GF-Pagetitle-Button-WriteButtonText'>
+                                        <p>글쓰기</p>
+                                    </div>
+                                    <div className='GF-Pagetitle-Button-WriteButtonHoverIMG'/>
+                                </div>
                             </Link>
                         </div>
-                        
+
                     </div>
+
+
+
+                    
+
+
+
+
+
+
+
 
                 </div>
             </div>

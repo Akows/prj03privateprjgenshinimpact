@@ -82,7 +82,8 @@ const WorldInfoLiyue = () => {
 
             <div className='WIFL-Logo-ContentOuter WIFL-ContentOuter-SectionConfig'>
                 <div className='WIFL-Logo-ContentInner'>
-
+                    <div className="WIFL-Logo-ContentInner-MainLogo"/>
+                    <div className="WIFL-Logo-ContentInner-Slogan"/>
                 </div>
             </div>
 

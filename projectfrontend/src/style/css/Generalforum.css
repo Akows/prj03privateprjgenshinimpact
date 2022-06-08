@@ -1,198 +1,337 @@
-/* 자유게시판 CSS */
-/* 페이지 배경화면 설정 */
-/* 배경화면 위에 컨텐츠 영역이 배치됨. */
-#GF-Background {
+/* 자유게시판 페이지 CSS */
+/* 자유게시판 페이지 CSS */
+
+/* 비디오 배경화면 설정 */
+/* 비디오 배경화면 설정 */
+
+/* 페이지 배경영역 설정 */
+.GF-BackgroundArea {
     color: black;
-    padding: 10px;
+    padding: 20px;
     width: 100%;
-    height: 100vh;
+    height: 1200px;
     position: relative;
 }
-    #GF-Background::before {
-        content: "";
-        background-image: url("../img/background/YoimiyaAyakaInazuma.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        opacity: 0.7;
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        right: 0px;
-        bottom: 0px;
-    }
-    #GF-Background > * {
-        color: black;
-        text-align: center;
-        position: relative;
-    }
-
-/* 배경화면 위에 배치될 컨텐츠 영역 설정 */
-#GF-Content-Outer {
-    width: 1600px;
-    height: 1200px;
-    margin-top: 60px;
-    display: inline-block;
+.GF-BackgroundArea > * {
+    color: black;
+    text-align: center;
+    position: relative;
 }
-    #GF-Content-Outer::before {
-        content: "";
-        background-color: white;
-        opacity: 0.6;
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        right: 0px;
-        bottom: 0px;
-        border-radius: 20px;
-    }
-    #GF-Content-Outer > * {
-        text-align: center;
-        position: relative;
-    }
 
-/* 컨텐츠 영역 내부에 배치될 실제 컨텐츠 내용들 설정 */
-#GF-Content-Inner {
-    width: 97.5%;
-    height: 97.5%;
-    margin: 0 auto;
+/* 페이지 배경화면 - 배경 이미지 설정 */
+.GF-BackgroundIMG::before {
+    content: "";
+    background-attachment: fixed;
+    background-image: url("../img/background/InazumaMT.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 1;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+/* Background 컨텐츠 배치 방식 */
+/* Background 컨텐츠 배치 방식 */
+.GF-Background-SectionConfig {
     display: inline-flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
+}
+
+/* 컨텐츠 Outer 영역 설정 */
+/* 컨텐츠 Outer 영역 설정 */
+.GF-ForumView-ContentOuter {
+    width: 90%;
+    height: 90%;
+
+    margin-top: 70px;
 
     /* 영역 확인용 경계선 설정 */
     /* border: 1px solid black; */
 }
 
-    #GF-Content-Title {
-        width: 95%;
-        height: 5%;
-        margin: 20px;
+/* Outer 영역 컨텐츠 배치 방식 설정 */
+.WIFM-ContentOuter-SectionConfig {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
-        font-size: xx-large;
-        font-weight: bolder;
-
-        background-color: #FF6E6E;
-        border-radius: 20px;
-
-        /* 영역 확인용 경계선 설정 */
-        /* border: 1px solid black; */
-    }
-
-        #GF-Content-Title-ShowTitle {
-            margin-top: 5px;
-        }
-
-    #GF-Content-PostList {
-        width: 95%;
-        height: 80%;
-        margin: 10px;
-
-        border-radius: 20px;
-        
-        /* 영역 확인용 경계선 설정 */
-        /* border: 1px solid black;         */
-    }
-
-        #GF-Content-PostList-List {
-            width: 98%;
-            height: 95%;
-            margin: 15px;
-
-            /* 영역 확인용 경계선 설정 */
-            /* border: 1px solid black;        */
-        }
-            #GF-Content-PostList-List-Table {
-                width: 100%;
-            }            
-                #GF-Content-PostList-List-Table > table {
-                    border-collapse: collapse;
-                    border-spacing: 10px 10px;
-                    border: 1px black solid;
-                }
-                #GF-Content-PostList-List-Table > thead > tr {
-                    background-color: #FF98FE;
-                    opacity: 0.8;
-                }
-                #GF-Content-PostList-List-Table > thead > th {
-                    background-color: #F0AA5F;
-                }
-
-                #GF-Content-PostList-List-Table-ShowNumber{
-                    width: 10%;
-                }
-                #GF-Content-PostList-List-Table-ShowTitle{
-                    width: 70%;
-                }
-                #GF-Content-PostList-List-Table-ShowWriteTime{
-                    width: 20%;
-                }
-
-    #GF-Content-tools {
-        width: 95%;
-        height: 5%;
-        margin: 10px;
-
-        display: inline-flex;
-
-        background-color: #FF6E6E;
-        border-radius: 20px;
-
-        /* 영역 확인용 경계선 설정 */
-        /* border: 1px solid black;         */
-    }
-
-.GVButtonarea {
-    margin: 0 auto;
-    margin-top: 5px;
+    margin-top: 70px;
 }
 
-.GF-Content-tools-PostPaging {
-    width: 45%;
-    height: 80%;
-    margin-top: 9px;
+/* 컨텐츠 Inner 영역 설정 */
+/* 컨텐츠 Inner 영역 설정 */
+.GF-ForumView-ContentInner {
+    width: 100%;
+    height: 100%;
 
     /* 영역 확인용 경계선 설정 */
-    /* border: 1px solid black;      */
+    /* border: 1px solid black; */
 }
 
-.GF-Content-tools-PostWrite {
-    width: 45%;
-    height: 80%;
+
+/* 컨텐츠 영역 설정 */
+/* 컨텐츠 영역 설정 */
+
+/* 제목 영역 설정 */
+/* 제목 영역 설정 */
+.GF-Pagetitle-Title {
+    width: 100%;
+    height: 15%;
+
+    position: relative;
+
+    display : flex;
+}
+.GF-Pagetitle-Title::before {
+    content: "";
+background-image: url("../img/background/city/Liyue.jpg");
+    background-size: 2450px 1200px;
+    background-repeat: no-repeat;
+    background-position: 0px -650px;
+
+    opacity: 0.7;
+
+    border-radius: 35px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+.GF-Pagetitle-Title > * {
+    position: relative;
+}
+.GF-Pagetitle-TitleBanner {
+    width: 100%;
+    height: 100%;
+    
+    background-image: url("../img/character/character_Ganyu_portrait.png");
+    background-size: 600px 400px;
+    background-repeat: no-repeat;
+    background-position: 1300px -10px;
 
     /* 영역 확인용 경계선 설정 */
-    /* border: 1px solid black;      */
+    /* border: 1px solid black; */
 }
-    #GF-Content-tools-PostWrite-WriteButton {
-        width: 120px;
-        height: 40px;
+.GF-Pagetitle-TitleBannerText {
+    text-shadow: 2px 2px 2px white;
 
-        margin-top: 3px;
-        margin-left: 550px;
+    margin-top: 60px;
 
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        font-size: larger;
-        font-weight: 500;
-        color: #000;
+    font-family: 'GIfont';
+    font-size: xx-large;
 
-        background-color: #B24BE5;
-        border-radius: 10px;
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black; */
+}
 
-        opacity: 0.8;
-    }
-    #GF-Content-tools-PostWrite-WriteButton:hover {
-        width: 120px;
-        height: 40px;
+/* 목록 영역 설정 */
+/* 목록 영역 설정 */
+.GF-Pagetitle-List {
+    width: 100%;
+    height: 65%;
 
-        margin-top: 3px;
-        margin-left: 550px;
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black; */
+}
+.GF-Pagetitle-ListTable {
+    width: 98.5%;
+    height: 97%;
 
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        font-size: x-large;
-        font-weight: bolder;
-        color: #000;
+    margin: 10px;
 
-        background-color: #B24BE5;
-        border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 
-        opacity: 1;
-    }
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black; */
+}
+
+.GF-Forumlist-Listtable-Table {
+    width: 75%;
+    height: 90%;
+
+    margin-top: 30px;
+}
+
+.GF-Forumlist-Listtable-Thead {
+    width: 100%;
+    height: 30%;
+
+    font-family: 'GIfont';
+    font-size: medium;
+
+    background-color: white;
+    opacity: 0.9;
+}
+.GF-Forumlist-Listtable-tbody {
+    width: 100%;
+    height: 70%;
+
+    position: relative;
+
+    font-family: 'GIfont';
+    font-size: medium;
+}
+.GF-Forumlist-Listtable-tbody::before {
+    content: "";
+    background-color: white;
+    opacity: 0.4;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+.GF-Forumlist-Listtable-tbody > * {
+    position: relative;
+}
+.GF-Forumlist-Listtable-tbody:hover {
+    opacity: 0.7;
+}
+
+.GF-Forumlist-Listtable-ShowNumber {
+    width: 10%;
+    height: 100%;
+
+    text-decoration: none;
+}
+.GF-Forumlist-Listtable-ShowTitle {
+    width: 70%;
+    height: 100%;
+}
+.GF-Forumlist-Listtable-ShowTitle > * {
+    text-decoration: none;
+    color: black;
+}
+.GF-Forumlist-Listtable-ShowWriteTime {
+    width: 20%;
+    height: 100%;
+}
+
+
+/* 버튼 영역 설정 */
+/* 버튼 영역 설정 */
+.GF-Pagetitle-Button {
+    width: 100%;
+    height: 20%;
+
+    display: flex;
+    flex-direction: row;
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black; */
+}
+
+/* 페이징 버튼 영역 설정 */
+.GF-Pagetitle-Button-Paging {
+    width: 70%;
+    height: 70%;
+
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
+
+    position: relative;
+
+
+
+    font-family: 'GIfont';
+    font-size: medium;
+}
+.GF-Pagetitle-Button-Paging::before {
+    content: "";
+    background-color: white;
+    opacity: 0.6;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+
+    border-radius: 30px;
+}
+.GF-Pagetitle-Button-Paging > * {
+    position: relative;
+    
+}
+
+.GF-Pagetitle-Button-PagingButton {
+    width: 80%;
+    height: 80%;
+
+    margin-top: 55px;
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black; */
+}
+
+/* 글쓰기 버튼 영역 설정 */
+.GF-Pagetitle-Button-Write {
+    width: 30%;
+    height: 100%;
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black; */
+}
+
+/* 글쓰기 버튼 배경 이미지 */
+.GF-Pagetitle-Button-WriteButton {
+    width: 80%;
+    height: 80%;
+
+    margin-top: 20px;
+    margin-left: 50px;
+
+    background-color: #E1F6FA;
+
+    border-radius: 15px;
+
+    display: flex;
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black; */
+}
+
+/* 글쓰기 버튼 이름과 Hover 이미지 */
+/* 마우스 Hover시에만 띄워지도록 */
+.GF-Pagetitle-Button-WriteButtonText {
+    width: 30%;
+    height: 100%;
+
+    visibility: hidden;
+}
+.GF-Pagetitle-Button-WriteButtonHoverIMG {
+    width: 70%;
+    height: 100%;
+
+    background-image: url("../img/character/Character_Klee_Full_Wish.webp");
+    background-size: 700px 800px;
+    background-repeat: no-repeat;
+    background-position: -70px 0px;
+
+    visibility: hidden;
+}
+.GF-Pagetitle-Button-WriteButton:hover .GF-Pagetitle-Button-WriteButtonHoverIMG {
+    animation: ShowUp 1s;
+
+    visibility: visible;
+}
+.GF-Pagetitle-Button-WriteButton:hover .GF-Pagetitle-Button-WriteButtonText {
+    animation: FadeIn 1s;
+
+    visibility: visible;
+    color: black;
+    font-family: 'GIfont';
+    font-size: xx-large;
+}
