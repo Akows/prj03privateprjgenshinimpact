@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Link } from 'react-router-dom';
 import axios from "axios";
 
-import "../style/css/Generalforum.css";
+import "../unused/Generalforum.css";
 import "../style/css/Global.css";
 
 import Pagination from '../components/Pagination';

@@ -66,24 +66,19 @@ const GeneralforumViewv2 = () => {
 
     return (
         <div className="GFVV2-BackgroundArea GFVV2-BackgroundIMG GFVV2-Background-SectionConfig" ref={pagestartpoint}>
-
             <div className='GFVV2-Content-Outer-Main GFVV2-ContentOuter-SectionConfig'>
-
                 <div className='GFVV2-Content-TitleAndContents'>
 
                     <div className='GFVV2-Content-Contents'>
-
                         <div className='GFVV2-Content-ForumTitle'>
                             <p>{posttitle}</p>
-                            <hr/>
                         </div>
 
-                        
+                        <div className="GFVV2-Content-Line"/>
 
                         <div className='GFVV2-Content-ForumText'>
                             <p>{postcontent}</p>
                         </div>
-
                     </div>
 
                     <div className='GFVV2-Content-Title'>
@@ -107,24 +102,12 @@ const GeneralforumViewv2 = () => {
                                 <p className="btntext">글 수정하기</p>
                                 </Link>
                             </div>
-
-
-                            
                         </div>
                     </div>
 
 
                 </div>
-
-                
-
-                
-
-
-
-
             </div> 
-
         </div>
     )
 }

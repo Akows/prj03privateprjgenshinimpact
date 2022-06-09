@@ -1,0 +1,80 @@
+
+.PIV2-Content-Contents {
+    width: 70%;
+    height: 100%;
+
+    display: inline-flex;
+    justify-content: center;
+    flex-direction: column;
+
+    align-items: center;
+
+    position: relative;
+}
+.PIV2-Content-Contents > * {
+    position: relative;
+}
+.PIV2-Content-Contents::before {
+    content: "";
+    background-color: #EBF5FF;
+    border-radius: 20px;
+    opacity: 0.8;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+.PIV2-Content-ForumTitle {
+    width: 98%;
+    height: 10%;
+
+    margin: 10px;
+    left: 50px;
+
+    text-align: left;
+
+    font-family: 'GIfont';
+    font-size: 20px;
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black; */
+}
+.PIV2-Content-ForumTitle > p {
+    bottom: 30px;
+}
+.PIV2-Content-ForumTitle > input {
+    width: 80%;
+    height: 30%;
+}
+
+.PIV2-Content-Line {
+    width: 90%;
+    height: 0.1%;
+
+    border: 0.1px solid black;
+}
+
+.PIV2-Content-ForumText {
+    width: 95%;
+    height: 90%;
+
+    margin: 30px;
+    left: 30px;
+
+    text-align: left;
+
+    font-family: 'GIfont';
+    font-size: 20px;
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black; */
+}
+.PIV2-Content-ForumText > p {
+    top: 30px;
+}
+.PIV2-Content-ForumText > input {
+    width: 82.5%;
+    height: 80%;
+}
