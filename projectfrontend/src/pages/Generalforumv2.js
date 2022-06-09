@@ -1,13 +1,12 @@
-
 import React, { useRef } from "react";
 
-import "../style/css/Testzone.css";
+import "../style/css/Generalforumv2.css";
 import "../style/css/Global.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import Pagination from "../components/Pagination";
 
-const Testzone = () => {
+const Generalforumv2 = () => {
 
     // 페이지를 이동하였을 때, 페이지 가장 맨 위 위치로 스크롤을 자동 위치시키는 기능
     // useRef로 이동 지점을 설정하고 useEffect로 함수가 자동 실행되도록 설정
@@ -60,40 +59,40 @@ const Testzone = () => {
     // **
 
     return (
-        <div className="TZ-BackgroundArea TZ-BackgroundIMG TZ-Background-SectionConfig" ref={pagestartpoint}>
+        <div className="GFV2-BackgroundArea GFV2-BackgroundIMG GFV2-Background-SectionConfig" ref={pagestartpoint}>
 
-            <div className='TZ-Content-Outer-Main TZ-ContentOuter-SectionConfig'>
+            <div className='GFV2-Content-Outer-Main GFV2-ContentOuter-SectionConfig'>
 
-                <div className='TZ-Content-Title'>
-                    <div className='TZ-Content-TitleBanner'>
+                <div className='GFV2-Content-Title'>
+                    <div className='GFV2-Content-TitleBanner'>
 
-                        <div className='TZ-Content-TitleBannerIMG IMG1'>
+                        <div className='GFV2-Content-TitleBannerIMG IMG1'>
 
                         </div>
 
-                        <div className='TZ-Content-TitleBannerTEXT'>
+                        <div className='GFV2-Content-TitleBannerTEXT'>
                             <p>익명게시판</p>
                         </div>
 
-                        <div className='TZ-Content-TitleBannerIMG IMG2'>
+                        <div className='GFV2-Content-TitleBannerIMG IMG2'>
 
                         </div>
                     </div>
                 </div>
 
-                <div className='TZ-Content-List'>
-                    <div className='TZ-Content-ListTable'>
+                <div className='GFV2-Content-List'>
+                    <div className='GFV2-Content-ListTable'>
 
                         {/* map 함수로 DB에서 받아온 데이터들을 적절한 형식으로 모두 출력. */}
                         {/* currentPosts 함수를 이용하여 전체 데이터들의 갯수도 계산한다. */}
                         {currentPosts(postdata).map(datas => {
                             return (
 
-                                <div className='TZ-Content-Table' key={datas.b_number_pk}>
-                                    <div className='TZ-Content-ListNumber'>
+                                <div className='GFV2-Content-Table' key={datas.b_number_pk}>
+                                    <div className='GFV2-Content-ListNumber'>
                                         <p>{datas.b_number_pk}</p> 
                                     </div>   
-                                    <div className='TZ-Content-ListTitle'>
+                                    <div className='GFV2-Content-ListTitle'>
                                         <Link to={`/generalforum/view/${datas.b_number_pk}`} 
                                                 state={{b_number_pk: datas.b_number_pk,
                                                         b_title: datas.b_title,
@@ -104,7 +103,7 @@ const Testzone = () => {
                                             <p>{datas.b_title}</p>
                                         </Link>
                                     </div> 
-                                    <div className='TZ-Content-ListTime'>
+                                    <div className='GFV2-Content-ListTime'>
                                         <p>{datas.b_write_time}</p>
                                     </div>                                  
                                 </div>
@@ -117,9 +116,9 @@ const Testzone = () => {
                     </div>
                 </div>
 
-                <div className='TZ-Content-Button'>
-                    <div className='TZ-Content-Paging'>
-                        <div className='TZ-Content-PagingButton'>
+                <div className='GFV2-Content-Button'>
+                    <div className='GFV2-Content-Paging'>
+                        <div className='GFV2-Content-PagingButton'>
                             <Pagination 
                                 postsPerPage={postsPerPage} 
                                 totalPosts={postdata.length} 
@@ -128,9 +127,9 @@ const Testzone = () => {
                         </div>
                     </div>
 
-                    <div className='TZ-Content-Write'>
+                    <div className='GFV2-Content-Write'>
 
-                        <div className='TZ-Content-WriteButton'>
+                        <div className='GFV2-Content-WriteButton'>
                             <Link to="/generalforum/writeoredit" 
                                 state={{isModify : false,
                                         number: '',
@@ -150,4 +149,4 @@ const Testzone = () => {
     )
 }
 
-export default Testzone;
+export default Generalforumv2;

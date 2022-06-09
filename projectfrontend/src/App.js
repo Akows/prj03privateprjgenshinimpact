@@ -11,17 +11,22 @@ import Mainpage from './pages/Mainpage';
 
 import WorldInfopage from './pages/WorldInfopage';
 
-import Generalforum from './pages/Generalforum';
-import GeneralforumView from './pages/GeneralforumView';
+import Generalforumv2 from './pages/Generalforumv2';
+import GeneralforumViewv2 from './pages/GeneralforumViewv2';
 import GeneralforumWriteAndEdit from './pages/GeneralforumWriteAndEdit';
 
 import WorldInfoMondstadt from './pages/WorldInfoMondstadt';
 import GenshinIntroduce from './pages/GenshinIntroduce';
 
-import Testzone from './pages/Testzone';
+// import Testzone from './pages/Testzone';
 import WorldInfoMond from './pages/WorldInfoMond';
 import WorldInfoLiyue from './pages/WorldInfoLiyue';
 import WorldInfoInazuma from './pages/WorldInfoInazuma';
+
+import Generalforum from './pages/Generalforum';
+// import GeneralforumView from './pages/GeneralforumView';
+
+
 
 const App = () => {
 
@@ -54,15 +59,17 @@ const App = () => {
           <Route path='/worldinfo' element={<WorldInfopage />}/>
           <Route path='/worldinfo/mondstadt' element={<WorldInfoMondstadt />}/>
 
-          <Route path='/generalforum' element={<Generalforum/> }/>
-          <Route path='/generalforum/view/:b_number_pk' element={<GeneralforumView/> }/>
+          <Route path='/generalforum' element={<Generalforumv2/> }/>
+          <Route path='/generalforum/view/:b_number_pk' element={<GeneralforumViewv2/> }/>
           <Route path='/generalforum/writeoredit' element={<GeneralforumWriteAndEdit/> }/>
 
-          <Route path='/testzone' element={<Testzone/> }/>  
+          <Route path='/testzone' element={<Generalforum/> }/>  
 
           <Route path='/test1' element={<WorldInfoMond/> }/>
           <Route path='/test2' element={<WorldInfoLiyue/> }/>  
-          <Route path='/test3' element={<WorldInfoInazuma/> }/>  
+          <Route path='/test3' element={<WorldInfoInazuma/> }/> 
+
+          <Route path='/test4' element={<GeneralforumViewv2/> }/>  
 
         </Routes>
       </div>
