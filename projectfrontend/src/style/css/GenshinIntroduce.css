@@ -430,7 +430,7 @@
     background-position: center;
 
     /* 영역 확인용 설정 */
-    border: 2px black solid;
+    /* border: 2px black solid; */
 }
 
 #EV-Content-Outer-Content-GF {
@@ -440,8 +440,14 @@
     margin: 20px;
 
     /* 영역 확인용 설정 */
-    border: 2px black solid;
+    /* border: 2px white solid; */
 }
+#EV-Content-Outer-Content-Slide {
+    width: 100%;
+    height: 100%;
+    margin-left: 285px;
+}
+
 
 /* 게임 출시 정보 영역 설정 */
 #EV-Content-Outer-Content-PI {

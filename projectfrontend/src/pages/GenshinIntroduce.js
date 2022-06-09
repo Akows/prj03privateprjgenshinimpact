@@ -16,6 +16,8 @@ import sildeimg4 from "D:/Coding Archive/Git Repo/PrivateProject/prj03privateprj
 import sildeimg5 from "D:/Coding Archive/Git Repo/PrivateProject/prj03privateprjgenshinimpact/projectfrontend/src/style/img/gameInfo/silde5.png";
 import sildeimg6 from "D:/Coding Archive/Git Repo/PrivateProject/prj03privateprjgenshinimpact/projectfrontend/src/style/img/gameInfo/silde6.png";
 
+import Slider2 from "../components/Slider";
+
 const GenshinIntroduce = () => {
     // 페이지를 이동하였을 때, 페이지 가장 맨 위 위치로 스크롤을 자동 위치시키는 기능
     // useRef로 이동 지점을 설정하고 useEffect로 함수가 자동 실행되도록 설정
@@ -177,7 +179,9 @@ const GenshinIntroduce = () => {
                                     </div>
 
                                     <div id="EV-Content-Outer-Content-GF">
-
+                                        <div id="EV-Content-Outer-Content-Slide">   
+                                        <Slider2/>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
