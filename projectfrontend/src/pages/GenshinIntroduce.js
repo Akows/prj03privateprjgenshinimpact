@@ -16,9 +16,28 @@ import sildeimg4 from "D:/Coding Archive/Git Repo/PrivateProject/prj03privateprj
 import sildeimg5 from "D:/Coding Archive/Git Repo/PrivateProject/prj03privateprjgenshinimpact/projectfrontend/src/style/img/gameInfo/silde5.png";
 import sildeimg6 from "D:/Coding Archive/Git Repo/PrivateProject/prj03privateprjgenshinimpact/projectfrontend/src/style/img/gameInfo/silde6.png";
 
-import Slider2 from "../components/Slider";
+import introimg1 from "D:/Coding Archive/Git Repo/PrivateProject/prj03privateprjgenshinimpact/projectfrontend/src/style/img/gameInfo/silde2-1.png"; 
+import introimg2 from "D:/Coding Archive/Git Repo/PrivateProject/prj03privateprjgenshinimpact/projectfrontend/src/style/img/gameInfo/silde2-2.png"; 
+import introimg3 from "D:/Coding Archive/Git Repo/PrivateProject/prj03privateprjgenshinimpact/projectfrontend/src/style/img/gameInfo/silde2-3.png"; 
+import introimg4 from "D:/Coding Archive/Git Repo/PrivateProject/prj03privateprjgenshinimpact/projectfrontend/src/style/img/gameInfo/silde2-4.png"; 
+import introimg5 from "D:/Coding Archive/Git Repo/PrivateProject/prj03privateprjgenshinimpact/projectfrontend/src/style/img/gameInfo/silde2-5.png"; 
+
+
+
+import Slider2 from "../components/Slider2";
 
 const GenshinIntroduce = () => {
+
+    const imgset = [
+        {
+            img1: introimg1,
+            img2: introimg2,
+            img3: introimg3,
+            img4: introimg4,
+            img5: introimg5
+        }
+    ];
+
     // 페이지를 이동하였을 때, 페이지 가장 맨 위 위치로 스크롤을 자동 위치시키는 기능
     // useRef로 이동 지점을 설정하고 useEffect로 함수가 자동 실행되도록 설정
     const pagestartpoint = useRef();
@@ -180,7 +199,7 @@ const GenshinIntroduce = () => {
 
                                     <div id="EV-Content-Outer-Content-GF">
                                         <div id="EV-Content-Outer-Content-Slide">   
-                                        <Slider2/>
+                                            <Slider2 imgset={imgset}/>
                                         </div>
                                     </div>
                                 </div>

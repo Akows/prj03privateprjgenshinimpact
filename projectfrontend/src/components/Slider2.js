@@ -1,10 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 
-import img1 from "D:/Coding Archive/Git Repo/PrivateProject/prj03privateprjgenshinimpact/projectfrontend/src/style/img/gameInfo/silde2-1.png"; 
-import img2 from "D:/Coding Archive/Git Repo/PrivateProject/prj03privateprjgenshinimpact/projectfrontend/src/style/img/gameInfo/silde2-2.png"; 
-import img3 from "D:/Coding Archive/Git Repo/PrivateProject/prj03privateprjgenshinimpact/projectfrontend/src/style/img/gameInfo/silde2-3.png"; 
-import img4 from "D:/Coding Archive/Git Repo/PrivateProject/prj03privateprjgenshinimpact/projectfrontend/src/style/img/gameInfo/silde2-4.png"; 
-import img5 from "D:/Coding Archive/Git Repo/PrivateProject/prj03privateprjgenshinimpact/projectfrontend/src/style/img/gameInfo/silde2-5.png"; 
+
 
 import styledComponents from "styled-components";
 
@@ -37,7 +33,7 @@ const IMG = styledComponents.img`
     height: 50vh;
 `;
 
-const Slider2 = (img) => {
+const Slider2 = (props) => {
 
     const TOTAL_SLIDES = 4;
 
@@ -47,19 +43,19 @@ const Slider2 = (img) => {
 
     const nextSlide = () => {
         if (currentSlide >= TOTAL_SLIDES) { // 더 이상 넘어갈 슬라이드가 없으면 슬라이드를 초기화합니다.
-        setCurrentSlide(0);
+            setCurrentSlide(0);
         } 
         else {
-        setCurrentSlide(currentSlide + 1);
+            setCurrentSlide(currentSlide + 1);
         }
     }
 
     const prevSlide = () => {
         if (currentSlide === 0) {
-        setCurrentSlide(TOTAL_SLIDES);
+            setCurrentSlide(TOTAL_SLIDES);
         } 
         else {
-        setCurrentSlide(currentSlide - 1);
+            setCurrentSlide(currentSlide - 1);
         }
     }
 
@@ -68,16 +64,17 @@ const Slider2 = (img) => {
         slideRef.current.style.transform = `translateX(-${currentSlide}00%)`; // 백틱을 사용하여 슬라이드로 이동하는 애니메이션을 만듭니다.
         }, [currentSlide]);
 
+    console.log(props.imgset);
 
     return (
         <Container>
             {/* {currentSlide} */}
             <SliderContainer ref={slideRef}>
-                <IMG src={img1} alt="데이터 없음."/>
-                <IMG src={img2} alt="데이터 없음."/>
-                <IMG src={img3} alt="데이터 없음."/>
-                <IMG src={img4} alt="데이터 없음."/>
-                <IMG src={img5} alt="데이터 없음."/>
+                <IMG src={''} alt="데이터 없음."/>
+                <IMG src={''} alt="데이터 없음."/>
+                <IMG src={''} alt="데이터 없음."/>
+                <IMG src={''} alt="데이터 없음."/>
+                <IMG src={''} alt="데이터 없음."/>
             </SliderContainer>
             <Button onClick={prevSlide}>Prev</Button>
             <Button onClick={nextSlide}>Next</Button>

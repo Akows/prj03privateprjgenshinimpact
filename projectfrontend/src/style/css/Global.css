@@ -20,6 +20,19 @@
     }
 }
 
+/* 위에서 아래로 등장하는 fadeDown */
+@keyframes fadeDown {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -15%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translateZ(0);
+    }
+}
+
+
 /* 투명도 100에서 0으로 낮아지는 fadeUp */
 @keyframes ShowUp {
     0% {
@@ -27,17 +40,6 @@
     }
     to {
         opacity: 1;
-    }
-}
-
-@keyframes FadeIn{
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: none;
     }
 }
 

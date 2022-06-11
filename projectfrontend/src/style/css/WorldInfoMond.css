@@ -101,7 +101,7 @@
     height: 18%;
 
     /* 영역 확인용 경계선 설정 */
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 .WIFM-IntroduceGod-ContentOuter {
     width: 85%;
@@ -155,7 +155,7 @@
     height: 95%;
 
     /* 영역 확인용 경계선 설정 */
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 .WIFM-IntroduceGod-ContentInner {
     width: 95%;
@@ -224,25 +224,75 @@
     display: flex;
 
     /* 영역 확인용 경계선 설정 */
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
-    .WIFM-IntroduceMond-Photo {
-        width: 50%;
-        height: 100%;
+.WIFM-IntroduceMond-Photo {
+    width: 50%;
+    height: 100%;
 
-        /* 영역 확인용 경계선 설정 */
-        border: 1px solid black;
-    }
-    .WIFM-IntroduceMond-Script {
-        width: 50%;
-        height: 100%;
+    display: flex;
 
-        font-family: 'GIfont';
-        font-size: xx-large;
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black; */
+}
+.WIFM-IntroduceMond-Photoimg1{
+    width: 50%;
+    height: 40%;
 
-        /* 영역 확인용 경계선 설정 */
-        border: 1px solid black;
-    }
+    margin-top: 60px;
+    margin-left: 5px;
+
+    background-image: url("../img/regionimg/mond_03.jpg");
+    background-size: 600px 400px;
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+
+    border-radius: 10px;
+
+    font-family: 'GIfont';
+    font-size: large;
+
+    animation: fadeDown 2s;
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black; */
+}
+.WIFM-IntroduceMond-Photoimg2{
+    width: 50%;
+    height: 40%;
+
+    margin-top: 270px;
+    margin-right: 5px;
+
+    background-image: url("../img/regionimg/mond_05.jpg");
+    background-size: 600px 400px;
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+
+    border-radius: 10px;
+
+    font-family: 'GIfont';
+    font-size: large;
+
+    animation: fadeUp 2s;
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black; */
+}
+.WIFM-IntroduceMond-Script {
+    width: 50%;
+    height: 100%;
+
+    margin-top: 100px;
+
+    font-family: 'GIfont';
+    font-size: x-large;
+
+    animation: ShowUp 2s;
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black; */
+}
 
 
 
