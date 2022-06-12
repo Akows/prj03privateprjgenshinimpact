@@ -22,9 +22,7 @@ import introimg3 from "D:/Coding Archive/Git Repo/PrivateProject/prj03privateprj
 import introimg4 from "D:/Coding Archive/Git Repo/PrivateProject/prj03privateprjgenshinimpact/projectfrontend/src/style/img/gameInfo/silde2-4.png"; 
 import introimg5 from "D:/Coding Archive/Git Repo/PrivateProject/prj03privateprjgenshinimpact/projectfrontend/src/style/img/gameInfo/silde2-5.png"; 
 
-
-
-import Slider2 from "../components/Slider2";
+import Sliderintro from "../components/Sliderintro";
 
 const GenshinIntroduce = () => {
 
@@ -109,11 +107,9 @@ const GenshinIntroduce = () => {
         prevArrow: <PrevArrow />
     };
 
-
     return (
         <>
             <div className="EV-BackgroundArea EV-BackgroundIMG1" ref={pagestartpoint}>
-                
                 <div id='EV-Content-Outer-Main'>
                     <div id="EV-Content-ContentAreaInnerorizontal">
                         <div id='EV-Content-Outer-Main-Logo'>
@@ -126,8 +122,6 @@ const GenshinIntroduce = () => {
                         </div>
                     </div>
                 </div>
-
-
 
                 <div id='EV-Content-Outer-Contents'>
                     <div id='EV-Content-Outer-Content-Container'>
@@ -199,7 +193,7 @@ const GenshinIntroduce = () => {
 
                                     <div id="EV-Content-Outer-Content-GF">
                                         <div id="EV-Content-Outer-Content-Slide">   
-                                            <Slider2 imgset={imgset}/>
+                                            <Sliderintro imgs={imgset}/>
                                         </div>
                                     </div>
                                 </div>

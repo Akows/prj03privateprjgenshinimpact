@@ -1,11 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
-
-
-
 import styledComponents from "styled-components";
 
 const Container = styledComponents.div`
-    width: 65%;
+    width: 39.5%;
     overflow: hidden; // 선을 넘어간 이미지들은 보이지 않도록 처리합니다.
 `;
 const Button = styledComponents.button`
@@ -30,10 +27,10 @@ const SliderContainer = styledComponents.div`
 
 const IMG = styledComponents.img`
     width: 100%;
-    height: 50vh;
+    height: 40vh;
 `;
 
-const Slider2 = (props) => {
+const Sliderworldinfo = (props) => {
 
     const TOTAL_SLIDES = 4;
 
@@ -64,17 +61,15 @@ const Slider2 = (props) => {
         slideRef.current.style.transform = `translateX(-${currentSlide}00%)`; // 백틱을 사용하여 슬라이드로 이동하는 애니메이션을 만듭니다.
         }, [currentSlide]);
 
-    console.log(props.imgset);
-
     return (
         <Container>
             {/* {currentSlide} */}
             <SliderContainer ref={slideRef}>
-                <IMG src={''} alt="데이터 없음."/>
-                <IMG src={''} alt="데이터 없음."/>
-                <IMG src={''} alt="데이터 없음."/>
-                <IMG src={''} alt="데이터 없음."/>
-                <IMG src={''} alt="데이터 없음."/>
+                <IMG src={props.imgs[0].img1} alt="데이터 없음."/>
+                <IMG src={props.imgs[0].img2} alt="데이터 없음."/>
+                <IMG src={props.imgs[0].img3} alt="데이터 없음."/>
+                <IMG src={props.imgs[0].img4} alt="데이터 없음."/>
+                <IMG src={props.imgs[0].img5} alt="데이터 없음."/>
             </SliderContainer>
             <Button onClick={prevSlide}>Prev</Button>
             <Button onClick={nextSlide}>Next</Button>
@@ -82,4 +77,4 @@ const Slider2 = (props) => {
     )
 }
 
-export default Slider2;
+export default Sliderworldinfo;

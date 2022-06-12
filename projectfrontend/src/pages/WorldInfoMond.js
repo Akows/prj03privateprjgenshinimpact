@@ -10,18 +10,18 @@ import mondinfoimg4 from "D:/Coding Archive/Git Repo/PrivateProject/prj03private
 import mondinfoimg5 from "D:/Coding Archive/Git Repo/PrivateProject/prj03privateprjgenshinimpact/projectfrontend/src/style/img/regionimg/mond_05.jpg"; 
 
 import MondBannerHorizontal from "../components/banner/MondBannerHorizontal";
-import Slider2 from "../components/Slider2";
+import Sliderworldinfo from "../components/Sliderworldinfo";
 
 const WorldInfoMond = () => {
-
     const imgset = [
-        {img1: mondinfoimg1},
-        {img2: mondinfoimg2},
-        {img3: mondinfoimg3},
-        {img4: mondinfoimg4},
-        {img5: mondinfoimg5}
+        {
+            img1: mondinfoimg1,
+            img2: mondinfoimg2,
+            img3: mondinfoimg3,
+            img4: mondinfoimg4,
+            img5: mondinfoimg5
+        }
     ];
-
 
     // 페이지를 이동하였을 때, 페이지 가장 맨 위 위치로 스크롤을 자동 위치시키는 기능
     // useRef로 이동 지점을 설정하고 useEffect로 함수가 자동 실행되도록 설정
@@ -88,12 +88,52 @@ const WorldInfoMond = () => {
 
             <div className='WIFM-IntroduceGod-ContentOuter WIFM-ContentOuter-SectionConfig' ref={introducegodpoint}>
                 <div className='WIFM-IntroduceGod-ContentInner'>
+                    <div className='WIFM-IntroduceGod-Background'>
+                        <div className='WIFM-IntroduceGod-Script1'>
+                            <p>「바람의 방향은 항상 바뀌는 거니까」</p>
+                            <p>「언젠가는, 더 빛나는 곳으로 향할 날이 올거야」</p>
+                            <p>「이제부터는 내 축복과 함께 더 자유롭게 날아봐」</p>
+                        </div>
+                        <div className='WIFM-IntroduceGod-Name'>
+                            <p>「자유의 신, 바르바토스」</p>
+                        </div>
 
+                        <div className='WIFM-IntroduceGod-Script2'>
+                            <p>수천년 전, 열풍의 마신 데카라비안을 축출하고 자유의 도시 '몬드'를 세운 바람과 자유의 신.</p>
+                            <p>1600여년 간 몬드를 다스리다 홀연 자취를 감추었다.</p>
+                            <p>1000여년 이상 모습을 드러내지 않았으나 몬드 사람들은 언젠가 바르바토스가 자신들 곁으로 돌아올 것이라 굳게 믿고있다.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div className='WIFM-IntroduceCity-ContentOuter WIFM-ContentOuter-SectionConfig' ref={introducecitypoint}>
                 <div className='WIFM-IntroduceCity-ContentInner'>
+
+                    <div className='WIFM-IntroduceCity-Script'>
+
+                        <p>「몬드성」</p> 
+
+                        <br/>
+
+                        <p>「음유시인과 예술가들 사이에서 '자유의 도시', '목가의 성', '북쪽의 명관'이라고 몬드의 중심지.</p>
+
+                        <br/>
+
+                        <p>바르바토스가 자취를 감춘 뒤 타락한 귀족들이 권력을 독점하고 사람들을 노예로 부렸다.</p>
+                        <p>어느 날 몬드에 강대한 마룡이 나타났는데, 귀족들은 몬드 사람들을 노예로 만들어 </p>
+                        <p>마룡에게 제물로 바치며 자신들의 안전만을 지켜나갔다.</p>
+
+                        <p>바네사라는 이름의 여성 노예가 음유시인의 모습으로 나타난 바르바토스의 도움을 얻어</p>
+                        <p>마룡을 무찌르고 타락한 귀족들을 몰아냄으로써 몬드는 다시 자유를 되찾을 수 있었다.</p>
+
+                        <p>이후 몬드 사람들은 하르파스툼 축제와 윈드블룸 축제로 당시의 사건을 기리고 있다.</p>
+
+                    </div>
+
+                    <div className='WIFM-IntroduceCity-IMG'>
+                        
+                    </div>
 
                 </div>
             </div>
@@ -105,7 +145,12 @@ const WorldInfoMond = () => {
 
             <div className='WIFM-IntroduceViewpoint-ContentOuter WIFM-ContentOuter-SectionConfig' ref={introduceviewpoint}>
                 <div className='WIFM-IntroduceViewpoint-ContentInner'>
-                    <Slider2 imgset={imgset}/>
+                    <div className='WIFM-IntroduceViewpoint-Title'>
+                        <p>눈여겨볼 장소</p>
+                    </div>
+                    <div className='WIFM-IntroduceViewpoint-Slider'>
+                        <Sliderworldinfo imgs={imgset}/>
+                    </div>
                 </div>
             </div>
 

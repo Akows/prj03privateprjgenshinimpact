@@ -5,7 +5,7 @@ import "../../style/css/BannerCSS/LiyueBannerVertical.css";
 const LiyueBannerVertical = () => {
     return (
         <div id="LBannerVer-Outer">
-            <Link to={"/worldinfo/mondstadt"}>
+            <Link to={"/worldinfo/liyue"}>
             <div id="LBannerVer-Emblem"></div>
             <div id="LBannerVer-Text">
                 리월항

@@ -9,18 +9,16 @@ import Footer from './components/Footer';
 
 import Mainpage from './pages/Mainpage';
 
+import GenshinIntroduce from './pages/GenshinIntroduce';
+
 import WorldInfopage from './pages/WorldInfopage';
+import WorldInfoMond from './pages/WorldInfoMond';
+import WorldInfoLiyue from './pages/WorldInfoLiyue';
+import WorldInfoInazuma from './pages/WorldInfoInazuma';
 
 import Generalforumv2 from './pages/Generalforumv2';
 import GeneralforumViewv2 from './pages/GeneralforumViewv2';
 import GeneralforumWriteAndEditv2 from './pages/GeneralforumWriteAndEditv2';
-
-import WorldInfoMondstadt from './pages/WorldInfoMondstadt';
-import GenshinIntroduce from './pages/GenshinIntroduce';
-
-import WorldInfoMond from './pages/WorldInfoMond';
-import WorldInfoLiyue from './pages/WorldInfoLiyue';
-import WorldInfoInazuma from './pages/WorldInfoInazuma';
 
 import Generalforum from './unused/Generalforum';
 
@@ -53,16 +51,13 @@ const App = () => {
           <Route path='/genshinintroduce' element={<GenshinIntroduce />}/>
 
           <Route path='/worldinfo' element={<WorldInfopage />}/>
-          <Route path='/worldinfo/mondstadt' element={<WorldInfoMondstadt />}/>
+          <Route path='/worldinfo/mondstadt' element={<WorldInfoMond/> }/>
+          <Route path='/worldinfo/liyue' element={<WorldInfoLiyue/> }/>  
+          <Route path='/worldinfo/inazuma' element={<WorldInfoInazuma/> }/> 
 
           <Route path='/generalforum' element={<Generalforumv2/> }/>
           <Route path='/generalforum/view/:b_number_pk' element={<GeneralforumViewv2/> }/>
           <Route path='/generalforum/writeoredit' element={<GeneralforumWriteAndEditv2/> }/>
-
-
-          <Route path='/test1' element={<WorldInfoMond/> }/>
-          <Route path='/test2' element={<WorldInfoLiyue/> }/>  
-          <Route path='/test3' element={<WorldInfoInazuma/> }/> 
 
           <Route path='/testzone' element={<Generalforum/> }/>  
 

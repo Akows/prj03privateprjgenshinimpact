@@ -108,7 +108,7 @@
     height: 18%;
 
     /* 영역 확인용 경계선 설정 */
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 .WIFM-IntroduceCity-ContentOuter {
     width: 85%;
@@ -129,7 +129,7 @@
     height: 18%;
 
     /* 영역 확인용 경계선 설정 */
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 .WIFM-Logo-ContentOuter {
     width: 85%;
@@ -162,11 +162,13 @@
     height: 95%;
 
     /* 영역 확인용 경계선 설정 */
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 .WIFM-IntroduceCity-ContentInner {
     width: 95%;
     height: 95%;
+
+    display: flex;
 
     /* 영역 확인용 경계선 설정 */
     border: 1px solid black;
@@ -182,8 +184,12 @@
     width: 95%;
     height: 95%;
 
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
+
     /* 영역 확인용 경계선 설정 */
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 .WIFM-Logo-ContentInner {
     width: 95%;
@@ -293,11 +299,128 @@
     /* 영역 확인용 경계선 설정 */
     /* border: 1px solid black; */
 }
+/* 집정관 영역 설정 */
+/* 집정관 영역 설정 */
+.WIFM-IntroduceGod-Background {
+
+    width: 100%;
+    height: 1000px;
+    position: relative;
+}
+.WIFM-IntroduceGod-Background > * {
+    position: relative;
+}
+.WIFM-IntroduceGod-Background::before {
+    content: "";
+    /* background-attachment: fixed; */
+    background-image: url("../img/background/god/Barbatos.jfif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.7;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+
+    border-radius: 15px;
+}
+.WIFM-IntroduceGod-Script1 {
+    width: 100%;
+    height: 20%;
+
+    top: 60px;
+
+    font-family: 'GIfont';
+    font-size: x-large;
+
+    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+
+    color: white;
+}
+.WIFM-IntroduceGod-Name {
+    width: 100%;
+    height: 40%;
+
+    top: 50px;
+
+    font-family: 'GIfont';
+    font-size: xx-large;
+
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+
+    color: black;
+}
+
+.WIFM-IntroduceGod-Script2 {
+    width: 100%;
+    height: 40%;
+
+    top: 50px;
+
+    font-family: 'GIfont';
+    font-size: x-large;
+
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+
+    color: black;
+}
+
+/* 도시 소개 영역 설정 */
+/* 도시 소개 영역 설정 */
+.WIFM-IntroduceCity-Script {
+    width: 50%;
+    height: 80%;
+
+    margin-top: 150px;
+
+    font-family: 'GIfont';
+    font-size: x-large;
+
+    /* 영역 확인용 경계선 설정 */
+    border: 1px solid black;
+}
+
+.WIFM-IntroduceCity-IMG {
+    width: 50%;
+    height: 100%;
+
+    /* 영역 확인용 경계선 설정 */
+    border: 1px solid black;
+}
 
 
 
 
 
+/* 관람 영역 설정 */
+/* 관람 영역 설정 */
+.WIFM-IntroduceViewpoint-Title {
+    width: 100%;
+    height: 20%;
+
+    margin-top: 0px;
+
+    font-family: 'GIfont';
+    font-size: xx-large;
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black; */
+}
+.WIFM-IntroduceViewpoint-Slider {
+    width: 100%;
+    height: 80%;
+
+    margin-top: -30px;
+
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black; */
+}
 
 
 
