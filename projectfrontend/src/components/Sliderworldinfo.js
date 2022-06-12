@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import styledComponents from "styled-components";
 
 const Container = styledComponents.div`
-    width: 39.5%;
+    width: 55%;
     overflow: hidden; // 선을 넘어간 이미지들은 보이지 않도록 처리합니다.
 `;
 const Button = styledComponents.button`
@@ -27,7 +27,7 @@ const SliderContainer = styledComponents.div`
 
 const IMG = styledComponents.img`
     width: 100%;
-    height: 40vh;
+    height: 50vh;
 `;
 
 const Sliderworldinfo = (props) => {
