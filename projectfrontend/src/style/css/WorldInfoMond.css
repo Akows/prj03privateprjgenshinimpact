@@ -115,14 +115,14 @@
     height: 18%;
 
     /* 영역 확인용 경계선 설정 */
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 .WIFM-IntroduceGov-ContentOuter {
     width: 85%;
     height: 18%;
 
     /* 영역 확인용 경계선 설정 */
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 .WIFM-IntroduceViewpoint-ContentOuter {
     width: 85%;
@@ -171,14 +171,16 @@
     display: flex;
 
     /* 영역 확인용 경계선 설정 */
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 .WIFM-IntroduceGov-ContentInner {
     width: 95%;
     height: 95%;
 
+    display: flex;
+
     /* 영역 확인용 경계선 설정 */
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 .WIFM-IntroduceViewpoint-ContentInner {
     width: 95%;
@@ -206,7 +208,6 @@
 /* 컨텐츠 영역 설정 */
 /* 컨텐츠 영역 설정 */
 
-/* 몬드 소개 영역 설정 */
 /* 몬드 소개 영역 설정 */
 .WIFM-IntroduceMond-TitleBanner {
     width: 100%;
@@ -299,10 +300,10 @@
     /* 영역 확인용 경계선 설정 */
     /* border: 1px solid black; */
 }
+
 /* 집정관 영역 설정 */
 /* 집정관 영역 설정 */
 .WIFM-IntroduceGod-Background {
-
     width: 100%;
     height: 1000px;
     position: relative;
@@ -373,24 +374,87 @@
     width: 50%;
     height: 80%;
 
-    margin-top: 150px;
+    margin-top: 50px;
 
     font-family: 'GIfont';
     font-size: x-large;
 
     /* 영역 확인용 경계선 설정 */
-    border: 1px solid black;
+    /* border: 1px solid black; */
+}
+.WIFM-IntroduceCity-ScriptTitle {
+    font-family: 'GIfont';
+    font-size: 50px;
 }
 
 .WIFM-IntroduceCity-IMG {
     width: 50%;
     height: 100%;
 
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
+
     /* 영역 확인용 경계선 설정 */
-    border: 1px solid black;
+    /* border: 1px solid black; */
+}
+.WIFM-IntroduceCity-image {
+    width: 80%;
+    height: 80%;
+
+    margin-top: 30px;
+
+    background-image: url("../img/background/MondstadtCastle.jpg");
+    background-size: 1500px 1000px;
+    background-repeat: no-repeat;
+    background-position: -600px 0px;
+
+    border-radius: 20px;
 }
 
+/* 정부 소개 영역 설정 */
+/* 정부 소개 영역 설정 */
+.WIFM-IntroduceGov-Script {
+    width: 50%;
+    height: 80%;
 
+    margin-top: 50px;
+
+    font-family: 'GIfont';
+    font-size: x-large;
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black; */
+}
+.WIFM-IntroduceGov-ScriptTitle {
+    font-family: 'GIfont';
+    font-size: 50px;
+}
+
+.WIFM-IntroduceGov-IMG {
+    width: 50%;
+    height: 100%;
+
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black; */
+}
+.WIFM-IntroduceGov-image {
+    width: 80%;
+    height: 80%;
+
+    margin-top: 30px;
+
+    background-image: url("../img/background/KnightsofFavonius.jpg");
+    background-size: 1800px 1000px;
+    background-repeat: no-repeat;
+    background-position: -500px -100px;
+
+    border-radius: 20px;
+}
 
 
 

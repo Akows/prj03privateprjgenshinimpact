@@ -23,7 +23,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    opacity: 1;
+    opacity: 0.8;
     position: absolute;
     top: 0px;
     left: 0px;
@@ -101,35 +101,35 @@
     height: 18%;
 
     /* 영역 확인용 경계선 설정 */
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 .WIFI-IntroduceGod-ContentOuter {
     width: 85%;
     height: 18%;
 
     /* 영역 확인용 경계선 설정 */
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 .WIFI-IntroduceCity-ContentOuter {
     width: 85%;
     height: 18%;
 
     /* 영역 확인용 경계선 설정 */
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 .WIFI-IntroduceGov-ContentOuter {
     width: 85%;
     height: 18%;
 
     /* 영역 확인용 경계선 설정 */
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 .WIFI-IntroduceViewpoint-ContentOuter {
     width: 85%;
     height: 18%;
 
     /* 영역 확인용 경계선 설정 */
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 .WIFI-Logo-ContentOuter {
     width: 85%;
@@ -155,39 +155,51 @@
     height: 95%;
 
     /* 영역 확인용 경계선 설정 */
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 .WIFI-IntroduceGod-ContentInner {
     width: 95%;
     height: 95%;
 
     /* 영역 확인용 경계선 설정 */
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 .WIFI-IntroduceCity-ContentInner {
     width: 95%;
     height: 95%;
 
+    display: flex;
+
     /* 영역 확인용 경계선 설정 */
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 .WIFI-IntroduceGov-ContentInner {
     width: 95%;
     height: 95%;
 
+    display: flex;
+
     /* 영역 확인용 경계선 설정 */
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 .WIFI-IntroduceViewpoint-ContentInner {
     width: 95%;
     height: 95%;
 
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
+
     /* 영역 확인용 경계선 설정 */
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 .WIFI-Logo-ContentInner {
     width: 95%;
     height: 95%;
+
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
 
     /* 영역 확인용 경계선 설정 */
     /* border: 1px solid black; */
@@ -213,30 +225,294 @@
     }
 
     .WIFI-IntroduceInazuma-PhotoAndScript {
-    width: 100%;
-    height: 75%;
-
-    display: flex;
-
-    /* 영역 확인용 경계선 설정 */
-    border: 1px solid black;
-}
+        width: 100%;
+        height: 75%;
+    
+        display: flex;
+    
+        /* 영역 확인용 경계선 설정 */
+        /* border: 1px solid black; */
+    }
     .WIFI-IntroduceInazuma-Photo {
         width: 50%;
         height: 100%;
-
+    
+        display: flex;
+    
         /* 영역 확인용 경계선 설정 */
-        border: 1px solid black;
+        /* border: 1px solid black; */
+    }
+    .WIFI-IntroduceInazuma-Photoimg1{
+        width: 50%;
+        height: 40%;
+    
+        margin-top: 60px;
+        margin-left: 5px;
+    
+        background-image: url("../img/regionimg/Inazuma_01.jpg");
+        background-size: 600px 400px;
+        background-repeat: no-repeat;
+        background-position: 0px 0px;
+    
+        border-radius: 10px;
+    
+        font-family: 'GIfont';
+        font-size: large;
+    
+        animation: fadeDown 2s;
+    
+        /* 영역 확인용 경계선 설정 */
+        /* border: 1px solid black; */
+    }
+    .WIFI-IntroduceInazuma-Photoimg2{
+        width: 50%;
+        height: 40%;
+    
+        margin-top: 270px;
+        margin-right: 5px;
+    
+        background-image: url("../img/regionimg/Inazuma_03.jpg");
+        background-size: 600px 400px;
+        background-repeat: no-repeat;
+        background-position: 0px 0px;
+    
+        border-radius: 10px;
+    
+        font-family: 'GIfont';
+        font-size: large;
+    
+        animation: fadeUp 2s;
+    
+        /* 영역 확인용 경계선 설정 */
+        /* border: 1px solid black; */
     }
     .WIFI-IntroduceInazuma-Script {
         width: 50%;
         height: 100%;
+    
+        margin-top: 100px;
+    
+        font-family: 'GIfont';
+        font-size: x-large;
+    
+        animation: ShowUp 2s;
 
+        text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    
+        /* 영역 확인용 경계선 설정 */
+        /* border: 1px solid black; */
+    }
+    
+    /* 집정관 영역 설정 */
+    /* 집정관 영역 설정 */
+    .WIFI-IntroduceGod-Background {
+        width: 100%;
+        height: 1000px;
+        position: relative;
+    }
+    .WIFI-IntroduceGod-Background > * {
+        position: relative;
+    }
+    .WIFI-IntroduceGod-Background::before {
+        content: "";
+        /* background-attachment: fixed; */
+        background-image: url("../img/background/god/Baal.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0.7;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+    
+        border-radius: 15px;
+    }
+    .WIFI-IntroduceGod-Script1 {
+        width: 100%;
+        height: 20%;
+    
+        top: 60px;
+    
+        font-family: 'GIfont';
+        font-size: x-large;
+    
+        text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+    
+        color: white;
+    }
+    .WIFI-IntroduceGod-Name {
+        width: 100%;
+        height: 40%;
+    
+        top: 50px;
+    
         font-family: 'GIfont';
         font-size: xx-large;
+    
+        text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    
+        color: black;
+    }
+    
+    .WIFI-IntroduceGod-Script2 {
+        width: 100%;
+        height: 40%;
+    
+        top: 50px;
+    
+        font-family: 'GIfont';
+        font-size: x-large;
+    
+        text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    
+        color: black;
+    }
+    
+    /* 도시 소개 영역 설정 */
+    /* 도시 소개 영역 설정 */
+    .WIFI-IntroduceCity-Script {
+        width: 50%;
+        height: 80%;
+    
+        margin-top: 50px;
+    
+        font-family: 'GIfont';
+        font-size: x-large;
 
+        text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    
         /* 영역 확인용 경계선 설정 */
-        border: 1px solid black;
+        /* border: 1px solid black; */
+    }
+    .WIFI-IntroduceCity-ScriptTitle {
+        font-family: 'GIfont';
+        font-size: 50px;
+
+        text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    }
+    
+    .WIFI-IntroduceCity-IMG {
+        width: 50%;
+        height: 100%;
+    
+        display: inline-flex;
+        align-items: center;
+        flex-direction: column;
+    
+        /* 영역 확인용 경계선 설정 */
+        /* border: 1px solid black; */
+    }
+    .WIFI-IntroduceCity-image {
+        width: 80%;
+        height: 80%;
+    
+        margin-top: 30px;
+    
+        background-image: url("../img/background/InazumaClasle.jfif");
+        background-size: 1200px 1000px;
+        background-repeat: no-repeat;
+        background-position: -250px 0px;
+    
+        border-radius: 20px;
+    }
+    
+    /* 정부 소개 영역 설정 */
+    /* 정부 소개 영역 설정 */
+    .WIFI-IntroduceGov-Script {
+        width: 50%;
+        height: 80%;
+    
+        margin-top: 50px;
+    
+        font-family: 'GIfont';
+        font-size: x-large;
+
+        text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    
+        /* 영역 확인용 경계선 설정 */
+        /* border: 1px solid black; */
+    }
+    .WIFI-IntroduceGov-ScriptTitle {
+        font-family: 'GIfont';
+        font-size: 50px;
+
+        text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    }
+    
+    .WIFI-IntroduceGov-IMG {
+        width: 50%;
+        height: 100%;
+    
+        display: inline-flex;
+        align-items: center;
+        flex-direction: column;
+    
+        /* 영역 확인용 경계선 설정 */
+        /* border: 1px solid black; */
+    }
+    .WIFI-IntroduceGov-image1 {
+        width: 30%;
+        height: 30%;
+
+        margin-top: 80px;
+    
+        background-image: url("../img/emblem/hiiragi.png");
+        background-size: 200px 200px;
+        background-repeat: no-repeat;
+        background-position: 0px 0px;
+    
+    }
+    .WIFI-IntroduceGov-image2 {
+        width: 30%;
+        height: 30%;
+    
+        background-image: url("../img/emblem/kuzu.png");
+        background-size: 200px 200px;
+        background-repeat: no-repeat;
+        background-position: 0px 0px;
+    
+    }
+    .WIFI-IntroduceGov-image3 {
+        width: 30%;
+        height: 30%;
+
+        background-image: url("../img/emblem/kamisato.png");
+        background-size: 200px 200px;
+        background-repeat: no-repeat;
+        background-position: 0px 0px;
+    
+    }
+    
+    
+    
+    /* 관람 영역 설정 */
+    /* 관람 영역 설정 */
+    .WIFI-IntroduceViewpoint-Title {
+        width: 100%;
+        height: 20%;
+    
+        margin-top: 0px;
+    
+        font-family: 'GIfont';
+        font-size: xx-large;
+    
+        /* 영역 확인용 경계선 설정 */
+        /* border: 1px solid black; */
+    }
+    .WIFI-IntroduceViewpoint-Slider {
+        width: 100%;
+        height: 80%;
+    
+        margin-top: -30px;
+    
+        display: inline-flex;
+        align-items: center;
+        flex-direction: column;
+    
+        /* 영역 확인용 경계선 설정 */
+        /* border: 1px solid black; */
     }
 
 

@@ -101,35 +101,35 @@
     height: 18%;
 
     /* 영역 확인용 경계선 설정 */
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 .WIFL-IntroduceGod-ContentOuter {
     width: 85%;
     height: 18%;
 
     /* 영역 확인용 경계선 설정 */
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 .WIFL-IntroduceCity-ContentOuter {
     width: 85%;
     height: 18%;
 
     /* 영역 확인용 경계선 설정 */
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 .WIFL-IntroduceGov-ContentOuter {
     width: 85%;
     height: 18%;
 
     /* 영역 확인용 경계선 설정 */
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 .WIFL-IntroduceViewpoint-ContentOuter {
     width: 85%;
     height: 18%;
 
     /* 영역 확인용 경계선 설정 */
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 .WIFL-Logo-ContentOuter {
     width: 85%;
@@ -155,39 +155,51 @@
     height: 95%;
 
     /* 영역 확인용 경계선 설정 */
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 .WIFL-IntroduceGod-ContentInner {
     width: 95%;
     height: 95%;
 
     /* 영역 확인용 경계선 설정 */
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 .WIFL-IntroduceCity-ContentInner {
     width: 95%;
     height: 95%;
 
+    display: flex;
+
     /* 영역 확인용 경계선 설정 */
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 .WIFL-IntroduceGov-ContentInner {
     width: 95%;
     height: 95%;
 
+    display: flex;
+
     /* 영역 확인용 경계선 설정 */
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 .WIFL-IntroduceViewpoint-ContentInner {
     width: 95%;
     height: 95%;
 
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
+
     /* 영역 확인용 경계선 설정 */
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 .WIFL-Logo-ContentInner {
     width: 95%;
     height: 95%;
+
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
 
     /* 영역 확인용 경계선 설정 */
     /* border: 1px solid black; */
@@ -212,33 +224,267 @@
         /* border: 1px solid black; */
     }
 
-.WIFL-IntroduceLiyue-PhotoAndScript {
-    width: 100%;
-    height: 75%;
-
-    display: flex;
-
-    /* 영역 확인용 경계선 설정 */
-    border: 1px solid black;
-}
+    .WIFL-IntroduceLiyue-PhotoAndScript {
+        width: 100%;
+        height: 75%;
+    
+        display: flex;
+    
+        /* 영역 확인용 경계선 설정 */
+        /* border: 1px solid black; */
+    }
     .WIFL-IntroduceLiyue-Photo {
         width: 50%;
         height: 100%;
-
+    
+        display: flex;
+    
         /* 영역 확인용 경계선 설정 */
-        border: 1px solid black;
+        /* border: 1px solid black; */
+    }
+    .WIFL-IntroduceLiyue-Photoimg1{
+        width: 50%;
+        height: 40%;
+    
+        margin-top: 60px;
+        margin-left: 5px;
+    
+        background-image: url("../img/regionimg/liyue_05.jpg");
+        background-size: 600px 400px;
+        background-repeat: no-repeat;
+        background-position: 0px 0px;
+    
+        border-radius: 10px;
+    
+        font-family: 'GIfont';
+        font-size: large;
+    
+        animation: fadeDown 2s;
+    
+        /* 영역 확인용 경계선 설정 */
+        /* border: 1px solid black; */
+    }
+    .WIFL-IntroduceLiyue-Photoimg2{
+        width: 50%;
+        height: 40%;
+    
+        margin-top: 270px;
+        margin-right: 5px;
+    
+        background-image: url("../img/regionimg/liyue_03.jpg");
+        background-size: 600px 400px;
+        background-repeat: no-repeat;
+        background-position: 0px 0px;
+    
+        border-radius: 10px;
+    
+        font-family: 'GIfont';
+        font-size: large;
+    
+        animation: fadeUp 2s;
+    
+        /* 영역 확인용 경계선 설정 */
+        /* border: 1px solid black; */
     }
     .WIFL-IntroduceLiyue-Script {
         width: 50%;
         height: 100%;
-
+    
+        margin-top: 100px;
+    
         font-family: 'GIfont';
-        font-size: xx-large;
-
+        font-size: x-large;
+    
+        animation: ShowUp 2s;
+    
         /* 영역 확인용 경계선 설정 */
-        border: 1px solid black;
+        /* border: 1px solid black; */
     }
 
+/* 집정관 영역 설정 */
+/* 집정관 영역 설정 */
+.WIFL-IntroduceGod-Background {
+    width: 100%;
+    height: 1000px;
+    position: relative;
+}
+.WIFL-IntroduceGod-Background > * {
+    position: relative;
+}
+.WIFL-IntroduceGod-Background::before {
+    content: "";
+    /* background-attachment: fixed; */
+    background-image: url("../img/background/god/Morax.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.7;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+
+    border-radius: 15px;
+}
+.WIFL-IntroduceGod-Script1 {
+    width: 100%;
+    height: 20%;
+
+    top: 60px;
+
+    font-family: 'GIfont';
+    font-size: x-large;
+
+    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+
+    color: white;
+}
+.WIFL-IntroduceGod-Name {
+    width: 100%;
+    height: 40%;
+
+    top: 50px;
+
+    font-family: 'GIfont';
+    font-size: xx-large;
+
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+
+    color: black;
+}
+
+.WIFL-IntroduceGod-Script2 {
+    width: 100%;
+    height: 40%;
+
+    top: 50px;
+
+    font-family: 'GIfont';
+    font-size: x-large;
+
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+
+    color: black;
+}
+
+/* 도시 소개 영역 설정 */
+/* 도시 소개 영역 설정 */
+.WIFL-IntroduceCity-Script {
+    width: 50%;
+    height: 80%;
+
+    margin-top: 50px;
+
+    font-family: 'GIfont';
+    font-size: x-large;
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black; */
+}
+.WIFL-IntroduceCity-ScriptTitle {
+    font-family: 'GIfont';
+    font-size: 50px;
+}
+
+.WIFL-IntroduceCity-IMG {
+    width: 50%;
+    height: 100%;
+
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black; */
+}
+.WIFL-IntroduceCity-image {
+    width: 80%;
+    height: 80%;
+
+    margin-top: 30px;
+
+    background-image: url("../img/background/Liyueport.jfif");
+    background-size: 1500px 900px;
+    background-repeat: no-repeat;
+    background-position: -300px -100px;
+
+    border-radius: 20px;
+}
+
+/* 정부 소개 영역 설정 */
+/* 정부 소개 영역 설정 */
+.WIFL-IntroduceGov-Script {
+    width: 50%;
+    height: 80%;
+
+    margin-top: 50px;
+
+    font-family: 'GIfont';
+    font-size: x-large;
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black; */
+}
+.WIFL-IntroduceGov-ScriptTitle {
+    font-family: 'GIfont';
+    font-size: 50px;
+}
+
+.WIFL-IntroduceGov-IMG {
+    width: 50%;
+    height: 100%;
+
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black; */
+}
+.WIFL-IntroduceGov-image {
+    width: 80%;
+    height: 80%;
+
+    margin-top: 30px;
+
+    background-image: url("../img/background/Liyuesevenstar.jpg");
+    background-size: 1100px 900px;
+    background-repeat: no-repeat;
+    background-position: -150px 0px;
+
+    border-radius: 20px;
+}
+
+
+
+/* 관람 영역 설정 */
+/* 관람 영역 설정 */
+.WIFL-IntroduceViewpoint-Title {
+    width: 100%;
+    height: 20%;
+
+    margin-top: 0px;
+
+    font-family: 'GIfont';
+    font-size: xx-large;
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black; */
+}
+.WIFL-IntroduceViewpoint-Slider {
+    width: 100%;
+    height: 80%;
+
+    margin-top: -30px;
+
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black; */
+}
 
 
 
@@ -250,10 +496,7 @@
 
 
 
-
-
-
-    /* 로고 영역 설정 */
+/* 로고 영역 설정 */
 /* 로고 영역 설정 */
 .WIFL-Logo-ContentInner-MainLogo {
     width: 100%;

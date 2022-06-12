@@ -109,10 +109,10 @@ const WorldInfoMond = () => {
 
             <div className='WIFM-IntroduceCity-ContentOuter WIFM-ContentOuter-SectionConfig' ref={introducecitypoint}>
                 <div className='WIFM-IntroduceCity-ContentInner'>
-
                     <div className='WIFM-IntroduceCity-Script'>
-
-                        <p>「몬드성」</p> 
+                        <div className='WIFM-IntroduceCity-ScriptTitle'>
+                            <p>「몬드성」</p> 
+                        </div>
 
                         <br/>
 
@@ -124,22 +124,45 @@ const WorldInfoMond = () => {
                         <p>어느 날 몬드에 강대한 마룡이 나타났는데, 귀족들은 몬드 사람들을 노예로 만들어 </p>
                         <p>마룡에게 제물로 바치며 자신들의 안전만을 지켜나갔다.</p>
 
+                        <br/>
+
                         <p>바네사라는 이름의 여성 노예가 음유시인의 모습으로 나타난 바르바토스의 도움을 얻어</p>
                         <p>마룡을 무찌르고 타락한 귀족들을 몰아냄으로써 몬드는 다시 자유를 되찾을 수 있었다.</p>
-
-                        <p>이후 몬드 사람들은 하르파스툼 축제와 윈드블룸 축제로 당시의 사건을 기리고 있다.</p>
-
+                        <p>이후 몬드 사람들은 하르파스툼 축제와 윈드블룸 축제를 통해 당시의 사건을 기리고 있다.</p>
                     </div>
 
                     <div className='WIFM-IntroduceCity-IMG'>
-                        
+                        <div className='WIFM-IntroduceCity-image'/>
                     </div>
-
                 </div>
             </div>
             <div className='WIFM-IntroduceGov-ContentOuter WIFM-ContentOuter-SectionConfig' ref={introducegovpoint}>
                 <div className='WIFM-IntroduceGov-ContentInner'>
+                    <div className='WIFM-IntroduceGov-IMG'>
+                        <div className='WIFM-IntroduceGov-image'/>
+                    </div>
 
+                    <div className='WIFM-IntroduceGov-Script'>
+                        <div className='WIFM-IntroduceGov-ScriptTitle'>
+                            <p>페보니우스 기사단</p> 
+                        </div>
+
+                        <br/>
+
+                        <p>몬드의 행정과 방위를 담당하는 기사단.</p>
+
+                        <br/>
+
+                        <p>바람 신과 함께 몬드의 자유를 되찾은 바네사는 다시는 억압의 시대가 닥치지 않기를 원했다.</p>
+                        <p>그리하여 자신과 함께 뜻을 같이 했던 동지들과 함께 몬드를 지킬 기사단을 만들었다.</p>
+                        <p>그 이름은 '페보니우스 기사단'.</p>
+
+                        <br/>
+
+                        <p>바네사는 초대 기사단장이 되어 '민들레 기사'라는 이명과 함께 몬드를 수호했다.</p>
+                        <p>그녀가 생명의 다했을 때, 생애 위업이 신들에게 인정받아 그녀의 혼은 셀레스티아로 향했으며.</p>
+                        <p>매의 형태로 몬드로 내려와 사람들을 지켜보고 있다는 설화가 내려오고 있다.</p>
+                    </div>
                 </div>
             </div>
 
