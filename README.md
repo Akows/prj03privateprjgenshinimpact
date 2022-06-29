@@ -3,6 +3,8 @@
 만든 사람, 이유승.
 이메일, akows141@gmail.com.
 
+깃 페이지 주소 : https://akows.github.io/LYSPrivateProject/
+
 ============================================
 
 :: 목차 ::
