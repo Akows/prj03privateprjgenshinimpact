@@ -1,1 +1,5 @@
-# prj03privateprjgenshinimpact
+# 이유승 개인 프로젝트 - 리액트와 스프링부트로 만들어 본 원신 홈페이지
+
+* 
+* 
+* 
