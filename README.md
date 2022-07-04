@@ -24,5 +24,4 @@
 ##### Backend : Spring Framework, myBatis, Tomcat
 ##### Frontend : React 16.12.0
 ##### DateBase : MariaDB 10.6.7 / MySQL Workbench 8.0 CE
-##### Module Bundler : 
-##### Web Browser : Google Chrome 102.0.5005.115
+##### Web Browser : Google Chrome
