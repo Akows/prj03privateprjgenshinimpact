@@ -25,3 +25,5 @@
 ##### Frontend : React 16.12.0
 ##### DateBase : MariaDB 10.6.7 / MySQL Workbench 8.0 CE
 ##### Web Browser : Google Chrome
+
+# 완성된 프로젝트, 다만 지속적으로 개선시키고 있는 프로젝트입니다.
