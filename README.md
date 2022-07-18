@@ -2,7 +2,7 @@
 
 ##
 
-메인화면 이미지
+![main 01 JPG](https://user-images.githubusercontent.com/54127322/179493620-43634588-da3a-4ce2-a61c-1e1b007ad987.jpg)
 
 ##
 
@@ -73,3 +73,93 @@
 #### Back-end에서 Spring Framework와 myBatis, Tomcat을 이용하여 DB와 백엔드 사이의 데이터를 주고받도록 제작되었습니다. 백엔드는 데이터를 요청받게 될 경우 mapper 파일의 SQL문을 통해 DB에 접근, 필요한 데이터를 조회하여 JSON 방식으로 프론트엔드단까지 넘기게 됩니다. 프론트엔드는 이를 받아 적절한 형태로 화면에 출력합니다.
 
 #### SPA 구조의 웹 페이지가 가지고 있는 뒤로 가기의 문제점은 react-router-dom의 useNavigate를 사용하여 세션 기록(페이지 방문 기록)에 접근, 뒤로 가기 기능을 구현하였습니다.
+
+## 2. 프론트엔드 (React)
+## 2-1. 프로젝트 구조
+#### 프론트엔드의 프로젝트 구조는 다음과 같습니다.
+![SRC 구성](https://user-images.githubusercontent.com/54127322/179493411-418bfa3f-33cd-4034-b827-62a04ffdb428.JPG)
+![CSS 구성](https://user-images.githubusercontent.com/54127322/179493421-087125d2-dae6-4fed-8081-1edf23a81b9b.JPG)
+
+## 2-2. 컴포넌트 구성
+### index.js
+  import React from 'react';
+  import ReactDOM from 'react-dom/client';
+  import './index.css';
+  import App from './App';
+  import reportWebVitals from './reportWebVitals';
+  import { BrowserRouter } from "react-router-dom";
+
+  const root = ReactDOM.createRoot(document.getElementById('root'));
+  root.render(
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  );
+
+  reportWebVitals();
+
+Create React App의 기본 구조를 사용하되, react-router-dom의 BrowserRouter를 사용하여 페이지를 새로고침하지 않고도 주소를 변경할 수 있도록 해주고, 현재 주소에 관련된 정보를 props로 조회 및 사용이 가능하도록 하였습니다.
+
+### App.js
+  import * as React from 'react';
+  import { Route, Routes } from 'react-router-dom';
+  import './App.css';
+  import Appbarv2 from './components/Appbarv2';
+  import Footer from './components/Footer';
+  import Mainpage from './pages/Mainpage';
+  import GenshinIntroduce from './pages/GenshinIntroduce';
+  import WorldInfopage from './pages/WorldInfopage';
+  import WorldInfoMond from './pages/WorldInfoMond';
+  import WorldInfoLiyue from './pages/WorldInfoLiyue';
+  import WorldInfoInazuma from './pages/WorldInfoInazuma';
+  import Generalforumv2 from './pages/Generalforumv2';
+  import GeneralforumViewv2 from './pages/GeneralforumViewv2';
+  import GeneralforumWriteAndEditv2 from './pages/GeneralforumWriteAndEditv2';
+  import Generalforum from './unused/Generalforum';
+
+  const App = () => {
+
+    // 현재 보여지는 페이지의 경로명을 가져오는 코드.
+    // const pathname = window.location.pathname;
+
+    return (
+      <div className="App">
+        <div>
+          <Appbarv2/>
+        </div>
+        <div>      
+          <Routes>
+            <Route path='/' element={<Mainpage />}/>
+            <Route path='/genshinintroduce' element={<GenshinIntroduce />}/>
+            <Route path='/worldinfo' element={<WorldInfopage />}/>
+            <Route path='/worldinfo/mondstadt' element={<WorldInfoMond/> }/>
+            <Route path='/worldinfo/liyue' element={<WorldInfoLiyue/> }/>  
+            <Route path='/worldinfo/inazuma' element={<WorldInfoInazuma/> }/> 
+            <Route path='/generalforum' element={<Generalforumv2/> }/>
+            <Route path='/generalforum/view/:b_number_pk' element={<GeneralforumViewv2/> }/>
+            <Route path='/generalforum/writeoredit' element={<GeneralforumWriteAndEditv2/> }/>
+            <Route path='/testzone' element={<Generalforum/> }/>  
+          </Routes>
+        </div>
+        <div>
+          <Footer/>
+        </div>   
+      </div>
+    );
+  }
+
+  export default App;
+
+상단 Appbar와 하단 Footer는 어떤 페이지에서도 고정으로 출력되도록 하고, react-router-dom의 Route, Routes를 이용해 URL의 변경에 따라 필요한 컴포넌트가 렌더링 되도록 하였습니다.
+
+## 3. 백엔드 (Spring Framework)
+## 3-1. 프로젝트 구조
+## 3-2. Database 테이블 설계
+## 3-3. Controller 구성
+## 3-4. DTO 구성
+## 3-5. DAO 구성
+
+## 4. 마무리
+## 4-1. 모자란 점
+## 4-2. 소감
+
