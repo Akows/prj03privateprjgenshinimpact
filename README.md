@@ -82,73 +82,75 @@
 
 ## 2-2. 컴포넌트 구성
 ### index.js
-  import React from 'react';
-  import ReactDOM from 'react-dom/client';
-  import './index.css';
-  import App from './App';
-  import reportWebVitals from './reportWebVitals';
-  import { BrowserRouter } from "react-router-dom";
+```import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from "react-router-dom";
 
-  const root = ReactDOM.createRoot(document.getElementById('root'));
-  root.render(
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  );
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+);
 
-  reportWebVitals();
+reportWebVitals();
+```
 
 Create React App의 기본 구조를 사용하되, react-router-dom의 BrowserRouter를 사용하여 페이지를 새로고침하지 않고도 주소를 변경할 수 있도록 해주고, 현재 주소에 관련된 정보를 props로 조회 및 사용이 가능하도록 하였습니다.
 
 ### App.js
-  import * as React from 'react';
-  import { Route, Routes } from 'react-router-dom';
-  import './App.css';
-  import Appbarv2 from './components/Appbarv2';
-  import Footer from './components/Footer';
-  import Mainpage from './pages/Mainpage';
-  import GenshinIntroduce from './pages/GenshinIntroduce';
-  import WorldInfopage from './pages/WorldInfopage';
-  import WorldInfoMond from './pages/WorldInfoMond';
-  import WorldInfoLiyue from './pages/WorldInfoLiyue';
-  import WorldInfoInazuma from './pages/WorldInfoInazuma';
-  import Generalforumv2 from './pages/Generalforumv2';
-  import GeneralforumViewv2 from './pages/GeneralforumViewv2';
-  import GeneralforumWriteAndEditv2 from './pages/GeneralforumWriteAndEditv2';
-  import Generalforum from './unused/Generalforum';
+```import * as React from 'react';
+import { Route, Routes } from 'react-router-dom';
+import './App.css';
+import Appbarv2 from './components/Appbarv2';
+import Footer from './components/Footer';
+import Mainpage from './pages/Mainpage';
+import GenshinIntroduce from './pages/GenshinIntroduce';
+import WorldInfopage from './pages/WorldInfopage';
+import WorldInfoMond from './pages/WorldInfoMond';
+import WorldInfoLiyue from './pages/WorldInfoLiyue';
+import WorldInfoInazuma from './pages/WorldInfoInazuma';
+import Generalforumv2 from './pages/Generalforumv2';
+import GeneralforumViewv2 from './pages/GeneralforumViewv2';
+import GeneralforumWriteAndEditv2 from './pages/GeneralforumWriteAndEditv2';
+import Generalforum from './unused/Generalforum';
 
-  const App = () => {
+const App = () => {
 
-    // 현재 보여지는 페이지의 경로명을 가져오는 코드.
-    // const pathname = window.location.pathname;
+  // 현재 보여지는 페이지의 경로명을 가져오는 코드.
+  // const pathname = window.location.pathname;
 
-    return (
-      <div className="App">
-        <div>
-          <Appbarv2/>
-        </div>
-        <div>      
-          <Routes>
-            <Route path='/' element={<Mainpage />}/>
-            <Route path='/genshinintroduce' element={<GenshinIntroduce />}/>
-            <Route path='/worldinfo' element={<WorldInfopage />}/>
-            <Route path='/worldinfo/mondstadt' element={<WorldInfoMond/> }/>
-            <Route path='/worldinfo/liyue' element={<WorldInfoLiyue/> }/>  
-            <Route path='/worldinfo/inazuma' element={<WorldInfoInazuma/> }/> 
-            <Route path='/generalforum' element={<Generalforumv2/> }/>
-            <Route path='/generalforum/view/:b_number_pk' element={<GeneralforumViewv2/> }/>
-            <Route path='/generalforum/writeoredit' element={<GeneralforumWriteAndEditv2/> }/>
-            <Route path='/testzone' element={<Generalforum/> }/>  
-          </Routes>
-        </div>
-        <div>
-          <Footer/>
-        </div>   
+  return (
+    <div className="App">
+      <div>
+        <Appbarv2/>
       </div>
-    );
-  }
+      <div>      
+        <Routes>
+          <Route path='/' element={<Mainpage />}/>
+          <Route path='/genshinintroduce' element={<GenshinIntroduce />}/>
+          <Route path='/worldinfo' element={<WorldInfopage />}/>
+          <Route path='/worldinfo/mondstadt' element={<WorldInfoMond/> }/>
+          <Route path='/worldinfo/liyue' element={<WorldInfoLiyue/> }/>  
+          <Route path='/worldinfo/inazuma' element={<WorldInfoInazuma/> }/> 
+          <Route path='/generalforum' element={<Generalforumv2/> }/>
+          <Route path='/generalforum/view/:b_number_pk' element={<GeneralforumViewv2/> }/>
+          <Route path='/generalforum/writeoredit' element={<GeneralforumWriteAndEditv2/> }/>
+          <Route path='/testzone' element={<Generalforum/> }/>  
+        </Routes>
+      </div>
+      <div>
+        <Footer/>
+      </div>   
+    </div>
+  );
+}
 
-  export default App;
+export default App;
+```
 
 상단 Appbar와 하단 Footer는 어떤 페이지에서도 고정으로 출력되도록 하고, react-router-dom의 Route, Routes를 이용해 URL의 변경에 따라 필요한 컴포넌트가 렌더링 되도록 하였습니다.
 
