@@ -154,6 +154,156 @@ export default App;
 
 상단 Appbar와 하단 Footer는 어떤 페이지에서도 고정으로 출력되도록 하고, react-router-dom의 Route, Routes를 이용해 URL의 변경에 따라 필요한 컴포넌트가 렌더링 되도록 하였습니다.
 
+### Appbarv2.js
+### Footer.js
+
+```import * as React from 'react';
+import { Link } from 'react-router-dom';
+import "../style/css/componentsCSS/Appbarv2.css";
+
+const Appbarv2 = () => {
+    return (
+        <div id='AB-Content-Outer'>
+            <div id='AB-Content-Inner-Logoarea'>
+                <div id='AB-Content-Inner-Logoarea-Button'>
+                    <Link to="/">
+                        <div id='AB-Content-Inner-Logoarea-Img'/>
+                    </Link> 
+                </div>
+            </div>
+
+            <div id='AB-Content-Inner-Pagemenuarea'>
+                <div id='AB-Content-Inner-Pagemenuarea-Button'>
+                    <div id='AB-Content-Inner-Pagemenuarea-Button-box' className='Pagemenuarea-Button-box1'>
+                        <Link to="/genshinintroduce">
+                            원신
+                        </Link>
+                    </div>
+                    <div id='AB-Content-Inner-Pagemenuarea-Button-box' className='Pagemenuarea-Button-box2'>
+                        <Link to="/worldinfo">
+                            티바트
+                        </Link>
+                    </div>
+                    <div id='AB-Content-Inner-Pagemenuarea-Button-box' className='Pagemenuarea-Button-box4'>
+                        <Link to="/generalforum">
+                            자유게시판
+                        </Link>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+}
+
+export default Appbarv2;
+```
+
+```import * as React from 'react';
+
+import "../style/css/componentsCSS/Footer.css";
+
+import gamelogo from "../style/img/ect/genshinimpectlogo.png";
+import playgrade from "../style/img/ect/gameratingresult.png";
+import companylogo from "../style/img/ect/hovoverselogo.png";
+import discordicon from "../style/img/ect/discordicon3030.png";
+import facebookicon from "../style/img/ect/facebookicon3030.png";
+import youtubeicon from "../style/img/ect/youtubeicon3030.png";
+
+const Footer = () => {
+    return (
+        <>
+            <footer id='footerarea'>
+                <div id='pagelinkarea'>
+                    <div id='pagelinkbtn'>
+                        <span className='iconbutton'>
+                            <a href='https://discord.com/invite/genshinimpact' target='_blank' rel="noopener noreferrer"> 
+                                <img src={discordicon} alt="img error!"/> 
+                            </a>
+                        </span>
+
+                        <span className='iconbutton'>
+                            <a href='https://www.facebook.com/Genshinimpact' target='_blank' rel="noopener noreferrer">
+                                <img src={facebookicon} alt="img error!"/> 
+                            </a>
+                        </span>
+
+                        <span className='iconbutton'>
+                            <a href='https://www.youtube.com/c/GenshinImpact' target='_blank' rel="noopener noreferrer"> 
+                                <img src={youtubeicon} alt="img error!"/> 
+                            </a>                        
+                        </span>
+                    </div>
+                </div>
+
+                <div id='contentarea'>
+                    <div id='gamelogoarea'>
+                        <img src={gamelogo} alt='img error!'/>
+                    </div>
+
+                    <div id='generalconditionsarea'>
+                        <span className='linkbutton'>
+                            <a className='link' href='https://genshin.hoyoverse.com/ko/company/privacy' target='_blank' rel="noopener noreferrer"> 
+                                개인정보처리방침
+                            </a>   
+                        </span>
+
+                        <span className='linkbutton'>
+                            <a className='link' href='https://genshin.hoyoverse.com/ko/company/terms' target='_blank' rel="noopener noreferrer"> 
+                                이용약관
+                            </a> 
+                        </span>
+
+                        <span className='linkbutton'>
+                            <a className='link' href='https://www.hoyoverse.com/ko-kr/about-us?utm_source=genshin&utm_medium=footer' target='_blank' rel="noopener noreferrer"> 
+                                About Us
+                            </a> 
+                        </span>
+
+                        <span className='linkbutton'>
+                            <a className='link' href='https://genshin.hoyoverse.com/ko/company/fund' target='_blank' rel="noopener noreferrer"> 
+                            개인정보 수집 및 이용
+                            </a> 
+                        </span>
+
+                        <span className='linkbutton'>
+                            <a className='link' href='mailto:genshincs_kr@hoyoverse.com' target='_blank' rel="noopener noreferrer"> 
+                                고객센터
+                            </a> 
+                        </span>
+                    </div>
+
+                    <div id='blankarea'/>
+
+                    <div id='playgradearea'>
+                        <img src={playgrade} alt='img error!' width="210" height="70"/>
+                    </div>
+
+                    <div id='playrightarea'>
+                        "PlayStation Family Mark," "PS5 logo" and "PS4 logo" are registered trademarks or trademarks of Sony Interactive Entertainment Inc.
+                        <br/>
+                        Epic, Epic Games, Epic Games Store, the Epic Games Store logo, and Epic Online Services are trademarks and/or registered trademarks of Epic Games. All other trademarks are the property of their respective owners.
+                    </div>
+
+                    <div id='blankarea'/>
+
+                    <div id='companylogoarea'>
+                        <img src={companylogo} alt='img error!' width="320" height="60"/>
+                    </div>
+
+                    <div id='companyrightarea'>
+                        Copyright © COGNOSPHERE. All Rights Reserved.
+                    </div>
+                </div>
+            </footer>
+        </>
+    );
+}
+
+export default Footer;
+```
+
+화면 최상단과 최하단에 고정되어 있는 컴포넌트들입니다. Appbarv2는 기존에 제작한 Appbar의 구성을 완전히 바꾸어 새 컴포넌트를 제작하였기에 구분을 위해 v2라고 이름을 붙여주었습니다. Appbarv2는 웹 페이지 이동을 위한 라우팅 기능을 수행하는 가장 중요한 요소 중 하나로 react-router-dom의 Link를 사용하여 페이지 이동 기능을 수행하고 있습니다. 하단 Footer는 원신 공식 페이지의 그것을 그대로 재현하는 것을 목표로 제작하였습니다.
+
 ## 3. 백엔드 (Spring Framework)
 ## 3-1. 프로젝트 구조
 ## 3-2. Database 테이블 설계
