@@ -27,6 +27,7 @@
 ### 2. 프론트엔드 (React)
 ##### 2-1. 프로젝트 구조
 ##### 2-2. 컴포넌트 구성
+##### 2-3. 웹페이지 스크린샷
 
 ### 3. 백엔드 (Spring Framework)
 ##### 3-1. 프로젝트 구조
@@ -159,7 +160,6 @@ export default App;
 상단 Appbar와 하단 Footer는 어떤 페이지에서도 고정으로 출력되도록 하고, react-router-dom의 Route, Routes를 이용해 URL의 변경에 따라 필요한 컴포넌트가 렌더링 되도록 하였습니다.
 
 ### Appbarv2.js
-### Footer.js
 
 ```import * as React from 'react';
 import { Link } from 'react-router-dom';
@@ -201,6 +201,8 @@ const Appbarv2 = () => {
 
 export default Appbarv2;
 ```
+
+### Footer.js
 
 ```import * as React from 'react';
 
@@ -1514,7 +1516,7 @@ export default Sliderintro;
 
 원신 공식 게임 소개 페이지를 그대로 재현해볼 것을 목표로 만든 게임 소개 페이지입니다. 메인페이지에서 사용하였던 react-player로 게임 트레일러 영상을 삽입하였으며, 이미지 슬라이드 기능을 구현하면서 react-slick 라이브러리를 사용해보고, 구글링으로 찾은 슬라이드 코드를 클론코딩하여 사용해보았습니다. 클론코딩 슬라이드 기능의 경우 styled-components를 사용하여 JS 파일 내부에서 CSS 속성을 설정해보았습니다. 또한 페이지를 각 기능별로 영역을 나누고 우측에 각 영역으로 바로 이동가능한 영역 이동 기능을 수행하는 리모컨을 구현하였습니다.
 
-
+## 2-3. 웹페이지 스크린샷
 
 ## 3. 백엔드 (Spring Framework)
 ## 3-1. 프로젝트 구조
