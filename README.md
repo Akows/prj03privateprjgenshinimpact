@@ -6200,6 +6200,7 @@ DB는 MariaDB를 사용하였으며 DBMS로는 MySQL Workbench를 이용하였�
 <details>
 <summary>코드 펼치기 / 접기</summary>
 <div markdown="1">
+
 ```package com.privproject.genshinimpectweb.Controller;
 
 import com.privproject.genshinimpectweb.Entity.BoardDto;
@@ -6248,8 +6249,10 @@ public class BoardController {
     }
 }
 ```
+
 </div>
 </details>
+
 @RequestMapping 어노테이션을 사용하여 게시판 기능에 관련된 ‘/board’에 대한 요청을 처리하는 Controller입니다. 각 메소드들은 글 작성, 글 조회, 글 수정, 글 삭제에 대한 기능들을 포함하고 있습니다.
 
 또한 React와 Spring의 동시 사용으로 발생하는 CORS(Cross-Origin Resource Sharing) 문제를 해결하기 위해 @CrossOrigin 어노테이션을 사용하였습니다.
@@ -6258,6 +6261,7 @@ public class BoardController {
 <details>
 <summary>코드 펼치기 / 접기</summary>
 <div markdown="1">
+
 ```package com.privproject.genshinimpectweb.Entity;
 
 import lombok.Data;
@@ -6274,6 +6278,7 @@ public class BoardDto
     private String b_attach_file_info;
 }
 ```
+
 </div>
 </details>
 
@@ -6283,6 +6288,7 @@ DB 테이블 컬럼과 Mapping 하기 위한 Data Transfer Object의 구성들�
 <details>
 <summary>코드 펼치기 / 접기</summary>
 <div markdown="1">
+
 ```package com.privproject.genshinimpectweb.Service;
 
 import com.privproject.genshinimpectweb.Entity.BoardDto;
@@ -6300,6 +6306,7 @@ public interface BoardService
     void boardDelete(BoardDto boardDto);
 }
 ```
+
 </div>
 </details>
 <details>
@@ -6351,7 +6358,30 @@ public class BoardServiceImpl implements BoardService
 <details>
 <summary>코드 펼치기 / 접기</summary>
 <div markdown="1">
+```package com.privproject.genshinimpectweb.Mapper;
 
+import com.privproject.genshinimpectweb.Entity.BoardDto;
+import org.apache.ibatis.annotations.Mapper;
+
+import java.util.List;
+
+@Mapper
+public interface BoardMapper
+{
+    void boardWrite(BoardDto boardDto);
+
+    List<BoardDto> getallboardlist();
+
+    void boardUpdate(BoardDto boardDto);
+
+    void boardDelete(BoardDto boardDto);
+}
+```
+</div>
+</details>
+<details>
+<summary>코드 펼치기 / 접기</summary>
+<div markdown="1">
 ```<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
