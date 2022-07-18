@@ -6147,15 +6147,257 @@ export default GeneralforumWriteAndEditv2;
 ## 
 
 ## 2-3. 웹페이지 스크린샷
+## 메인 페이지 (반응형 웹 적용)
+![001 메인 페이지](https://user-images.githubusercontent.com/54127322/179523012-b23ad184-5e3e-44c8-9a17-cc4f0c69d2f6.JPG)
+![002 메인 페이지 2](https://user-images.githubusercontent.com/54127322/179523019-22e0975e-5801-4c35-a2bd-b9cc852a8232.JPG)
+
+본 프로젝트의 메인 페이지입니다. 메인 페이지는 반응형 웹이 적용되어 화면의 너비가 1200px 이하로 줄어들 경우, 배경화면과 출력 문구가 바뀌어 출력되도록 하였습니다.
+
+## 상단 Appbar & 하단 Footer
+![003 앱바](https://user-images.githubusercontent.com/54127322/179523022-2634c444-3239-4304-a788-09c93450b86d.JPG)
+![004 푸터](https://user-images.githubusercontent.com/54127322/179523024-ad1bb3dc-796c-4468-9fe2-3bcbdd57de1b.JPG)
+
+## 게임 소개 페이지
+![005 게임 소개 페이지 01](https://user-images.githubusercontent.com/54127322/179523027-d8e3ce07-33ab-4ee6-9db2-a6343ab5a9f4.JPG)
+![006 게임 소개 페이지 02](https://user-images.githubusercontent.com/54127322/179523031-eef0f02c-20de-4985-bbdf-b77b8d222c63.JPG)
+![007 게임 소개 페이지 03](https://user-images.githubusercontent.com/54127322/179523032-70612c3e-0a4d-4d66-935d-9fc57167763b.JPG)
+![008 게임 소개 페이지 04](https://user-images.githubusercontent.com/54127322/179523037-3f06e781-4d72-40ed-82b4-86e4908f2f68.JPG)
+![009 게임 소개 페이지 05](https://user-images.githubusercontent.com/54127322/179523039-7e912dab-5122-4d2b-b2cf-fb3b50865f18.JPG)
+
+## 월드 소개 페이지
+![010 월드 소개 페이지 - 메인](https://user-images.githubusercontent.com/54127322/179523042-ea1e02cc-7e08-4b6c-961b-71e125d9eb9c.JPG)
+![011 월드 소개 페이지 - 몬드](https://user-images.githubusercontent.com/54127322/179523044-e69adf59-4f60-43b0-aaae-b50510651dd8.JPG)
+![012 월드 소개 페이지 - 리월](https://user-images.githubusercontent.com/54127322/179523047-a99d38f9-3c02-4857-8a5e-f4c69be63992.JPG)
+![013 월드 소개 페이지 - 이나즈마](https://user-images.githubusercontent.com/54127322/179523049-d2122a38-d40f-4207-b67a-46b4129f4018.JPG)
+
+## 자유게시판(익명게시판) 페이지
+![014 익명게시판](https://user-images.githubusercontent.com/54127322/179523050-e527cf04-6ddc-40ef-913f-9fb33c29ee39.JPG)
+![015 상세글 보기페이지](https://user-images.githubusercontent.com/54127322/179523053-8d7ec444-96ed-4990-8522-9e7d757d6a97.JPG)
+![016 글 작성 페이지](https://user-images.githubusercontent.com/54127322/179523054-243e84fa-2127-4d99-9f76-121f5c1dab62.JPG)
+![017 글 수정 페이지](https://user-images.githubusercontent.com/54127322/179523057-447ff788-46be-45d0-a795-238dc4a673d1.JPG)
+
+## 자유게시판(익명게시판)의 각종 알림
+![018 글 수정 알람](https://user-images.githubusercontent.com/54127322/179523060-3c815241-10e2-4970-877e-3857d2afe3cb.JPG)
+![019 글 작성 알람](https://user-images.githubusercontent.com/54127322/179523062-ab8460b6-adc1-462a-8e6a-19b0c8840880.JPG)
+![020 글 삭제 알람](https://user-images.githubusercontent.com/54127322/179523064-bede399e-8d5e-4ebe-96c4-fac6a765e45f.JPG)
+![021 무결성 알람](https://user-images.githubusercontent.com/54127322/179523065-ff2d9c4a-4231-498f-9f9a-e41656b58c51.JPG)
 
 ## 3. 백엔드 (Spring Framework)
 ## 3-1. 프로젝트 구조
+백엔드의 프로젝트 구조는 다음과 같습니다.
+![SRC](https://user-images.githubusercontent.com/54127322/179523070-82bc045d-f37b-44bf-916f-fc1e36ce2205.JPG)
+
 ## 3-2. Database 테이블 설계
+![DB 테이블 구조](https://user-images.githubusercontent.com/54127322/179523069-3d64abcb-af59-4d19-98e8-feda61a31666.JPG)
+
+DB는 MariaDB를 사용하였으며 DBMS로는 MySQL Workbench를 이용하였습니다.
+
+게시판 작성을 위해 1개의 테이블을 제작하였습니다. PK로 사용할 ‘게시판 번호’ B_NUMBER_PK를 시작으로 게시글 제목 B_TITLE, 게시글 내용 B_CONTENT, 게시글 작성 시간 B_WRITE_TIME, 게시글 삭제여부 B_DELETE_STATE의 5개 컬럼이 게시판 테이블에 존재하고 있습니다.
+
+또한 훗날 회원가입 기능을 추가할 것을 염두하여 회원 테이블의 회원번호 컬럼을 FK로 존재하고 있으며 첨부파일 기능 확장을 염두하여 첨부파일 정보 컬럼도 존재하지만 현재로써 이 2가지 컬럼은 기능하고 있지 않습니다. (추후 기능 추가 이후 사용 예정)
+
 ## 3-3. Controller 구성
+<details>
+<summary>코드 펼치기 / 접기</summary>
+<div markdown="1">
+
+package com.privproject.genshinimpectweb.Controller;
+
+import com.privproject.genshinimpectweb.Entity.BoardDto;
+import com.privproject.genshinimpectweb.Service.BoardService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+@RequestMapping("/board")
+@CrossOrigin
+public class BoardController {
+
+    @Autowired
+    BoardService boardService;
+
+    @PostMapping("/write")
+    public String boardWrite(@RequestBody BoardDto boardDto)
+    {
+        boardService.boardWrite(boardDto);
+
+        return "Board Write Complete!";
+    }
+
+    @GetMapping("/getallboardlist")
+    public List<BoardDto> getallboardlist()
+    {
+        return boardService.getallboardlist();
+    }
+
+    @PutMapping("/boardupdate")
+    public String boardUpdate(@RequestBody BoardDto boardDto)
+    {
+        boardService.boardUpdate(boardDto);
+
+        return "Board Update Complete!";
+    }
+
+    @PutMapping("/boarddelete")
+    public String boardDelete(@RequestBody BoardDto boardDto)
+    {
+        boardService.boardDelete(boardDto);
+
+        return "Board Delete Complete!";
+    }
+}
+
+</div>
+</details>
+
+@RequestMapping("/board")을 사용하여 게시판 기능에 관련된 ‘/board’에 대한 요청을 처리하는 메소드들로 구성되어 있습니다. 각 메소드들은 글 작성, 글 조회, 글 수정, 글 삭제에 대한 기능들을 포함하고 있습니다.
+
+또한 React와 Spring의 동시 사용으로 발생하는 CORS(Cross-Origin Resource Sharing) 문제를 해결하기 위해 @CrossOrigin 어노테이션을 사용하였습니다.
+
 ## 3-4. DTO 구성
+<details>
+<summary>코드 펼치기 / 접기</summary>
+<div markdown="1">
+
+package com.privproject.genshinimpectweb.Entity;
+
+import lombok.Data;
+
+@Data
+public class BoardDto
+{
+    private int b_number_pk;
+    private int m_number_fk;
+    private String b_title;
+    private String b_content;
+    private String b_write_time;
+    private String b_delete_state;
+    private String b_attach_file_info;
+}
+
+
+</div>
+</details>
+
+DB 테이블 컬럼과 Mapping 하기 위한 Data Transfer Object의 구성들입니다.
+
 ## 3-5. DAO 구성
+<details>
+<summary>코드 펼치기 / 접기</summary>
+<div markdown="1">
+
+package com.privproject.genshinimpectweb.Service;
+
+import com.privproject.genshinimpectweb.Entity.BoardDto;
+
+import java.util.List;
+
+public interface BoardService
+{
+    void boardWrite(BoardDto boardDto);
+
+    public List<BoardDto> getallboardlist();
+
+    void boardUpdate(BoardDto boardDto);
+
+    void boardDelete(BoardDto boardDto);
+}
+
+
+</div>
+</details>
+<details>
+<summary>코드 펼치기 / 접기</summary>
+<div markdown="1">
+
+package com.privproject.genshinimpectweb.Service;
+
+import com.privproject.genshinimpectweb.Entity.BoardDto;
+import com.privproject.genshinimpectweb.Entity.MemberDto;
+import com.privproject.genshinimpectweb.Mapper.BoardMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+@Service
+public class BoardServiceImpl implements BoardService
+{
+    @Autowired
+    BoardMapper boardMapper;
+
+    @Override
+    public void boardWrite(BoardDto boardDto)
+    {
+        boardMapper.boardWrite(boardDto);
+    }
+
+    @Override
+    public List<BoardDto> getallboardlist()
+    {
+        return boardMapper.getallboardlist();
+    }
+
+    @Override
+    public void boardUpdate(BoardDto boardDto) {
+        boardMapper.boardUpdate(boardDto);
+    }
+
+    @Override
+    public void boardDelete(BoardDto boardDto)
+    {
+        boardMapper.boardDelete(boardDto);
+    }
+
+}
+
+</div>
+</details>
+<details>
+<summary>코드 펼치기 / 접기</summary>
+<div markdown="1">
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.privproject.genshinimpectweb.Mapper.BoardMapper">
+    <select id="getallboardlist" resultType="com.privproject.genshinimpectweb.Entity.BoardDto">
+        SELECT *
+        FROM board_tb
+        WHERE b_delete_state = 'N'
+    </select>
+
+    <insert id="boardWrite" parameterType="com.privproject.genshinimpectweb.Entity.BoardDto">
+        INSERT INTO board_tb(B_TITLE, B_CONTENT, B_WRITE_TIME, B_DELETE_STATE, B_ATTACH_FILE_INFO)
+        VALUES (#{b_title}, #{b_content}, now(), 'N', '없음')
+    </insert>
+
+    <update id="boardUpdate" parameterType="com.privproject.genshinimpectweb.Entity.BoardDto">
+        UPDATE board_tb
+        SET B_TITLE = #{b_title}, B_CONTENT = #{b_content}, B_WRITE_TIME = now()
+        WHERE B_NUMBER_PK = #{b_number_pk}
+    </update>
+
+    <update id="boardDelete" parameterType="com.privproject.genshinimpectweb.Entity.BoardDto">
+        UPDATE board_tb
+        SET B_DELETE_STATE = 'Y'
+        WHERE B_NUMBER_PK = #{b_number_pk}
+    </update>
+</mapper>
+
+</div>
+</details>
+
+백엔드 <-> DB 사이에서 데이터를 주고받는 기능을 담당하는 Data Access Object입니다. myBatis를 사용하여 DB에 SQL문을 전송하여 데이터를 호출하는 mapper.xml이 존재합니다.
 
 ## 4. 마무리
-## 4-1. 모자란 점
-## 4-2. 소감
+## 4-1. 소감
+프로젝트 프론트엔드로 React를 선택한 뒤, 프로젝트에 사용할 시간이 여유롭지 않았기에 React를 체계적으로 배우지 못했습니다. 어떻게든 작동하는 결과물을 만들어보자는 심정으로 구글링과 유튜브 영상 등을 보고 리액트 프로젝트를 생성하고 SPA 구조를 구현한 뒤 스프링부트와 연동시킨다는 목표를 구현하는데 최선을 다했습니다.
 
+결과적으로 잘 작동되는 웹 페이지를 완성하긴 했으나 프로젝트를 진행하면서 React에 대한 지식이 조금씩 늘어가며 프로젝트의 구조를 더 체계적으로 구성하거나 React Hook를 더 지혜롭게 사용하지 못했다는 생각이 들었습니다. 또한 
+Redux같은 상태 관리 라이브러리에 대한 부분은 아예 생각도 하지 못한 점이 너무나도 아쉽습니다.
+
+## 4-2. 앞으로 할 일
+웹 프로그래머가 되기 위해 배워야할 것은 너무나도 무궁무진합니다. 공부에 정진하여 모자란 부분을 채워 다음 프로젝트에 반영하거나 이 프로젝트를 개선해야 할 것입니다.
