@@ -6257,6 +6257,27 @@ public class BoardController {
 또한 React와 Spring의 동시 사용으로 발생하는 CORS(Cross-Origin Resource Sharing) 문제를 해결하기 위해 @CrossOrigin 어노테이션을 사용하였습니다.
 
 ## 3-4. DTO 구성
+<details>
+<summary>코드 펼치기 / 접기</summary>
+<div markdown="1">
+```java
+package com.privproject.genshinimpectweb.Entity;
+import lombok.Data;
+
+@Data
+public class BoardDto
+{
+    private int b_number_pk;
+    private int m_number_fk;
+    private String b_title;
+    private String b_content;
+    private String b_write_time;
+    private String b_delete_state;
+    private String b_attach_file_info;
+}
+```
+</div>
+</details>
 
 DB 테이블 컬럼과 Mapping 하기 위한 Data Transfer Object의 구성들입니다.
 
