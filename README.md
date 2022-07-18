@@ -6284,6 +6284,145 @@ public class BoardDto
 DB 테이블 컬럼과 Mapping 하기 위한 Data Transfer Object의 구성들입니다.
 
 ## 3-5. DAO 구성
+<details>
+<summary>코드 펼치기 / 접기</summary>
+<div markdown="1">
+
+```java
+package com.privproject.genshinimpectweb.Service;
+
+import com.privproject.genshinimpectweb.Entity.BoardDto;
+
+import java.util.List;
+
+public interface BoardService
+{
+    void boardWrite(BoardDto boardDto);
+
+    public List<BoardDto> getallboardlist();
+
+    void boardUpdate(BoardDto boardDto);
+
+    void boardDelete(BoardDto boardDto);
+}
+```
+
+</div>
+</details>
+
+<details>
+<summary>코드 펼치기 / 접기</summary>
+<div markdown="1">
+
+```java
+package com.privproject.genshinimpectweb.Service;
+
+import com.privproject.genshinimpectweb.Entity.BoardDto;
+import com.privproject.genshinimpectweb.Entity.MemberDto;
+import com.privproject.genshinimpectweb.Mapper.BoardMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+@Service
+public class BoardServiceImpl implements BoardService
+{
+    @Autowired
+    BoardMapper boardMapper;
+
+    @Override
+    public void boardWrite(BoardDto boardDto)
+    {
+        boardMapper.boardWrite(boardDto);
+    }
+
+    @Override
+    public List<BoardDto> getallboardlist()
+    {
+        return boardMapper.getallboardlist();
+    }
+
+    @Override
+    public void boardUpdate(BoardDto boardDto) {
+        boardMapper.boardUpdate(boardDto);
+    }
+
+    @Override
+    public void boardDelete(BoardDto boardDto)
+    {
+        boardMapper.boardDelete(boardDto);
+    }
+}
+```
+
+</div>
+</details>
+
+<details>
+<summary>코드 펼치기 / 접기</summary>
+<div markdown="1">
+
+```java
+package com.privproject.genshinimpectweb.Mapper;
+
+import com.privproject.genshinimpectweb.Entity.BoardDto;
+import org.apache.ibatis.annotations.Mapper;
+
+import java.util.List;
+
+@Mapper
+public interface BoardMapper
+{
+    void boardWrite(BoardDto boardDto);
+
+    List<BoardDto> getallboardlist();
+
+    void boardUpdate(BoardDto boardDto);
+
+    void boardDelete(BoardDto boardDto);
+}
+```
+
+</div>
+</details>
+
+<details>
+<summary>코드 펼치기 / 접기</summary>
+<div markdown="1">
+
+```html
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.privproject.genshinimpectweb.Mapper.BoardMapper">
+    <select id="getallboardlist" resultType="com.privproject.genshinimpectweb.Entity.BoardDto">
+        SELECT *
+        FROM board_tb
+        WHERE b_delete_state = 'N'
+    </select>
+
+    <insert id="boardWrite" parameterType="com.privproject.genshinimpectweb.Entity.BoardDto">
+        INSERT INTO board_tb(B_TITLE, B_CONTENT, B_WRITE_TIME, B_DELETE_STATE, B_ATTACH_FILE_INFO)
+        VALUES (#{b_title}, #{b_content}, now(), 'N', '없음')
+    </insert>
+
+    <update id="boardUpdate" parameterType="com.privproject.genshinimpectweb.Entity.BoardDto">
+        UPDATE board_tb
+        SET B_TITLE = #{b_title}, B_CONTENT = #{b_content}, B_WRITE_TIME = now()
+        WHERE B_NUMBER_PK = #{b_number_pk}
+    </update>
+
+    <update id="boardDelete" parameterType="com.privproject.genshinimpectweb.Entity.BoardDto">
+        UPDATE board_tb
+        SET B_DELETE_STATE = 'Y'
+        WHERE B_NUMBER_PK = #{b_number_pk}
+    </update>
+</mapper>
+
+```
+</div>
+</details>
 
 백엔드 <-> DB 사이에서 데이터를 주고받는 기능을 담당하는 Data Access Object입니다. myBatis를 사용하여 DB에 SQL문을 전송하여 데이터를 호출하는 mapper.xml도 존재합니다.
 
