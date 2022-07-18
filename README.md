@@ -118,7 +118,8 @@ Create React App의 기본 구조를 사용하되, react-router-dom의 BrowserRo
 <summary>코드 펼치기 / 접기</summary>
 <div markdown="1">
 
-```import * as React from 'react';
+```javascript
+import * as React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Appbarv2 from './components/Appbarv2';
@@ -180,7 +181,8 @@ export default App;
 <summary>코드 펼치기 / 접기</summary>
 <div markdown="1">
 
-```import * as React from 'react';
+```javascript
+import * as React from 'react';
 import { Link } from 'react-router-dom';
 import "../style/css/componentsCSS/Appbarv2.css";
 
@@ -229,6 +231,7 @@ export default Appbarv2;
 <summary>코드 펼치기 / 접기</summary>
 <div markdown="1">
 
+```css
 /* 상단 메뉴바 CSS */
 
 /* 원신 폰트 설정 */
@@ -295,12 +298,6 @@ ul, li {
     /* border: 1px solid black; */
 }
 
-
-
-
-
-
-
 #AB-Content-Inner-Logoarea-Button {
     width: 100%;
     height: 100%;
@@ -318,12 +315,7 @@ ul, li {
         /* 영역 확인용 경계선 설정 */
         /* border: 1px solid black; */
     }
-
-
-
-
-
-
+    
 #AB-Content-Inner-Pagemenuarea-Button {
     width: 100%;
     height: 100%;
@@ -367,10 +359,6 @@ ul, li {
     .Pagemenuarea-Button-box4 > *:hover {
         border-bottom: 3px solid green; 
     }
-
-
-
-
 
 #AB-Content-Inner-Usermenu-Button {
     width: 90%;
@@ -560,7 +548,7 @@ ul, li {
         visibility: visible;
     }
 }
-
+```
 </div>
 </details>
 
@@ -569,6 +557,7 @@ ul, li {
 <summary>코드 펼치기 / 접기</summary>
 <div markdown="1">
 
+```css
 #footerarea {
     width: 100%;
     height: 500px;
@@ -657,7 +646,7 @@ ul, li {
             display: block;
         }
     }
-
+```
 </div>
 </details>
 
@@ -666,7 +655,8 @@ ul, li {
 <summary>코드 펼치기 / 접기</summary>
 <div markdown="1">
 
-```import * as React from 'react';
+```javascript
+import * as React from 'react';
 
 import "../style/css/componentsCSS/Footer.css";
 
@@ -782,7 +772,8 @@ export default Footer;
 <summary>코드 펼치기 / 접기</summary>
 <div markdown="1">
 
-```import React, { useRef } from "react";
+```javascript
+import React, { useRef } from "react";
 import ReactPlayer from "react-player";
 import "../style/css/Mainpage.css";
 
@@ -882,7 +873,8 @@ export default Mainpage;
 <summary>코드 펼치기 / 접기</summary>
 <div markdown="1">
 
-```/* 프로젝트 메인 페이지 CSS */
+```css
+/* 프로젝트 메인 페이지 CSS */
 /* 원신 폰트 설정 */
 @font-face {
     font-family: 'GIfont';
@@ -1152,7 +1144,8 @@ export default Mainpage;
 <summary>코드 펼치기 / 접기</summary>
 <div markdown="1">
 
-```import React, { useRef } from "react";
+```javascript
+import React, { useRef } from "react";
 import ReactPlayer from "react-player";
 import Slider from "react-slick";
 
@@ -1402,7 +1395,8 @@ export default GenshinIntroduce;
 <summary>코드 펼치기 / 접기</summary>
 <div markdown="1">
 
-```/* 원신 소개 페이지 CSS */
+```css
+/* 원신 소개 페이지 CSS */
 
 /* 페이지 배경화면 설정 */
 /* 배경화면 위에 흰색 투명 바탕의 컨텐츠 영역이 배치됨. */
@@ -1926,7 +1920,8 @@ export default GenshinIntroduce;
 <summary>코드 펼치기 / 접기</summary>
 <div markdown="1">
 
-```import React, { useState, useEffect, useRef } from "react";
+```javascript
+import React, { useState, useEffect, useRef } from "react";
 import styledComponents from "styled-components";
 
 const Container = styledComponents.div`
@@ -2020,7 +2015,8 @@ export default Sliderintro;
 <summary>코드 펼치기 / 접기</summary>
 <div markdown="1">
 
-```import React, { useRef } from "react";
+```javascript
+import React, { useRef } from "react";
 
 import InazumaBannerVertical from "../components/banner/InazumaBannerVertical";
 import LiyueBannerVertical from "../components/banner/LiyueBannerVertical";
@@ -2066,7 +2062,8 @@ export default WorldInfopage;
 <summary>코드 펼치기 / 접기</summary>
 <div markdown="1">
 
-```/* 월드 소개 페이지 CSS */
+```css
+/* 월드 소개 페이지 CSS */
 
 /* 페이지 배경화면 설정 */
 /* 배경화면 위에 흰색 투명 바탕의 컨텐츠 영역이 배치됨. */
@@ -2150,7 +2147,8 @@ export default WorldInfopage;
 <summary>코드 펼치기 / 접기</summary>
 <div markdown="1">
 
-```import { Link } from "react-router-dom";
+```javascript
+import { Link } from "react-router-dom";
 import "../../style/css/BannerCSS/MondBannerVertical.css";
 
 const MondBannerVertical = () => {
@@ -2177,7 +2175,8 @@ export default MondBannerVertical;
 <summary>코드 펼치기 / 접기</summary>
 <div markdown="1">
 
-```/* 몬드 배너 */
+```css
+/* 몬드 배너 */
 /* 몬드 배너 */
 #MBannerVer-Outer {
     width: 33.3%;
@@ -2248,7 +2247,7 @@ export default MondBannerVertical;
 <summary>코드 펼치기 / 접기</summary>
 <div markdown="1">
 
-```
+```javascript
 import { Link } from "react-router-dom";
 import "../../style/css/BannerCSS/LiyueBannerVertical.css";
 
@@ -2277,7 +2276,8 @@ export default LiyueBannerVertical;
 <summary>코드 펼치기 / 접기</summary>
 <div markdown="1">
 
-```/* 리월 배너 */
+```css
+/* 리월 배너 */
 /* 리월 배너 */
 #LBannerVer-Outer {
     width: 33.3%;
@@ -2348,7 +2348,7 @@ export default LiyueBannerVertical;
 <summary>코드 펼치기 / 접기</summary>
 <div markdown="1">
 
-```
+```javascript
 import { Link } from "react-router-dom";
 import "../../style/css/BannerCSS/InazumaBannerVertical.css";
 
@@ -2377,7 +2377,8 @@ export default InazumaBannerVertical;
 <summary>코드 펼치기 / 접기</summary>
 <div markdown="1">
 
-```/* 이나즈마 배너 */
+```css
+/* 이나즈마 배너 */
 /* 이나즈마 배너 */
 #IBannerVer-Outer{
     width: 33.3%;
@@ -2451,7 +2452,8 @@ export default InazumaBannerVertical;
 <summary>코드 펼치기 / 접기</summary>
 <div markdown="1">
 
-```import React, { useRef } from "react";
+```javascript
+import React, { useRef } from "react";
 
 import "../style/css/WorldInfoMond.css";
 import "../style/css/Global.css";
@@ -2669,7 +2671,8 @@ export default WorldInfoMond;
 <summary>코드 펼치기 / 접기</summary>
 <div markdown="1">
 
-```/* 몬드 소개 페이지 CSS */
+```css
+/* 몬드 소개 페이지 CSS */
 /* 몬드 소개 페이지 CSS */
 
 /* 페이지 배경영역 설정 */
@@ -3191,7 +3194,8 @@ export default WorldInfoMond;
 <summary>코드 펼치기 / 접기</summary>
 <div markdown="1">
 
-```import React, { useRef } from "react";
+```javascript
+import React, { useRef } from "react";
 
 import "../style/css/WorldInfoLiyue.css";
 import "../style/css/Global.css";
@@ -3409,7 +3413,8 @@ export default WorldInfoLiyue;
 <summary>코드 펼치기 / 접기</summary>
 <div markdown="1">
 
-```/* 리월 소개 페이지 CSS */
+```css
+/* 리월 소개 페이지 CSS */
 /* 리월 소개 페이지 CSS */
 
 /* 페이지 배경영역 설정 */
@@ -3929,8 +3934,8 @@ export default WorldInfoLiyue;
 <summary>코드 펼치기 / 접기</summary>
 <div markdown="1">
 
-```import React, { useRef } from "react";
-
+```javascript
+import React, { useRef } from "react";
 import "../style/css/WorldInfoInazuma.css";
 import "../style/css/Global.css";
 
@@ -4146,7 +4151,8 @@ export default WorldInfoInazuma;
 <summary>코드 펼치기 / 접기</summary>
 <div markdown="1">
 
-```/* 이나즈마 소개 페이지 CSS */
+```css
+/* 이나즈마 소개 페이지 CSS */
 /* 이나즈마 소개 페이지 CSS */
 
 /* 페이지 배경영역 설정 */
@@ -4697,7 +4703,8 @@ export default WorldInfoInazuma;
 <summary>코드 펼치기 / 접기</summary>
 <div markdown="1">
 
-```import React, { useRef } from "react";
+```javascript
+import React, { useRef } from "react";
 
 import "../style/css/Generalforumv2.css";
 import "../style/css/Global.css";
@@ -4859,7 +4866,8 @@ export default Generalforumv2;
 <summary>코드 펼치기 / 접기</summary>
 <div markdown="1">
 
-```/* 익명게시판 소개 페이지 CSS */
+```css
+/* 익명게시판 소개 페이지 CSS */
 
 /* 페이지 배경화면 설정 */
 /* 배경화면 위에 흰색 투명 바탕의 컨텐츠 영역이 배치됨. */
@@ -5232,7 +5240,8 @@ export default Generalforumv2;
 <summary>코드 펼치기 / 접기</summary>
 <div markdown="1">
 
-```import axios from "axios";
+```javascript
+import axios from "axios";
 import React from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import "../style/css/GeneralforumViewv2.css";
@@ -5357,7 +5366,8 @@ export default GeneralforumViewv2;
 <summary>코드 펼치기 / 접기</summary>
 <div markdown="1">
 
-```/* 글 상세보기 페이지 CSS */
+```css
+/* 글 상세보기 페이지 CSS */
 
 /* 페이지 배경화면 설정 */
 /* 배경화면 위에 흰색 투명 바탕의 컨텐츠 영역이 배치됨. */
@@ -5423,9 +5433,6 @@ export default GeneralforumViewv2;
     flex-direction: column;
 }
 
-
-
-
 .GFVV2-Content-TitleAndContents {
     width: 90%;
     height: 90%;
@@ -5437,7 +5444,6 @@ export default GeneralforumViewv2;
     /* 영역 확인용 경계선 설정 */
     /* border: 1px solid white; */
 }
-
 
 .GFVV2-Content-Contents {
     width: 70%;
@@ -5509,9 +5515,6 @@ export default GeneralforumViewv2;
 .GFVV2-Content-ForumText > p {
     top: 30px;
 }
-
-
-
 
 .GFVV2-Content-Title {
     width: 450px;
@@ -5715,7 +5718,8 @@ export default GeneralforumViewv2;
 <summary>코드 펼치기 / 접기</summary>
 <div markdown="1">
 
-```import axios from "axios";
+```javascript
+import axios from "axios";
 import React, { useRef } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import PostInputv2 from "../components/PostInputv2";
@@ -5924,7 +5928,8 @@ export default GeneralforumWriteAndEditv2;
 <summary>코드 펼치기 / 접기</summary>
 <div markdown="1">
 
-```/* 익명게시판 작성 / 수정 페이지 CSS */
+```css
+/* 익명게시판 작성 / 수정 페이지 CSS */
 
 /* 페이지 배경화면 설정 */
 /* 배경화면 위에 흰색 투명 바탕의 컨텐츠 영역이 배치됨. */
@@ -5990,9 +5995,6 @@ export default GeneralforumWriteAndEditv2;
     flex-direction: column;
 }
 
-
-
-
 .GFWAEV2-Content-TitleAndContents {
     width: 90%;
     height: 90%;
@@ -6004,9 +6006,6 @@ export default GeneralforumWriteAndEditv2;
     /* 영역 확인용 경계선 설정 */
     /* border: 1px solid white; */
 }
-
-
-
 
 .GFWAEV2-Content-Title {
     width: 450px;
@@ -6201,7 +6200,8 @@ DB는 MariaDB를 사용하였으며 DBMS로는 MySQL Workbench를 이용하였�
 <summary>코드 펼치기 / 접기</summary>
 <div markdown="1">
 
-```package com.privproject.genshinimpectweb.Controller;
+```java
+package com.privproject.genshinimpectweb.Controller;
 import com.privproject.genshinimpectweb.Entity.BoardDto;
 import com.privproject.genshinimpectweb.Service.BoardService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -6259,7 +6259,8 @@ public class BoardController {
 <details>
 <summary>코드 펼치기 / 접기</summary>
 <div markdown="1">
-```package com.privproject.genshinimpectweb.Entity;
+```java
+package com.privproject.genshinimpectweb.Entity;
 import lombok.Data;
 
 @Data
@@ -6283,7 +6284,8 @@ DB 테이블 컬럼과 Mapping 하기 위한 Data Transfer Object의 구성들�
 <details>
 <summary>코드 펼치기 / 접기</summary>
 <div markdown="1">
-```package com.privproject.genshinimpectweb.Service;
+```java
+package com.privproject.genshinimpectweb.Service;
 import com.privproject.genshinimpectweb.Entity.BoardDto;
 import java.util.List;
 
@@ -6304,7 +6306,8 @@ public interface BoardService
 <details>
 <summary>코드 펼치기 / 접기</summary>
 <div markdown="1">
-```package com.privproject.genshinimpectweb.Service;
+```java
+package com.privproject.genshinimpectweb.Service;
 import com.privproject.genshinimpectweb.Entity.BoardDto;
 import com.privproject.genshinimpectweb.Entity.MemberDto;
 import com.privproject.genshinimpectweb.Mapper.BoardMapper;
@@ -6349,7 +6352,8 @@ public class BoardServiceImpl implements BoardService
 <details>
 <summary>코드 펼치기 / 접기</summary>
 <div markdown="1">
-```package com.privproject.genshinimpectweb.Mapper;
+```java
+package com.privproject.genshinimpectweb.Mapper;
 import com.privproject.genshinimpectweb.Entity.BoardDto;
 import org.apache.ibatis.annotations.Mapper;
 import java.util.List;
@@ -6366,13 +6370,15 @@ public interface BoardMapper
     void boardDelete(BoardDto boardDto);
 }
 ```
+
 </div>
 </details>
 
 <details>
 <summary>코드 펼치기 / 접기</summary>
 <div markdown="1">
-```<?xml version="1.0" encoding="UTF-8"?>
+```html
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.privproject.genshinimpectweb.Mapper.BoardMapper">
     <select id="getallboardlist" resultType="com.privproject.genshinimpectweb.Entity.BoardDto">
