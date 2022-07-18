@@ -91,7 +91,8 @@
 <summary>코드 펼치기 / 접기</summary>
 <div markdown="1">
 
-```import React from 'react';
+```javascript
+import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
@@ -6261,6 +6262,7 @@ public class BoardController {
 <div markdown="1">
 ```java
 package com.privproject.genshinimpectweb.Entity;
+
 import lombok.Data;
 
 @Data
@@ -6274,6 +6276,7 @@ public class BoardDto
     private String b_delete_state;
     private String b_attach_file_info;
 }
+
 ```
 </div>
 </details>
@@ -6286,7 +6289,9 @@ DB 테이블 컬럼과 Mapping 하기 위한 Data Transfer Object의 구성들�
 <div markdown="1">
 ```java
 package com.privproject.genshinimpectweb.Service;
+
 import com.privproject.genshinimpectweb.Entity.BoardDto;
+
 import java.util.List;
 
 public interface BoardService
@@ -6299,6 +6304,7 @@ public interface BoardService
 
     void boardDelete(BoardDto boardDto);
 }
+
 ```
 </div>
 </details>
@@ -6308,11 +6314,13 @@ public interface BoardService
 <div markdown="1">
 ```java
 package com.privproject.genshinimpectweb.Service;
+
 import com.privproject.genshinimpectweb.Entity.BoardDto;
 import com.privproject.genshinimpectweb.Entity.MemberDto;
 import com.privproject.genshinimpectweb.Mapper.BoardMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import java.util.List;
 
 @Service
@@ -6343,7 +6351,6 @@ public class BoardServiceImpl implements BoardService
     {
         boardMapper.boardDelete(boardDto);
     }
-
 }
 ```
 </div>
@@ -6354,8 +6361,10 @@ public class BoardServiceImpl implements BoardService
 <div markdown="1">
 ```java
 package com.privproject.genshinimpectweb.Mapper;
+
 import com.privproject.genshinimpectweb.Entity.BoardDto;
 import org.apache.ibatis.annotations.Mapper;
+
 import java.util.List;
 
 @Mapper
@@ -6370,7 +6379,6 @@ public interface BoardMapper
     void boardDelete(BoardDto boardDto);
 }
 ```
-
 </div>
 </details>
 
@@ -6380,6 +6388,7 @@ public interface BoardMapper
 ```html
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
 <mapper namespace="com.privproject.genshinimpectweb.Mapper.BoardMapper">
     <select id="getallboardlist" resultType="com.privproject.genshinimpectweb.Entity.BoardDto">
         SELECT *
