@@ -173,6 +173,8 @@ export default App;
 
 상단 Appbar와 하단 Footer는 어떤 페이지에서도 고정으로 출력되도록 하고, react-router-dom의 Route, Routes를 이용해 URL의 변경에 따라 필요한 컴포넌트가 렌더링 되도록 하였습니다.
 
+## 
+
 ### Appbarv2.js
 <details>
 <summary>코드 펼치기 / 접기</summary>
@@ -218,6 +220,443 @@ const Appbarv2 = () => {
 
 export default Appbarv2;
 ```
+
+</div>
+</details>
+
+### Appbarv2.css
+<details>
+<summary>코드 펼치기 / 접기</summary>
+<div markdown="1">
+
+/* 상단 메뉴바 CSS */
+
+/* 원신 폰트 설정 */
+@font-face {
+    font-family: 'GIfont';
+    src: url('../../font/ja-jp.ttf') format('truetype');
+}
+
+/* ul, li 태그의 기본 스타일을 제거 */
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#AB-Content-Outer{
+    width: 100%;
+    height: 70px;
+
+    position: fixed;
+    z-index: 999;
+
+    background-color: black;
+    opacity: 0.7;
+}
+#AB-Content-Outer > * {
+    float: left;
+    display : inline-flex;
+}
+
+
+#AB-Content-Inner-Logoarea {
+    width: 12%;
+    height: 100%;
+
+    background-image: url("../../img/ect/genshinimpectlogo.png");
+    background-size: 150px 70px;
+    background-repeat: no-repeat;
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black; */
+}
+#AB-Content-Inner-Pagemenuarea {
+    width: 78.5%;
+    height: 100%;
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black; */
+}
+#AB-Content-Inner-Usermenuarea {
+    width: 8%;
+    height: 100%;
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black; */
+}
+#AB-Content-Inner-ResponsiveWebMenuarea {
+    width: 0%;
+    height: 0%;
+
+    display: none;
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black; */
+}
+
+
+
+
+
+
+
+#AB-Content-Inner-Logoarea-Button {
+    width: 100%;
+    height: 100%;
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid black; */
+}
+    #AB-Content-Inner-Logoarea-Img {
+        width: 90%;
+        height: 90%;
+
+        margin: auto;
+        padding: 10px;
+
+        /* 영역 확인용 경계선 설정 */
+        /* border: 1px solid black; */
+    }
+
+
+
+
+
+
+#AB-Content-Inner-Pagemenuarea-Button {
+    width: 100%;
+    height: 100%;
+    margin-left: 60px;
+    margin-top: 24px;
+    display : inline-flex;
+}
+    #AB-Content-Inner-Pagemenuarea-Button-box {
+        margin-left: 20px;
+    }
+
+    #AB-Content-Inner-Pagemenuarea-Button-box > * {
+        color: white;
+
+        text-decoration: none;
+        font-family: 'GIfont';
+        font-size: large;
+        font-weight: 100;
+    
+        /* 커서가 올라가면 글자 뒤에 배경색이 띄워지는 CSS (아래 절반만 배경)  */
+        /* background-image: linear-gradient(transparent calc(100% - 3px), #000 3px); */
+    }
+
+    #AB-Content-Inner-Pagemenuarea-Button-box > *:hover {
+        line-height: 1.2;
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff;
+
+        /* 커서가 올라가면 글자 뒤에 배경색이 띄워지는 CSS (아래 절반만 배경)  */
+        /* background-image: linear-gradient(transparent 60%, gray 40%); */
+    }
+
+    .Pagemenuarea-Button-box1 > *:hover {
+        border-bottom: 3px solid red; 
+    }
+    .Pagemenuarea-Button-box2 > *:hover {
+        border-bottom: 3px solid blue; 
+    }
+    .Pagemenuarea-Button-box3 > *:hover {
+        border-bottom: 3px solid yellow; 
+    }
+    .Pagemenuarea-Button-box4 > *:hover {
+        border-bottom: 3px solid green; 
+    }
+
+
+
+
+
+#AB-Content-Inner-Usermenu-Button {
+    width: 90%;
+    height: 90%;
+
+    margin-top: 5px;
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid white; */
+}
+#AB-Content-Inner-Usermenu-Button-box {
+    width: 120px;
+    height: 50px;
+
+    margin-top: 20px;
+}
+
+#AB-Content-Inner-Usermenu-Button-box > * {
+    color: white;
+
+    text-decoration: none;
+    font-family: 'GIfont';
+    font-size: large;
+    font-weight: 100;
+
+    /* 커서가 올라가면 글자 뒤에 배경색이 띄워지는 CSS (아래 절반만 배경)  */
+    /* background-image: linear-gradient(transparent calc(100% - 3px), #000 3px); */
+}
+
+#AB-Content-Inner-Usermenu-Button-box > *:hover {
+    /* color: red; */
+    border-bottom: 3px solid blue; 
+    line-height: 1.2;
+
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff;
+
+    /* 커서가 올라가면 글자 뒤에 배경색이 띄워지는 CSS (아래 절반만 배경)  */
+    /* background-image: linear-gradient(transparent 60%, gray 40%); */
+}
+
+/* 하단 메뉴를 숨김, 커서가 올라갈 때에만 메뉴가 드러나도록 조치 */
+#AB-Content-Inner-Usermenu-Button-box-li {
+    width: 50%;
+    height: 50%;
+    position: relative;
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid white; */
+}
+
+#AB-Content-Inner-Usermenu-Button-box-li-ul {
+    background: black;
+    position: absolute;
+    visibility: hidden;
+
+    opacity: 0;
+
+    /* 영역 확인용 경계선 설정 */
+    /* border: 1px solid white; */
+}
+
+#AB-Content-Inner-Usermenu-Button-box-li:hover #AB-Content-Inner-Usermenu-Button-box-li-ul {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* 반응형 웹 CSS 설정 */
+/* 950px 이하에서는 유저 메뉴가 사라지도록 */
+@media ( max-width: 950px ) {
+    #AB-Content-Inner-Logoarea {
+        width: 15%;
+        height: 100%;
+    
+        background-image: url("../../img/ect/genshinimpectlogo.png");
+        background-size: 150px 70px;
+        background-repeat: no-repeat;
+    
+        /* 영역 확인용 경계선 설정 */
+        /* border: 1px solid black; */
+    }
+
+    #AB-Content-Inner-Pagemenuarea {
+        width: 85%;
+        height: 100%;
+    
+        /* 영역 확인용 경계선 설정 */
+        /* border: 1px solid black; */
+    }
+    
+    #AB-Content-Inner-Usermenuarea {
+        width: 0%;
+        height: 0%;
+    
+        /* 영역 확인용 경계선 설정 */
+        /* border: 1px solid black; */
+    }
+
+    #AB-Content-Inner-ResponsiveWebMenuarea {
+        width: 0%;
+        height: 0%;
+    }
+}
+
+/* 700px 이하에서는 페이지 메뉴도 사라지도록 */
+@media ( max-width: 700px ) {
+    #AB-Content-Inner-Logoarea {
+        width: 20%;
+        height: 100%;
+    
+        background-image: url("../../img/ect/genshinimpectlogo.png");
+        background-size: 120px 60px;
+        background-repeat: no-repeat;
+        background-position: 0px 5px;
+    
+        /* 영역 확인용 경계선 설정 */
+        /* border: 1px solid black; */
+    }
+    
+    #AB-Content-Inner-Pagemenuarea {
+        width: 80%;
+        height: 100%;
+
+        /* 영역 확인용 경계선 설정 */
+        /* border: 1px solid black; */
+    }
+    
+    #AB-Content-Inner-Usermenuarea {
+        width: 0%;
+        height: 0%;
+
+        display: none;
+    
+        /* 영역 확인용 경계선 설정 */
+        /* border: 1px solid black; */
+    }
+
+    /* 반응형 전용 메뉴 CSS */
+    /* hover 사용시 원인불명의 CSS 충돌 현상이 생겨 해결시까지 사용 중단 */
+    #AB-Content-Inner-ResponsiveWebMenuarea {
+        width: 0%;
+        height: 0%;
+    }
+    #AB-Content-Inner-ResponsiveWebMenuarea-Button-box {
+        width: 100px;
+        height: 45px;
+    
+        margin-top: 25px;
+    }
+    
+    #AB-Content-Inner-ResponsiveWebMenuarea-Button-box > * {
+        color: white;
+    
+        text-decoration: none;
+        font-family: 'GIfont';
+        font-size: large;
+        font-weight: 100;
+    
+        /* 커서가 올라가면 글자 뒤에 배경색이 띄워지는 CSS (아래 절반만 배경)  */
+        /* background-image: linear-gradient(transparent calc(100% - 3px), #000 3px); */
+    }
+    
+    #AB-Content-Inner-ResponsiveWebMenuarea-Button-box > *:hover {
+        /* color: red; */
+        border-bottom: 3px solid blue; 
+        line-height: 1.2;
+    
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff;
+    
+        /* 커서가 올라가면 글자 뒤에 배경색이 띄워지는 CSS (아래 절반만 배경)  */
+        /* background-image: linear-gradient(transparent 60%, gray 40%); */
+    }
+    
+    /* 하단 메뉴를 숨김, 커서가 올라갈 때에만 메뉴가 드러나도록 조치 */
+
+    
+    #AB-Content-Inner-ResponsiveWebMenuarea-Button-box-li-ul {
+        background: black;
+
+        position: absolute;
+        visibility: hidden;
+
+        /* 영역 확인용 경계선 설정 */
+        /* border: 1px solid white; */
+    }
+    
+    #AB-Content-Inner-ResponsiveWebMenuarea-Button-box-li:hover #AB-Content-Inner-ResponsiveWebMenuarea-Button-box-li-ul {
+        visibility: visible;
+    }
+}
+
+</div>
+</details>
+
+### Footer.css
+<details>
+<summary>코드 펼치기 / 접기</summary>
+<div markdown="1">
+
+#footerarea {
+    width: 100%;
+    height: 500px;
+    background: linear-gradient(90deg, rgba(9,9,9,1) 0%, rgba(0,0,0,1) 51%, rgba(129,129,129,1) 100%);
+}
+
+#pagelinkarea {
+    width: 100%;
+    height: 8%;
+    background: linear-gradient(90deg, rgba(108,108,108,0.5270483193277311) 0%, rgba(217,217,217,1) 100%);
+    text-align: left;
+    display: inline-block;
+}
+#pagelinkbtn {
+    width: 100%;
+    height: 100%;
+
+    margin-top: 5px;
+}
+    #pagelinkarea > a {
+        text-decoration: none;
+    }
+
+    .iconbutton{
+        margin: 10px;
+        height: 100%;
+        text-decoration: none;
+    }
+
+#contentarea {
+    width: 100%;
+    height: 92%;
+}
+    #gamelogoarea {
+        padding: 10px;
+        height: 8%;
+    }
+    #generalconditionsarea {
+        padding: 10px;
+        height: 8%;
+        margin-top: 40px;
+        color: gray;
+    }
+    .linkbutton{
+        width: 100px;
+        height: 80px;
+        padding: 10px;
+    }
+
+    .link{
+        width: 100px;
+        height: 80px;
+        padding: 10px;
+        color: gray;
+        text-decoration: none;
+    }
+
+    #playgradearea {
+        height: 15%;
+    }
+    #playrightarea {
+        height: 13%;
+        margin-top: 30px;
+        color: gray;
+        font-size: small;
+    }
+    #companylogoarea {
+        height: 16%;
+    }
+    #companyrightarea {
+        height: 14%;
+        color: white;
+        font-size: small;
+    }
+
+    #blankarea {
+        height: 10%;
+        display: none;
+    }
+
+    @media ( max-width: 1190px ) {
+        #playrightarea {
+            display: none;
+        }
+        #blankarea {
+            display: block;
+        }
+    }
 
 </div>
 </details>
@@ -335,6 +774,8 @@ export default Footer;
 </details>
 
 화면 최상단과 최하단에 고정되어 있는 컴포넌트들입니다. Appbarv2는 기존에 제작한 Appbar의 구성을 완전히 바꾸어 새 컴포넌트를 제작하였기에 구분을 위해 v2라고 이름을 붙여주었습니다. Appbarv2는 웹 페이지 이동을 위한 라우팅 기능을 수행하는 가장 중요한 요소 중 하나로 react-router-dom의 Link를 사용하여 페이지 이동 기능을 수행하고 있습니다. 하단 Footer는 원신 공식 페이지의 그것을 그대로 재현하는 것을 목표로 제작하였습니다.
+
+## 
 
 ### Mainpage.js
 <details>
@@ -703,6 +1144,8 @@ export default Mainpage;
 </details>
 
 본 프로젝트의 메인 페이지입니다. 움직이는 배경화면을 구현하기 위해 react-player를 이용하여 영상을 삽입하여 이를 배경이미지로 사용하였습니다. 또한 반응형 웹 기능을 추가하여 페이지 가로 길이가 1200px 이하로 내려갈 경우 배경화면과 출력 문구 등이 변경되도록 하였습니다.
+
+## 
 
 ### GenshinIntroduce.js
 <details>
@@ -1570,6 +2013,8 @@ export default Sliderintro;
 
 원신 공식 게임 소개 페이지를 그대로 재현해볼 것을 목표로 만든 게임 소개 페이지입니다. 메인페이지에서 사용하였던 react-player로 게임 트레일러 영상을 삽입하였으며, 이미지 슬라이드 기능을 구현하면서 react-slick 라이브러리를 사용해보고, 구글링으로 찾은 슬라이드 코드를 클론코딩하여 사용해보았습니다. 클론코딩 슬라이드 기능의 경우 styled-components를 사용하여 JS 파일 내부에서 CSS 속성을 설정해보았습니다. 또한 페이지를 각 기능별로 영역을 나누고 우측에 각 영역으로 바로 이동가능한 영역 이동 기능을 수행하는 리모컨을 구현하였습니다.
 
+## 
+
 ### WorldInfopage.js
 <details>
 <summary>코드 펼치기 / 접기</summary>
@@ -1697,6 +2142,8 @@ export default WorldInfopage;
 </details>
 
 월드 소개 페이지입니다. SPA 구조의 근본적인 특징 때문인지 페이지 이동시 스크롤의 위치가 초기화되지 않아 useRef를 사용해 페이지 최상단에 포인트를 지정하고 useEffect를 이용해 페이지 이동시 스크롤의 위치가 페이지 최상단으로 이동하도록 하였습니다. 월드 소개 페이지는 각 세부 소개 페이지로 넘어가기 전에 보여지는 페이지로 수직 배너를 만들어 보다 생동감 있는 입장 버튼을 구현하였습니다.
+
+## 
 
 ### MondBannerVertical.js
 <details>
@@ -1996,6 +2443,8 @@ export default InazumaBannerVertical;
 </details>
 
 배너 컴포넌트는 마우스 커서가 올라갈 경우 지역의 이름, 상징 인물, 지역 문양이 띄워지도록 제작하였습니다.
+
+## 
 
 ### WorldInfoMond.js
 <details>
@@ -4241,6 +4690,8 @@ export default WorldInfoInazuma;
 
 세부 소개 페이지는 당 월드의 이름, 간단한 소개, 상징 인물 소개, 수도 설명, 지배계층 소개, 주요 장소 소개로 나누어져있습니다. 게임 소개 페이지에서 사용되었던 슬라이드쇼와 영역 이동 리모컨 기능이 적용되었습니다.
 
+## 
+
 ### Generalforumv2.js
 <details>
 <summary>코드 펼치기 / 접기</summary>
@@ -4772,7 +5223,9 @@ export default Generalforumv2;
 
 자유게시판(익명게시판) 페이지입니다. 본 페이지에서는 백엔드와의 통신을 통해 DB에 데이터를 저장하고, 조회하며 수정 및 삭제 기능을 수행하는 최상단 페이지입니다. 이 페이지에서 게시물 데이터가 조회되어 하위 컴포넌트의 매개변수로 넘겨주고 있습니다. useState를 이용해 postdata 변수를 생성, 제어하며 useEffect와 axios로 백엔드와 통신 기능을 수행하여 데이터를 주고받아 게시판 기능을 수행하게 됩니다.
 
-또한 페이징 기능도 구현하였습니다. 페이징 기능을 구현을 위해 필요한 변수들을 선언하고 기능 구현을 위한 로직을 통해 최종적으로 게시글이 10개 단위로 출력되도록 하였습니다.
+또한 페이징 기능도 구현하였습니다. 필요한 변수들을 선언하고 기능 구현을 위한 로직을 통해 최종적으로 게시글이 10개 단위로 출력되도록 하였습니다.
+
+## 
 
 ### GeneralforumViewv2.js
 <details>
@@ -5255,6 +5708,8 @@ export default GeneralforumViewv2;
 
 자유게시판(익명게시판)의 상세 글 보기 페이지입니다. Generalforumv2.js에서 조회된 게시글 데이터는 useLocation을 통해 변수에 담겨져 출력되도록 하였습니다. 또한 게시글 수정 및 삭제 기능도 이 곳에서 수행할 수 있도록 하였습니다. 삭제 기능은 버튼의 onClick 함수를 적용하여 axios를 통해 백엔드로 글 번호가 넘어가 DB에서 삭제되도록 하였습니다. (DB에서 완전 삭제되지는 않고 삭제글 컬럼을 두고 그곳에서 Y/N 여부로 글 삭제를 판단하도록 되어있습니다.) 또 navigate를 사용하여 뒤로 가기 기능을 구현하였습니다.
 
+## 
+
 ### GeneralforumWriteAndEditv2.js
 <details>
 <summary>코드 펼치기 / 접기</summary>
@@ -5688,6 +6143,8 @@ export default GeneralforumWriteAndEditv2;
 </details>
 
 자유게시판(익명게시판)의 글 작성 및 수정 페이지입니다. 기본적으로 상세 글 페이지와 동일한 구성으로 글 작성 및 수정 여부를 판단하는 변수를 만들어 같은 페이지에서 작성과 수정 기능이 구분되어 동작하도록 만들었습니다.
+
+## 
 
 ## 2-3. 웹페이지 스크린샷
 
