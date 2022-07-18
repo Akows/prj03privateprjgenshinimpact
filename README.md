@@ -6202,12 +6202,10 @@ DB는 MariaDB를 사용하였으며 DBMS로는 MySQL Workbench를 이용하였�
 <div markdown="1">
 
 ```package com.privproject.genshinimpectweb.Controller;
-
 import com.privproject.genshinimpectweb.Entity.BoardDto;
 import com.privproject.genshinimpectweb.Service.BoardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
@@ -6261,9 +6259,7 @@ public class BoardController {
 <details>
 <summary>코드 펼치기 / 접기</summary>
 <div markdown="1">
-
 ```package com.privproject.genshinimpectweb.Entity;
-
 import lombok.Data;
 
 @Data
@@ -6278,7 +6274,6 @@ public class BoardDto
     private String b_attach_file_info;
 }
 ```
-
 </div>
 </details>
 
@@ -6288,11 +6283,8 @@ DB 테이블 컬럼과 Mapping 하기 위한 Data Transfer Object의 구성들�
 <details>
 <summary>코드 펼치기 / 접기</summary>
 <div markdown="1">
-
 ```package com.privproject.genshinimpectweb.Service;
-
 import com.privproject.genshinimpectweb.Entity.BoardDto;
-
 import java.util.List;
 
 public interface BoardService
@@ -6306,20 +6298,18 @@ public interface BoardService
     void boardDelete(BoardDto boardDto);
 }
 ```
-
 </div>
 </details>
+
 <details>
 <summary>코드 펼치기 / 접기</summary>
 <div markdown="1">
 ```package com.privproject.genshinimpectweb.Service;
-
 import com.privproject.genshinimpectweb.Entity.BoardDto;
 import com.privproject.genshinimpectweb.Entity.MemberDto;
 import com.privproject.genshinimpectweb.Mapper.BoardMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 @Service
@@ -6355,14 +6345,13 @@ public class BoardServiceImpl implements BoardService
 ```
 </div>
 </details>
+
 <details>
 <summary>코드 펼치기 / 접기</summary>
 <div markdown="1">
 ```package com.privproject.genshinimpectweb.Mapper;
-
 import com.privproject.genshinimpectweb.Entity.BoardDto;
 import org.apache.ibatis.annotations.Mapper;
-
 import java.util.List;
 
 @Mapper
@@ -6379,12 +6368,12 @@ public interface BoardMapper
 ```
 </div>
 </details>
+
 <details>
 <summary>코드 펼치기 / 접기</summary>
 <div markdown="1">
 ```<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-
 <mapper namespace="com.privproject.genshinimpectweb.Mapper.BoardMapper">
     <select id="getallboardlist" resultType="com.privproject.genshinimpectweb.Entity.BoardDto">
         SELECT *
