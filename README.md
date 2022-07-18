@@ -86,7 +86,11 @@
 ![CSS 구성](https://user-images.githubusercontent.com/54127322/179493421-087125d2-dae6-4fed-8081-1edf23a81b9b.JPG)
 
 ## 2-2. 컴포넌트 구성
-### index.js
+
+<details>
+<summary>### index.js</summary>
+<div markdown="1">
+
 ```import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
@@ -103,6 +107,9 @@ root.render(
 
 reportWebVitals();
 ```
+
+</div>
+</details>
 
 Create React App의 기본 구조를 사용하되, react-router-dom의 BrowserRouter를 사용하여 페이지를 새로고침하지 않고도 주소를 변경할 수 있도록 해주고, 현재 주소에 관련된 정보를 props로 조회 및 사용이 가능하도록 하였습니다.
 
