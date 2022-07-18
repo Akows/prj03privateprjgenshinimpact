@@ -6200,8 +6200,7 @@ DB는 MariaDB를 사용하였으며 DBMS로는 MySQL Workbench를 이용하였�
 <details>
 <summary>코드 펼치기 / 접기</summary>
 <div markdown="1">
-
-package com.privproject.genshinimpectweb.Controller;
+```package com.privproject.genshinimpectweb.Controller;
 
 import com.privproject.genshinimpectweb.Entity.BoardDto;
 import com.privproject.genshinimpectweb.Service.BoardService;
@@ -6248,11 +6247,10 @@ public class BoardController {
         return "Board Delete Complete!";
     }
 }
-
+```
 </div>
 </details>
-
-@RequestMapping("/board")을 사용하여 게시판 기능에 관련된 ‘/board’에 대한 요청을 처리하는 메소드들로 구성되어 있습니다. 각 메소드들은 글 작성, 글 조회, 글 수정, 글 삭제에 대한 기능들을 포함하고 있습니다.
+@RequestMapping 어노테이션을 사용하여 게시판 기능에 관련된 ‘/board’에 대한 요청을 처리하는 Controller입니다. 각 메소드들은 글 작성, 글 조회, 글 수정, 글 삭제에 대한 기능들을 포함하고 있습니다.
 
 또한 React와 Spring의 동시 사용으로 발생하는 CORS(Cross-Origin Resource Sharing) 문제를 해결하기 위해 @CrossOrigin 어노테이션을 사용하였습니다.
 
@@ -6260,8 +6258,7 @@ public class BoardController {
 <details>
 <summary>코드 펼치기 / 접기</summary>
 <div markdown="1">
-
-package com.privproject.genshinimpectweb.Entity;
+```package com.privproject.genshinimpectweb.Entity;
 
 import lombok.Data;
 
@@ -6276,8 +6273,7 @@ public class BoardDto
     private String b_delete_state;
     private String b_attach_file_info;
 }
-
-
+```
 </div>
 </details>
 
@@ -6287,8 +6283,7 @@ DB 테이블 컬럼과 Mapping 하기 위한 Data Transfer Object의 구성들�
 <details>
 <summary>코드 펼치기 / 접기</summary>
 <div markdown="1">
-
-package com.privproject.genshinimpectweb.Service;
+```package com.privproject.genshinimpectweb.Service;
 
 import com.privproject.genshinimpectweb.Entity.BoardDto;
 
@@ -6304,15 +6299,13 @@ public interface BoardService
 
     void boardDelete(BoardDto boardDto);
 }
-
-
+```
 </div>
 </details>
 <details>
 <summary>코드 펼치기 / 접기</summary>
 <div markdown="1">
-
-package com.privproject.genshinimpectweb.Service;
+```package com.privproject.genshinimpectweb.Service;
 
 import com.privproject.genshinimpectweb.Entity.BoardDto;
 import com.privproject.genshinimpectweb.Entity.MemberDto;
@@ -6352,14 +6345,14 @@ public class BoardServiceImpl implements BoardService
     }
 
 }
-
+```
 </div>
 </details>
 <details>
 <summary>코드 펼치기 / 접기</summary>
 <div markdown="1">
 
-<?xml version="1.0" encoding="UTF-8"?>
+```<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.privproject.genshinimpectweb.Mapper.BoardMapper">
@@ -6386,11 +6379,11 @@ public class BoardServiceImpl implements BoardService
         WHERE B_NUMBER_PK = #{b_number_pk}
     </update>
 </mapper>
-
+```
 </div>
 </details>
 
-백엔드 <-> DB 사이에서 데이터를 주고받는 기능을 담당하는 Data Access Object입니다. myBatis를 사용하여 DB에 SQL문을 전송하여 데이터를 호출하는 mapper.xml이 존재합니다.
+백엔드 <-> DB 사이에서 데이터를 주고받는 기능을 담당하는 Data Access Object입니다. myBatis를 사용하여 DB에 SQL문을 전송하여 데이터를 호출하는 mapper.xml도 존재합니다.
 
 ## 4. 마무리
 ## 4-1. 소감
