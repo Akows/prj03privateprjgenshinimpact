@@ -6260,6 +6260,7 @@ public class BoardController {
 <details>
 <summary>코드 펼치기 / 접기</summary>
 <div markdown="1">
+
 ```java
 package com.privproject.genshinimpectweb.Entity;
 import lombok.Data;
@@ -6276,6 +6277,7 @@ public class BoardDto
     private String b_attach_file_info;
 }
 ```
+
 </div>
 </details>
 
